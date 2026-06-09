@@ -243,18 +243,34 @@
     text-decoration: none;
   }
   .nav-logo-mark {
-    width: 38px; height: 38px;
-    background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
-    border-radius: 6px;
+    width: 56px; height: 56px;
+    border: 1.5px solid #D4AF37;
+    border-radius: 4px;
+    background: #0F1117;
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif;
-    color: white; font-weight: 900; font-size: 18px;
+    box-shadow: inset 0 0 0 3px #0F1117, inset 0 0 0 3.5px rgba(212,175,55,0.4);
     flex-shrink: 0;
+  }
+  .nav-logo-mark span {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px; font-weight: 600;
+    line-height: 0.95; letter-spacing: -1.5px;
+    background: linear-gradient(135deg, #DC3C3C 0%, #B42850 30%, #A01450 50%, #648CC8 75%, #3CDCF0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   .nav-logo-text { color: white; }
   .nav-logo-text span { display: block; }
-  .nav-logo-text .brand { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
-  .nav-logo-text .sub { font-size: 10px; color: var(--oro); letter-spacing: 2px; text-transform: uppercase; font-weight: 500; }
+  .nav-logo-text .brand { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; letter-spacing: 2px; }
+  .nav-logo-text .sub { font-size: 9px; color: var(--oro); letter-spacing: 3px; text-transform: uppercase; font-weight: 500; margin-top: 3px; }
+  @media (max-width: 640px) {
+    .nav-logo-mark { width: 46px; height: 46px; }
+    .nav-logo-mark span { font-size: 26px; }
+    .nav-logo-text .brand { font-size: 13px; letter-spacing: 1.5px; }
+    .nav-logo-text .sub { font-size: 7px; letter-spacing: 2.5px; }
+  }
 
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a {
@@ -341,16 +357,126 @@
     max-width: 900px; margin: 0 auto; width: 100%;
   }
 
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.3);
-    padding: 6px 16px; border-radius: 100px;
-    margin-bottom: 28px;
+  /* ===== BRAND SIGNATURE - sopra H1 ===== */
+  .brand-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 32px;
+    padding: 28px 40px;
+    border-top: 0.5px solid rgba(212, 175, 55, 0.35);
+    border-bottom: 0.5px solid rgba(212, 175, 55, 0.35);
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .hero-eyebrow span { font-size: clamp(14px, 3vw, 18px); color: var(--oro); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
-  .hero-eyebrow-dot { width: 6px; height: 6px; background: var(--oro); border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:0.5;transform:scale(1.3);} }
+  .brand-signature .sig-monogram {
+    font-family: 'Playfair Display', serif;
+    font-size: 84px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -2.5px;
+    background: linear-gradient(135deg, #DC3C3C 0%, #B42850 30%, #A01450 50%, #648CC8 75%, #3CDCF0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    flex-shrink: 0;
+  }
+  .brand-signature .sig-divider {
+    width: 0.5px;
+    height: 72px;
+    background: rgba(212, 175, 55, 0.4);
+    flex-shrink: 0;
+  }
+  .brand-signature .sig-text {
+    text-align: left;
+    flex: 1;
+  }
+  .brand-signature .sig-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    color: #F5EFE3;
+    margin-bottom: 8px;
+  }
+  .brand-signature .sig-sub {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    color: #C9A66B;
+  }
+
+  /* ===== BRAND MANIFESTO - dopo sub, prima CTA ===== */
+  .brand-manifesto {
+    max-width: 820px;
+    margin: 0 auto 48px;
+    padding: 36px 40px;
+    text-align: center;
+  }
+  .brand-manifesto .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    letter-spacing: 0.015em;
+    background: linear-gradient(135deg,
+      #FF6B4A 0%,
+      #DC3C3C 12%,
+      #E8195E 24%,
+      #B42850 36%,
+      #A01450 48%,
+      #7A4FB5 60%,
+      #648CC8 72%,
+      #3CDCF0 84%,
+      #50E3C2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .brand-manifesto .divider-line {
+    width: 80px;
+    height: 0.5px;
+    background: rgba(212, 175, 55, 0.5);
+    margin: 0 auto 22px;
+  }
+  .brand-manifesto .mark {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(20px, 2.6vw, 26px);
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #F4D67A;
+    display: block;
+    margin-bottom: 18px;
+  }
+  .brand-manifesto .tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.8vw, 28px);
+    font-weight: 600;
+    color: #E8DCC0;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Responsive smartphone */
+  @media (max-width: 640px) {
+    .brand-signature { gap: 22px; padding: 22px 22px; }
+    .brand-signature .sig-monogram { font-size: 60px; }
+    .brand-signature .sig-divider { height: 54px; }
+    .brand-signature .sig-name { font-size: 20px; letter-spacing: 0.26em; }
+    .brand-signature .sig-sub { font-size: 13px; letter-spacing: 0.34em; }
+    .brand-manifesto { padding: 28px 22px; margin-bottom: 36px; }
+    .brand-manifesto .quote { font-size: 22px; line-height: 1.45; margin-bottom: 22px; }
+    .brand-manifesto .mark { font-size: 16px; letter-spacing: 0.22em; margin-bottom: 14px; }
+    .brand-manifesto .tagline { font-size: 17px; letter-spacing: 0.15em; }
+  }
 
   .hero-h1 {
     font-family: 'Playfair Display', serif;
@@ -409,6 +535,60 @@
     transition: all 0.25s;
   }
   .btn-ghost:hover { border-color: var(--oro); color: var(--oro); }
+
+  /* ===== PATRIMONIO PROFESSIONALE ===== */
+  .patrimonio-block {
+    background: linear-gradient(135deg, #0F1117 0%, #1A2438 100%);
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 28px 32px;
+    text-align: center;
+    margin: 28px auto 0;
+    max-width: 900px;
+  }
+  .patrimonio-heading {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+  }
+  .patrimonio-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .patrimonio-item { text-align: center; min-width: 100px; }
+  .patrimonio-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #F5EFE3;
+    line-height: 1;
+  }
+  .patrimonio-num.gold { color: #D4AF37; }
+  .patrimonio-label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: #A89878;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+  .patrimonio-sep {
+    width: 0.5px;
+    background: rgba(212, 175, 55, 0.4);
+    align-self: stretch;
+    min-height: 50px;
+  }
+  @media (max-width: 640px) {
+    .patrimonio-block { padding: 22px 18px; }
+    .patrimonio-row { gap: 18px; flex-direction: column; }
+    .patrimonio-sep { width: 60px; height: 0.5px; min-height: 0; margin: 0 auto; }
+    .patrimonio-num { font-size: 28px; }
+  }
 
   .hero-stats {
     display: flex; gap: 48px;
@@ -1120,10 +1300,10 @@
 <!-- NAVIGATION -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    <div class="nav-logo-mark">S</div>
+    <div class="nav-logo-mark"><span>DS</span></div>
     <div class="nav-logo-text">
-      <span class="brand">Immobiliare Scaglia</span>
-      <span class="sub">Piacenza · Dal 2008</span>
+      <span class="brand">DAVIDE SCAGLIA</span>
+      <span class="sub">VENDERE CASA A PIACENZA</span>
     </div>
   </a>
   <ul class="nav-links" id="navLinks">
@@ -1164,9 +1344,13 @@
 
   <div class="hero-content">
 
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-dot"></div>
-      <span>Agente immobiliare a Piacenza · Dal 2008</span>
+    <div class="brand-signature">
+      <div class="sig-monogram">DS</div>
+      <div class="sig-divider"></div>
+      <div class="sig-text">
+        <div class="sig-name">DAVIDE SCAGLIA</div>
+        <div class="sig-sub">VENDERE CASA A PIACENZA</div>
+      </div>
     </div>
 
     <h1 class="hero-h1">
@@ -1178,27 +1362,44 @@
       Questo sito è fatto per chi ha una casa da vendere e vuole capire davvero come funziona il mercato di Piacenza. Strategie concrete, notizie aggiornate, metodi chiari. Niente linguaggio tecnico inutile — solo quello che ti serve per non arrivare impreparato.
     </p>
 
-    <div class="hero-actions">
-      <a href="#valutazione" class="btn-gold">→ Parliamo del tuo immobile</a>
-      <a href="#chi-sono" class="btn-ghost">Chi sono</a>
+    <div class="brand-manifesto">
+      <div class="quote">"Le case si scelgono con il cuore.<br>Si vivono con sentimento ed emozioni.<br>Si vendono con un metodo."</div>
+      <div class="divider-line"></div>
+      <span class="mark">IL METODO IMMOBILIARE</span>
+      <span class="tagline">Strategie di Vendite Immobiliari</span>
     </div>
 
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="num">16+</div>
-        <div class="label">Anni di esperienza</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">5</div>
-        <div class="label">Video testimonianze</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">24h</div>
-        <div class="label">Risposta rapida</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">6</div>
-        <div class="label">Zone coperte</div>
+    <div class="hero-actions">
+      <a href="#valutazione" class="btn-gold">→ Parliamo del tuo immobile</a>
+    </div>
+
+    <div class="patrimonio-block">
+      <div class="patrimonio-heading">Patrimonio Professionale</div>
+      <div class="patrimonio-row">
+        <div class="patrimonio-item">
+          <div class="patrimonio-num">2007</div>
+          <div class="patrimonio-label">Inizio professione</div>
+        </div>
+        <div class="patrimonio-sep"></div>
+        <div class="patrimonio-item">
+          <div class="patrimonio-num">2012</div>
+          <div class="patrimonio-label">Immobiliare Scaglia</div>
+        </div>
+        <div class="patrimonio-sep"></div>
+        <div class="patrimonio-item">
+          <div class="patrimonio-num gold">18</div>
+          <div class="patrimonio-label">Anni di esperienza</div>
+        </div>
+        <div class="patrimonio-sep"></div>
+        <div class="patrimonio-item">
+          <div class="patrimonio-num">&#9654;</div>
+          <div class="patrimonio-label">Video testimonianze</div>
+        </div>
+        <div class="patrimonio-sep"></div>
+        <div class="patrimonio-item">
+          <div class="patrimonio-num">6</div>
+          <div class="patrimonio-label">Zone coperte</div>
+        </div>
       </div>
     </div>
 
@@ -1223,43 +1424,236 @@
 </div>
 
 
-<!-- SITUAZIONI DELICATE -->
-<section id="situazioni" style="background:#1c1a17;padding:80px 5%;">
+<!-- SITUAZIONI IMPEGNATIVE - SEO+GEO OPTIMIZED -->
+<section id="situazioni" itemscope itemtype="https://schema.org/Service" style="background:#1c1a17;padding:80px 5%;">
+  <meta itemprop="serviceType" content="Consulenza immobiliare per situazioni impegnative">
+  <meta itemprop="areaServed" content="Piacenza">
+  <div itemprop="provider" itemscope itemtype="https://schema.org/RealEstateAgent" style="display:none;">
+    <meta itemprop="name" content="Davide Scaglia">
+    <meta itemprop="areaServed" content="Piacenza">
+  </div>
+
   <div style="max-width:1100px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;" class="situazioni-grid">
-      <div>
-        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);color:white;font-weight:900;line-height:1.1;margin-bottom:20px;">
-          Devi gestire un immobile<br>in una <em style="color:#B8860B;font-style:italic;">situazione complessa?</em>
-        </h2>
-        <p style="font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:16px;">
-          Se devi vendere o gestire un immobile a Piacenza in un contesto delicato — successione, separazione, divisione patrimoniale — qui trovi un supporto concreto per capire come muoversi.
-        </p>
-        <p style="font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:28px;">
-          In questi casi non serve improvvisare: servono valutazioni corrette, tempi realistici e una gestione attenta per evitare errori o tensioni tra le parti.
-        </p>
-        <div style="display:flex;align-items:flex-start;gap:12px;background:rgba(184,134,11,0.1);border-left:3px solid #B8860B;border-radius:0 8px 8px 0;padding:16px 18px;">
-          <span style="font-size:20px;flex-shrink:0;">👉</span>
-          <span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.8);line-height:1.65;">Supporto operativo per la valutazione e la gestione della vendita, con un approccio riservato e orientato alla soluzione.</span>
-        </div>
+
+    <!-- HEADER CON BILANCIA BLU -->
+    <div style="text-align:center;margin-bottom:56px;">
+      <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:24px;background:rgba(74,144,226,0.1);border:1px solid rgba(74,144,226,0.3);padding:8px 22px;border-radius:100px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3v18M5 8h14M8 8l-3 7c0 1.5 1.5 3 3 3s3-1.5 3-3l-3-7zM16 8l-3 7c0 1.5 1.5 3 3 3s3-1.5 3-3l-3-7z" stroke="#4A90E2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#4A90E2;">Quando l&rsquo;immobile pesa pi&ugrave; di quanto sembra</span>
       </div>
-      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(184,134,11,0.15);border-radius:16px;padding:32px;">
-        <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:24px;">
-          <span style="font-size:32px;">⚖️</span>
-          <span style="font-size:clamp(16px,2vw,20px);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#B8860B;">Per situazioni più delicate</span>
+      <h2 itemprop="name" style="font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);color:white;font-weight:900;line-height:1.15;margin-bottom:24px;">
+        Ci sono momenti in cui una casa<br><em style="color:#B8860B;font-style:italic;">non &egrave; pi&ugrave; solo una casa.</em>
+      </h2>
+      <p itemprop="description" style="font-size:clamp(17px,2vw,20px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:820px;margin:0 auto 16px;">
+        Una separazione. Un&rsquo;eredit&agrave;. Un patrimonio da tutelare per qualcuno che si fida di te. Un immobile fermo in mezzo a una decisione che nessuno vuole prendere.
+      </p>
+      <p style="font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,0.55);line-height:1.7;max-width:820px;margin:0 auto;font-style:italic;">
+        In questi momenti la casa diventa il punto in cui si incrociano emozioni, interessi e responsabilit&agrave;. E ogni decisione presa senza la giusta competenza pesa per anni.
+      </p>
+    </div>
+
+    <!-- BLOCCO 1: PER I PRIVATI -->
+    <div style="margin-bottom:80px;">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div style="display:inline-block;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:14px;border-bottom:1px solid rgba(184,134,11,0.3);padding-bottom:6px;">Per i privati</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,38px);color:white;font-weight:700;line-height:1.2;margin-bottom:20px;">
+          Quando la casa diventa il centro<br>di una decisione difficile
+        </h3>
+        <p style="font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:820px;margin:0 auto 14px;">
+          Ci sono momenti della vita in cui ti ritrovi a dover decidere cosa fare di una casa &mdash; non perch&eacute; lo hai scelto, ma perch&eacute; la vita ha scelto per te.
+        </p>
+        <p style="font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:820px;margin:0 auto 14px;">
+          Una separazione che cambia tutto. Un genitore che non c&rsquo;&egrave; pi&ugrave;. Un fratello con cui dividere quello che resta. Un lavoro in un&rsquo;altra citt&agrave;, una famiglia che cresce, una vita che non sta pi&ugrave; nelle vecchie mura.
+        </p>
+        <p style="font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,0.7);line-height:1.7;max-width:820px;margin:0 auto 14px;">
+          Sono momenti in cui le decisioni si prendono in fretta &mdash; <em>&ldquo;basta che si chiuda&rdquo;</em> &mdash; ma le conseguenze restano per anni.
+        </p>
+        <p style="font-size:clamp(16px,1.8vw,18px);color:rgba(255,255,255,0.85);line-height:1.7;max-width:820px;margin:0 auto;font-style:italic;">
+          Vendere a quanto? Aspettare quanto? Affidarsi a chi? Come si parla a un fratello che vede il valore della casa in modo diverso dal tuo? Come si gestisce una vendita quando i sentimenti pesano pi&ugrave; del prezzo?
+        </p>
+      </div>
+
+      <!-- 4 CARD PRIVATI in formato DOMANDA -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;" itemscope itemtype="https://schema.org/FAQPage">
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:rgba(255,255,255,0.03);border:1px solid rgba(184,134,11,0.18);border-radius:12px;padding:28px;transition:all 0.3s;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:12px;">01 &mdash; Separazione</div>
+          <div itemprop="name" style="font-size:18px;color:white;line-height:1.45;font-weight:600;margin-bottom:14px;font-family:'Playfair Display',serif;">
+            Chi resta in casa? Chi esce? A che prezzo?
+          </div>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="font-size:14.5px;color:rgba(255,255,255,0.65);line-height:1.65;">
+              Decisioni che si prendono in pochi mesi ma che pesano per vent&rsquo;anni. Una valutazione vera &egrave; l&rsquo;unica cosa che permette a due persone che non si parlano pi&ugrave; di trovare un accordo.
+            </div>
+          </div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Separazioni e divorzi, con definizione del destino della casa familiare</span></div>
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Successioni ed eredità, con immobili da dividere tra più eredi</span></div>
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Controversie tra familiari o soci con proprietà condivise</span></div>
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Situazioni patrimoniali complesse che richiedono divisione o liquidazione dei beni</span></div>
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Procedure esecutive o pignoramenti con necessità di vendita dell'immobile</span></div>
-          <div style="display:flex;align-items:flex-start;gap:14px;"><span style="width:8px;height:8px;background:#B8860B;border-radius:50%;flex-shrink:0;margin-top:10px;"></span><span style="font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.72);line-height:1.6;">Operazioni societarie o liquidazioni che coinvolgono beni immobiliari</span></div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:rgba(255,255,255,0.03);border:1px solid rgba(184,134,11,0.18);border-radius:12px;padding:28px;transition:all 0.3s;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:12px;">02 &mdash; Eredit&agrave;</div>
+          <div itemprop="name" style="font-size:18px;color:white;line-height:1.45;font-weight:600;margin-bottom:14px;font-family:'Playfair Display',serif;">
+            Pi&ugrave; eredi, un solo immobile: come si divide?
+          </div>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="font-size:14.5px;color:rgba(255,255,255,0.65);line-height:1.65;">
+              Fratelli che vivono in citt&agrave; diverse. Un&rsquo;eredit&agrave; da dividere. Una valutazione che deve mettere d&rsquo;accordo tutti &mdash; perch&eacute; finch&eacute; ognuno tiene in mente la propria cifra, l&rsquo;accordo non arriva mai.
+            </div>
+          </div>
         </div>
-        <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(184,134,11,0.15);">
-          <p style="font-size:clamp(14px,1.8vw,16px);color:rgba(255,255,255,0.45);line-height:1.65;">In tutti questi scenari non è solo una questione di vendita, ma di gestione corretta del valore, dei tempi e delle relazioni tra le parti.</p>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:rgba(255,255,255,0.03);border:1px solid rgba(184,134,11,0.18);border-radius:12px;padding:28px;transition:all 0.3s;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:12px;">03 &mdash; Cura familiare</div>
+          <div itemprop="name" style="font-size:18px;color:white;line-height:1.45;font-weight:600;margin-bottom:14px;font-family:'Playfair Display',serif;">
+            Un genitore da accudire: liberare, vendere, riadattare?
+          </div>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="font-size:14.5px;color:rgba(255,255,255,0.65);line-height:1.65;">
+              Tempi stretti, decisioni emotive, sensibilit&agrave; necessaria. Non &egrave; solo una pratica: &egrave; la storia di una vita che cambia forma.
+            </div>
+          </div>
         </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="background:rgba(255,255,255,0.03);border:1px solid rgba(184,134,11,0.18);border-radius:12px;padding:28px;transition:all 0.3s;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:12px;">04 &mdash; Un nuovo capitolo</div>
+          <div itemprop="name" style="font-size:18px;color:white;line-height:1.45;font-weight:600;margin-bottom:14px;font-family:'Playfair Display',serif;">
+            Trasferimento, nuova famiglia: vendere bene o in fretta?
+          </div>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text" style="font-size:14.5px;color:rgba(255,255,255,0.65);line-height:1.65;">
+              Lavoro in un&rsquo;altra citt&agrave;. Una nuova famiglia. Una scelta che cambia tutto. La casa deve essere venduta bene, non in fretta &mdash; perch&eacute; quello che ricavo oggi &egrave; quello che porto nel mio futuro.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <!-- SEPARATORE -->
+    <div style="max-width:200px;margin:0 auto 60px;height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.5),transparent);"></div>
+
+    <!-- BLOCCO 2: PER I PROFESSIONISTI -->
+    <div style="max-width:880px;margin:0 auto;">
+
+      <div style="text-align:center;margin-bottom:40px;">
+        <div style="display:inline-block;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#B8860B;font-weight:700;margin-bottom:14px;border-bottom:1px solid rgba(184,134,11,0.3);padding-bottom:6px;">Per i professionisti</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,34px);color:white;font-weight:700;line-height:1.25;margin-bottom:20px;">
+          Sei un professionista con un cliente coinvolto<br>in una questione immobiliare impegnativa?
+        </h3>
+        <p style="font-size:clamp(17px,2vw,20px);color:#B8860B;line-height:1.6;font-style:italic;font-weight:500;">
+          Hai bisogno di risolvere una situazione semplice,<br>che pu&ograve; diventare complessa nel tempo?
+        </p>
+      </div>
+
+      <div style="font-size:clamp(16px,1.7vw,18px);color:rgba(255,255,255,0.78);line-height:1.8;">
+
+        <p style="margin-bottom:20px;">
+          Magari gestisci il patrimonio di qualcuno. Ti occupi dei beni di un parente, di un amico, di un assistito. Sei un amministratore di sostegno, un tutore, un curatore. A volte &egrave; un ruolo informale, affidato a te perch&eacute; qualcuno si fida &mdash; un familiare che ti ha chiesto un parere, una propriet&agrave; condivisa che nessuno vuole gestire ma che a un certo punto va decisa.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          In ogni ambito di studio professionale di cui ti occupi, in ogni cerchia di relazioni, arriva sempre quel momento: c&rsquo;&egrave; di mezzo un immobile e qualcuno deve decidere cosa farne.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          E in quel momento iniziano le domande del tuo assistito. Vendere subito o aspettare? A quale prezzo? Si pu&ograve; tenere? Si pu&ograve; dividere? Si pu&ograve; affittare nel frattempo? Qualcuno deve liquidare gli altri &mdash; ma con quali soldi, su quale base, in quale tempo?
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Domande a cui tu sai rispondere &mdash; nel tuo perimetro di competenza. Ma c&rsquo;&egrave; una parte che esula da quel perimetro: il valore reale dell&rsquo;immobile sul mercato di oggi. E senza quel dato, tutto il resto resta sospeso.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Tu lo sai bene. Sai che una pratica pu&ograve; essere impostata in modo impeccabile, ma se il numero di partenza &egrave; sbagliato, tutto il resto si trascina dietro quell&rsquo;errore. Sai che le parti si dividono o si accordano in base a una cifra &mdash; e che finch&eacute; ognuno tiene in mente la propria, nessun accordo regge. Sai che un cliente che ti chiede <em>&ldquo;quanto vale davvero?&rdquo;</em> aspetta una risposta che tu non puoi dargli da solo.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          E sai anche cosa succede quando questa parte viene gestita male.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Le riunioni si moltiplicano senza concludere. Le posizioni si irrigidiscono. Le richieste si trasformano in pretese. Qualcuno tira fuori una stima fatta dal cognato. Qualcun altro arriva con un numero scritto su una mail da un sedicente esperto che ha usato una qualche intelligenza artificiale &mdash; la stessa che un bambino di otto anni saprebbe smentire. E tu sei l&igrave;, con la responsabilit&agrave; di portare avanti la pratica, mentre la base su cui dovrebbe poggiare non esiste.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          In quei casi non basta una stima approssimativa. &Egrave; sempre il mercato che decide, non chi vuole credere a un numero comodo.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Non basta una cifra detta a voce, e poi scritta usando qualche sotterfugio di intelligenza artificiale che qualcuno ti propina per farti credere di aver fatto un buon lavoro. Un bambino di otto anni probabilmente lo farebbe anche meglio.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Non basta un parere generico.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Le situazioni sono molteplici, i motivi innumerevoli, le sfumature infinite. Ogni caso ha la sua storia, ogni storia ha le sue tensioni, ogni tensione si sblocca solo davanti a un dato vero.
+        </p>
+
+        <p style="margin-bottom:24px;color:rgba(255,255,255,0.92);font-size:clamp(17px,1.9vw,20px);border-left:3px solid #B8860B;padding-left:22px;">
+          Serve <strong style="color:#B8860B;font-weight:600;">una valutazione che regge</strong>. Davanti a un giudice, davanti a interessi diversi e ai pi&ugrave; disparati. Serve <strong style="color:#B8860B;font-weight:600;">un dato di mercato documentato, scritto, difendibile e trasparente</strong> &mdash; dove ogni numero ha una spiegazione, ogni spiegazione ha una fonte, ogni fonte &egrave; verificabile.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Quando il tuo cliente arriva da te con un immobile di mezzo, la sua tranquillit&agrave; &mdash; e in molti casi anche la tua, e il rispetto che porti per lui e per la tua professione, quella che hai scelto &mdash; dipende da quale scelta viene fatta.
+        </p>
+
+        <p style="margin-bottom:36px;">
+          La differenza tra una pratica chiusa in tre o sei mesi, e una causa che si trascina due, tre, cinque o pi&ugrave; anni, passa spesso da l&igrave;.
+        </p>
+
+      </div>
+
+      <!-- IL TEMPO -->
+      <div style="margin-top:50px;padding-top:40px;border-top:1px solid rgba(184,134,11,0.2);">
+        <h3 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,42px);color:#B8860B;font-weight:700;line-height:1.2;text-align:center;margin-bottom:32px;font-style:italic;">
+          E l&rsquo;attesa lacera la vita.
+        </h3>
+
+        <div style="font-size:clamp(16px,1.7vw,18px);color:rgba(255,255,255,0.78);line-height:1.8;">
+
+          <p style="margin-bottom:20px;">
+            Lacera la vita di chi aspetta una decisione che non arriva. Di chi non pu&ograve; progettare il proprio futuro perch&eacute; ha un immobile bloccato in mezzo a una causa, a un&rsquo;eredit&agrave; contesa, a una separazione che non si chiude. Di chi si sveglia ogni mattina con la stessa domanda &mdash; <em>&ldquo;oggi sar&agrave; il giorno in cui si risolve?&rdquo;</em> &mdash; e ogni sera con la stessa risposta: <em>domani?</em>
+          </p>
+
+          <p style="margin-bottom:20px;">
+            E nel frattempo? Nel frattempo i rapporti si logorano tra tutte le parti coinvolte. I fratelli smettono di parlarsi. I coniugi diventano nemici &mdash; <em>La guerra dei Roses</em> &egrave; nulla in confronto a certe separazioni vere. Le aziende perdono valore. I clienti perdono fiducia, si arrabbiano, diventano dubbiosi, diffidenti &mdash; perch&eacute; in Italia i tempi della giustizia sono lunghi, e lo sanno tutti.
+          </p>
+
+          <p style="margin-bottom:28px;">
+            E tu, nel frattempo, perdi tempo, energia e vai in frustrazione.
+          </p>
+
+          <p style="margin-bottom:20px;font-style:italic;color:rgba(255,255,255,0.6);text-align:center;font-size:clamp(18px,2vw,22px);">
+            &ldquo;Eh, speriamo vada tutto bene.&rdquo;
+          </p>
+
+          <p style="margin-bottom:20px;">
+            Certo, la speranza &egrave; l&rsquo;ultima a morire. Ma non per caso. Lo &egrave; perch&eacute; prima muore qualcun altro. Prima muore la pazienza. Prima muore il rapporto. Prima muore la possibilit&agrave; di risolvere un problema, una situazione. E quando ti accorgi che la speranza &egrave; rimasta sola, &egrave; gi&agrave; troppo tardi per tutto il resto.
+          </p>
+
+          <p style="margin-bottom:20px;">
+            Ecco perch&eacute; chi si rende conto di queste cose, chi tiene conto dei vari aspetti e di cosa lo aspetta, cerca di sbrigarsela il prima possibile. Anche chi ha ragione ha lo stesso tempo di chi ha torto. E il tempo &egrave; l&rsquo;unica cosa uguale per tutti.
+          </p>
+
+          <p style="margin-bottom:0;color:rgba(255,255,255,0.92);font-weight:500;font-size:clamp(17px,1.9vw,20px);text-align:center;font-style:italic;padding:24px 20px;background:rgba(184,134,11,0.06);border-radius:12px;">
+            Ecco perch&eacute; la speranza &egrave; l&rsquo;ultima a morire &mdash; ma proprio l&rsquo;ultima. Perch&eacute; prima muore qualcun altro.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA FINALE -->
+    <div style="text-align:center;margin-top:60px;">
+      <a href="#valutazione" style="display:inline-block;padding:18px 44px;background:#B8860B;color:white;text-decoration:none;font-size:15px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;border-radius:6px;transition:all 0.3s;">&rarr; Parliamone in modo riservato</a>
+      <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:16px;font-style:italic;letter-spacing:0.5px;">
+        Consulenza professionale per privati e per i loro consulenti. A Piacenza, su appuntamento.
+      </p>
+    </div>
+
   </div>
 </section>
 
