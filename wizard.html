@@ -211,8 +211,69 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
 
 <div class="step" id="step4">
   <div class="step-num">Passo 4 di 4 — quasi fatto!</div>
-  <h2>Dove ti trovo?</h2>
-  <p class="sub">Ti chiamo io. Niente call center, niente assistenti. Davide Scaglia, direttamente — con già tutto il quadro della tua situazione.</p>
+  <h2>Qualche dettaglio<br>sull'immobile e su dove ti trovo</h2>
+  <p class="sub">Più so, più arrivo preparato. Ti chiamo io — Davide Scaglia, direttamente.</p>
+
+  <span class="field-label">L'immobile — dati principali</span>
+  <div class="form-row" style="margin-bottom:10px;">
+    <div class="form-group">
+      <label>Superficie (mq indicativi)</label>
+      <select id="fmq">
+        <option value="">Seleziona...</option>
+        <option>Fino a 50 mq</option>
+        <option>50 – 80 mq</option>
+        <option>80 – 120 mq</option>
+        <option>120 – 180 mq</option>
+        <option>Oltre 180 mq</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Numero di vani / locali</label>
+      <select id="fvani">
+        <option value="">Seleziona...</option>
+        <option>Monolocale / bilocale</option>
+        <option>Trilocale (3 locali)</option>
+        <option>Quadrilocale (4 locali)</option>
+        <option>5 locali o più</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row" style="margin-bottom:10px;">
+    <div class="form-group">
+      <label>Piano (se appartamento)</label>
+      <select id="fpiano">
+        <option value="">Seleziona...</option>
+        <option>Piano terra</option>
+        <option>1° – 3° piano</option>
+        <option>4° piano o superiore</option>
+        <option>Attico / ultimo piano</option>
+        <option>Non applicabile</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Stato conservativo</label>
+      <select id="fstato">
+        <option value="">Seleziona...</option>
+        <option>Ottimo / ristrutturato</option>
+        <option>Buono / abitabile</option>
+        <option>Da aggiornare</option>
+        <option>Da ristrutturare</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group" style="margin-bottom:18px;">
+    <label>Hai già un prezzo in mente? (opzionale)</label>
+    <select id="fprezzo">
+      <option value="">Preferisco sentire prima la tua opinione</option>
+      <option>Fino a 80.000 €</option>
+      <option>80.000 – 150.000 €</option>
+      <option>150.000 – 250.000 €</option>
+      <option>250.000 – 400.000 €</option>
+      <option>Oltre 400.000 €</option>
+    </select>
+  </div>
+
+  <span class="field-label">I tuoi contatti</span>
   <div class="form-row">
     <div class="form-group"><label>Nome *</label><input type="text" id="fn" placeholder="Il tuo nome" oninput="chk()"></div>
     <div class="form-group"><label>Cognome</label><input type="text" id="fl" placeholder="Il tuo cognome"></div>
@@ -281,15 +342,25 @@ function showConferma(){
   var email=document.getElementById('fe').value.trim();
   var orario=document.getElementById('fo').value;
   var note=document.getElementById('fnote').value.trim();
+  var mq=document.getElementById('fmq').value;
+  var vani=document.getElementById('fvani').value;
+  var piano=document.getElementById('fpiano').value;
+  var stato=document.getElementById('fstato').value;
+  var prezzo=document.getElementById('fprezzo').value;
   var msg='Ciao Davide, ho compilato il modulo sul tuo sito.'
     +'\n\n👤 '+nome+(cognome?' '+cognome:'')
     +(phone?'\n📞 '+phone:'')
     +(email?'\n✉️ '+email:'')
     +'\n\n🏠 Immobile: '+d.tipo
     +'\n📍 Zona: '+d.zona
-    +'\n💬 Motivo: '+d.motivo
+    +'\n📐 Superficie: '+(mq||'non indicata')
+    +'\n🚪 Vani: '+(vani||'non indicati')
+    +'\n🏢 Piano: '+(piano||'non indicato')
+    +'\n🔧 Stato: '+(stato||'non indicato')
+    +'\n💶 Prezzo in mente: '+(prezzo||'da definire')
+    +'\n\n💬 Motivo vendita: '+d.motivo
     +'\n🔑 Stato attuale: '+d.stato_uso
-    +'\n🤝 Agenti: '+d.agenti
+    +'\n🤝 Agenti contattati: '+d.agenti
     +'\n⏱ Tempi: '+d.tempi
     +(orario?'\n🕐 Orario preferito: '+orario:'')
     +(note?'\n📝 Note: '+note:'')
