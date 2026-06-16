@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prenota la consulenza gratuita — Davide Scaglia, Piacenza</title>
-<meta name="description" content="Parla con Davide Scaglia, agente immobiliare a Piacenza dal 2007. Consulenza professionale: analizziamo insieme il tuo immobile e la situazione di mercato.">
+<title>Valuta la Tua Casa a Piacenza — Consulenza Gratuita | Davide Scaglia</title>
+<meta name="description" content="Scopri la strategia giusta per vendere casa a Piacenza. Davide Scaglia, agente immobiliare dal 2007: metodo chiaro, acquirenti selezionati, zero sorprese. Consulenza gratuita.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://venderecasapiacenza.it/wizard">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Consulenza immobiliare Piacenza — Davide Scaglia",
-  "description": "Consulenza professionale con Davide Scaglia, agente immobiliare a Piacenza dal 2007.",
+  "name": "Consulenza gratuita per vendere casa a Piacenza — Davide Scaglia",
+  "description": "Consulenza professionale con Davide Scaglia, agente immobiliare a Piacenza dal 2007. Strategia personalizzata, valutazione reale, nessuna sorpresa.",
   "provider": {
     "@type": "RealEstateAgent",
     "name": "Davide Scaglia — Immobiliare Scaglia",
@@ -26,103 +26,309 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
-:root{--nero:#1c1a17;--oro:#B8860B;--oro-chiaro:#d4a520;--oro-scuro:#8B6508;--bianco:#fdfcf9;--grigio:#7a7570;--grigio-chiaro:#f2ede3;--verde:#16a34a;--card:#fff;--radius:8px;--radius-lg:16px;}
+:root{
+  --nero:#1c1a17;
+  --oro:#B8860B;
+  --oro-chiaro:#d4a520;
+  --oro-scuro:#8B6508;
+  --bianco:#fdfcf9;
+  --grigio:#7a7570;
+  --grigio-chiaro:#f2ede3;
+  --verde:#16a34a;
+  --card:#fff;
+  --radius:8px;
+  --radius-lg:16px;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);min-height:100vh;-webkit-font-smoothing:antialiased;}
-.topbar{background:rgba(10,10,10,0.97);border-bottom:1px solid rgba(184,134,11,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:80px;position:sticky;top:0;z-index:100;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--nero);
+  color:var(--nero);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ===== TOPBAR ===== */
+.topbar{
+  background:rgba(8,8,8,0.98);
+  border-bottom:1px solid rgba(184,134,11,0.18);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+  position:sticky;top:0;z-index:100;
+}
 .topbar-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
-.logo-ds{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;background:linear-gradient(135deg,#DC3C3C,#648CC8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;border:2px solid #D4AF37;border-radius:4px;width:96px;height:96px;display:flex;align-items:center;justify-content:center;}
-.logo-name{font-family:'Playfair Display',serif;color:#fff;font-size:22px;font-weight:700;letter-spacing:2.5px;}
-.logo-sub{font-size:11px;color:var(--oro);letter-spacing:3px;text-transform:uppercase;margin-top:3px;}
-.topbar-back{color:rgba(255,255,255,0.6);font-size:13px;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
-.topbar-back:hover{color:var(--oro);}
-.wizard-hero{background:linear-gradient(135deg,#0F1117 0%,#1a2438 100%);padding:52px 5% 44px;text-align:center;border-bottom:1px solid rgba(184,134,11,0.15);}
-.hero-label{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--oro);margin-bottom:18px;}
-.wizard-hero h1{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(24px,3.6vw,44px);font-weight:900;line-height:1.18;margin-bottom:22px;}
+.logo-mark{
+  width:52px;height:52px;
+  border:1.5px solid #D4AF37;
+  border-radius:4px;background:#0F1117;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.logo-mark span{
+  font-family:'Playfair Display',serif;
+  font-size:28px;font-weight:700;letter-spacing:-1px;
+  background:linear-gradient(135deg,#DC3C3C 0%,#B42850 35%,#648CC8 75%,#3CDCF0 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.logo-text{color:#fff;}
+.logo-text .brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;display:block;}
+.logo-text .sub{font-size:9px;color:var(--oro);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-top:3px;display:block;}
+.topbar-back{
+  color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;
+  display:flex;align-items:center;gap:6px;
+  border:1px solid rgba(255,255,255,0.12);
+  padding:8px 16px;border-radius:100px;
+  transition:all .2s;
+}
+.topbar-back:hover{color:var(--oro);border-color:rgba(184,134,11,0.4);}
+
+/* ===== WIZARD HERO ===== */
+.wizard-hero{
+  background:linear-gradient(150deg,#0A0D14 0%,#121A2C 55%,#0A0D14 100%);
+  padding:52px 5% 48px;
+  text-align:center;
+  border-bottom:1px solid rgba(184,134,11,0.14);
+  position:relative;overflow:hidden;
+}
+.wizard-hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 68% 55% at 50% 40%,rgba(184,134,11,0.07),transparent);
+  pointer-events:none;
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(184,134,11,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(184,134,11,0.03) 1px,transparent 1px);
+  background-size:54px 54px;pointer-events:none;
+}
+.hero-label{
+  font-size:10px;font-weight:700;letter-spacing:3.5px;
+  text-transform:uppercase;color:var(--oro);
+  margin-bottom:20px;position:relative;z-index:1;
+}
+.wizard-hero h1{
+  font-family:'Playfair Display',serif;
+  color:#fff;
+  font-size:clamp(26px,3.8vw,48px);
+  font-weight:900;line-height:1.15;
+  margin-bottom:24px;
+  position:relative;z-index:1;
+}
 .wizard-hero h1 em{font-style:italic;color:var(--oro);}
-.hero-body p{color:rgba(255,255,255,0.7);font-size:16px;max-width:620px;margin:0 auto 14px;line-height:1.75;}
+.hero-body{position:relative;z-index:1;}
+.hero-body p{
+  color:rgba(255,255,255,0.68);
+  font-size:clamp(15px,1.7vw,17px);
+  max-width:600px;margin:0 auto 14px;line-height:1.78;
+}
 .hero-p2{color:rgba(255,255,255,0.85)!important;font-style:italic;}
-.hero-quote{font-family:'Playfair Display',serif;font-size:clamp(18px,2.6vw,28px);font-style:italic;line-height:1.65;margin:28px auto 0;max-width:620px;text-align:center;background:linear-gradient(135deg,#FF6B4A 0%,#DC3C3C 15%,#E8195E 28%,#B42850 40%,#A01450 52%,#7A4FB5 64%,#648CC8 76%,#3CDCF0 88%,#50E3C2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.hero-cta-label{font-family:'Playfair Display',serif;font-size:clamp(16px,2vw,21px);color:#fff;font-weight:700;margin:32px 0 8px;letter-spacing:.3px;}
-.hero-sub{color:rgba(255,255,255,0.6);font-size:15px;max-width:520px;margin:0 auto 28px;line-height:1.65;}
-.trust-row{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:4px;}
-.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.55);font-size:13px;}
-.trust-item b{color:rgba(255,255,255,0.9);}
-.progress-wrap{background:var(--grigio-chiaro);padding:18px 5%;border-bottom:1px solid rgba(0,0,0,0.07);}
-.progress-inner{max-width:680px;margin:0 auto;}
+.hero-quote{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(17px,2.2vw,26px);
+  font-style:italic;line-height:1.65;
+  margin:30px auto 0;max-width:580px;
+  background:linear-gradient(135deg,#FF6B4A 0%,#DC3C3C 15%,#E8195E 28%,#B42850 40%,#A01450 52%,#7A4FB5 64%,#648CC8 76%,#3CDCF0 88%,#50E3C2 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  position:relative;z-index:1;
+}
+.hero-cta-label{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(17px,2.1vw,22px);
+  color:#fff;font-weight:700;
+  margin:34px 0 10px;
+  position:relative;z-index:1;
+}
+.hero-sub{
+  color:rgba(255,255,255,0.58);
+  font-size:clamp(14px,1.5vw,16px);
+  max-width:500px;margin:0 auto 28px;line-height:1.65;
+  position:relative;z-index:1;
+}
+.trust-row{
+  display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+  position:relative;z-index:1;
+}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.5);font-size:13px;}
+.trust-item b{color:rgba(255,255,255,0.88);}
+
+/* ===== PROGRESS ===== */
+.progress-wrap{
+  background:var(--grigio-chiaro);
+  padding:16px 5%;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  position:sticky;top:72px;z-index:90;
+}
+.progress-inner{max-width:660px;margin:0 auto;}
 .progress-labels{display:flex;justify-content:space-between;margin-bottom:8px;}
-.progress-label{font-size:11px;color:var(--grigio);font-weight:500;letter-spacing:.5px;transition:color .3s;}
+.progress-label{font-size:11px;color:var(--grigio);font-weight:500;letter-spacing:.4px;transition:color .3s;}
 .progress-label.active{color:var(--oro);font-weight:700;}
-.progress-bar{height:4px;background:rgba(0,0,0,0.1);border-radius:2px;overflow:hidden;}
+.progress-bar{height:3px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden;}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--oro),var(--oro-chiaro));border-radius:2px;transition:width .5s ease;}
-.wizard-main{background:var(--grigio-chiaro);padding:36px 5% 60px;min-height:calc(100vh - 260px);}
-.wizard-card{max-width:680px;margin:0 auto;background:var(--card);border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,0.07);padding:40px;box-shadow:0 4px 40px rgba(0,0,0,0.06);}
+
+/* ===== WIZARD CARD ===== */
+.wizard-main{background:var(--grigio-chiaro);padding:36px 5% 72px;min-height:calc(100vh - 310px);}
+.wizard-card{max-width:660px;margin:0 auto;background:var(--card);border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,0.07);padding:40px;box-shadow:0 4px 40px rgba(0,0,0,0.07);}
+
+/* steps */
 .step{display:none;animation:fadeIn .3s ease;}
 .step.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
-.step-num{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--oro);margin-bottom:10px;}
-.step h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--nero);margin-bottom:8px;line-height:1.2;}
-.step .sub{font-size:15px;color:var(--grigio);margin-bottom:28px;line-height:1.6;}
-.field-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grigio);margin-bottom:10px;display:block;}
+.step-num{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro);margin-bottom:12px;}
+.step h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--nero);margin-bottom:10px;line-height:1.2;}
+.step .sub{font-size:clamp(14px,1.5vw,16px);color:var(--grigio);margin-bottom:28px;line-height:1.65;}
+
+/* options */
+.field-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--grigio);margin-bottom:10px;display:block;}
 .options-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;}
-.option-btn{background:#fff;border:1.5px solid rgba(0,0,0,0.1);border-radius:var(--radius);padding:16px 14px;cursor:pointer;text-align:left;transition:all .18s;display:flex;align-items:center;gap:11px;font-family:'DM Sans',sans-serif;width:100%;}
+.option-btn{
+  background:#fff;border:1.5px solid rgba(0,0,0,0.1);
+  border-radius:var(--radius);padding:16px 14px;
+  cursor:pointer;text-align:left;
+  transition:all .18s;
+  display:flex;align-items:center;gap:11px;
+  font-family:'DM Sans',sans-serif;width:100%;
+}
 .option-btn:hover{border-color:var(--oro);background:rgba(184,134,11,0.04);}
-.option-btn.selected{border-color:var(--oro);background:rgba(184,134,11,0.09);box-shadow:0 0 0 1px var(--oro);}
+.option-btn.selected{border-color:var(--oro);background:rgba(184,134,11,0.08);box-shadow:0 0 0 1px var(--oro);}
 .option-icon{font-size:22px;flex-shrink:0;}
 .option-label{font-size:14px;font-weight:600;color:var(--nero);display:block;}
 .option-hint{font-size:12px;color:var(--grigio);display:block;margin-top:2px;}
 .option-btn.col3{flex-direction:column;text-align:center;padding:14px 10px;justify-content:center;}
 .option-btn.col3 .option-label{font-size:13px;text-align:center;}
-.form-group label{display:block;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#3a3835;margin-bottom:6px;}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:#fff;border:1.5px solid rgba(0,0,0,0.18);color:#1c1a17;font-family:'DM Sans',sans-serif;font-size:15px;padding:13px 15px;border-radius:var(--radius);transition:border-color .2s;outline:none;}
-.form-group input::placeholder,.form-group textarea::placeholder{color:#888;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--oro);background:#fffef8;}
+
+/* form */
+.form-block{margin-bottom:28px;}
+.form-block + .form-block{padding-top:24px;border-top:1px solid rgba(0,0,0,0.06);}
+.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#3a3835;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;background:#fff;
+  border:1.5px solid rgba(0,0,0,0.14);
+  color:#1c1a17;font-family:'DM Sans',sans-serif;
+  font-size:15px;padding:13px 15px;
+  border-radius:var(--radius);
+  transition:border-color .2s;outline:none;
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#aaa;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--oro);background:#fffef9;}
 .form-group select{color:#1c1a17;}
 .form-group select option{color:#1c1a17;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.btn-row{display:flex;gap:12px;align-items:center;margin-top:6px;}
-.btn-prev{background:transparent;border:1.5px solid rgba(0,0,0,0.12);color:var(--grigio);padding:13px 22px;border-radius:var(--radius);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;transition:all .2s;white-space:nowrap;}
+
+/* btn row */
+.btn-row{display:flex;gap:12px;align-items:center;margin-top:8px;}
+.btn-prev{
+  background:transparent;border:1.5px solid rgba(0,0,0,0.12);
+  color:var(--grigio);padding:13px 22px;
+  border-radius:var(--radius);cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
+  transition:all .2s;white-space:nowrap;
+}
 .btn-prev:hover{border-color:var(--nero);color:var(--nero);}
-.btn-next{background:linear-gradient(135deg,var(--oro),var(--oro-scuro));color:#fff;border:none;padding:14px 28px;border-radius:var(--radius);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;flex:1;transition:all .25s;letter-spacing:.3px;}
+.btn-next{
+  background:linear-gradient(135deg,var(--oro),var(--oro-scuro));
+  color:#fff;border:none;padding:14px 28px;
+  border-radius:var(--radius);cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;
+  flex:1;transition:all .25s;letter-spacing:.3px;
+}
 .btn-next:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 6px 20px rgba(184,134,11,0.4);}
-.btn-next:disabled{opacity:.45;cursor:not-allowed;}
-.privacy{font-size:11px;color:var(--grigio);line-height:1.6;margin-top:10px;}
-@media(max-width:600px){
+.btn-next:disabled{opacity:.38;cursor:not-allowed;}
+
+/* submit note */
+.submit-note{
+  font-size:12px;color:var(--grigio);
+  line-height:1.65;margin-top:12px;
+  text-align:center;
+}
+
+/* privacy */
+.privacy{font-size:11px;color:var(--grigio);line-height:1.65;margin-top:10px;}
+
+/* ===== MOBILE ===== */
+@media(max-width:640px){
+  .topbar{height:64px;padding:0 4%;}
+  .logo-mark{width:44px;height:44px;}
+  .logo-mark span{font-size:22px;}
+  .logo-text .brand{font-size:12px;letter-spacing:1.5px;}
+  .logo-text .sub{font-size:8px;letter-spacing:2px;}
+  .topbar-back{font-size:12px;padding:6px 12px;}
+
+  .wizard-hero{padding:40px 4% 44px;}
+  .progress-wrap{top:64px;}
+
+  .wizard-main{padding:24px 4% 56px;}
+  .wizard-card{padding:24px 18px;}
+
   .options-grid,.form-row{grid-template-columns:1fr;}
-  .wizard-card{padding:22px 18px;}
   .btn-row{flex-direction:column;}
   .btn-prev,.btn-next{width:100%;}
-  .logo-ds{width:64px;height:64px;font-size:34px;}
-  .logo-name{font-size:16px;}
+
+  .trust-row{flex-direction:column;align-items:center;gap:12px;}
+  .trust-item{font-size:13px;}
 }
+
+  /* ===== BRAND BLOCK FRASI ===== */
+  .brand-frasi-block{background:#0A0D14;padding:72px 5%;text-align:center;position:relative;overflow:hidden;}
+  .brand-frasi-block::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 40%,rgba(184,134,11,0.09),transparent);pointer-events:none;}
+  .bfb-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(184,134,11,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,134,11,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+  .bfb-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+  .bfb-slogan{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,48px);font-style:italic;line-height:1.45;margin:0 auto 2.5rem;background:linear-gradient(135deg,#FF6B4A 0%,#DC3C3C 15%,#E8195E 28%,#B42850 40%,#A01450 52%,#7A4FB5 64%,#648CC8 76%,#3CDCF0 88%,#50E3C2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .bfb-separator{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 2.5rem;max-width:520px;}
+  .bfb-sep-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.4),transparent);}
+  .bfb-saperlo{font-family:'DM Sans',sans-serif;font-size:clamp(16px,3.5vw,36px);font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:linear-gradient(90deg,#D4A520 0%,#FFD700 40%,#B8860B 70%,#D4A520 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+  .bfb-tagline{font-family:'Playfair Display',serif;font-size:clamp(20px,4vw,44px);font-weight:900;font-style:italic;line-height:1.2;margin:0 auto 10px;background:linear-gradient(135deg,#ffffff 0%,#d4a520 50%,#ffffff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .bfb-credit{font-size:11px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:8px;}
+  @media(max-width:640px){.brand-frasi-block{padding:52px 4%;}.bfb-saperlo{white-space:normal;}}
+
+
+  /* ===== BRAND BLOCK ===== */
+  .brand-manifesto{background:#0A0D14;padding:72px 5%;text-align:center;position:relative;overflow:hidden;}
+  .brand-manifesto::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 40%,rgba(184,134,11,0.09),transparent);pointer-events:none;}
+  .brand-manifesto .bm-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(184,134,11,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,134,11,0.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;}
+  .bm-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+  .bm-slogan{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,48px);font-style:italic;line-height:1.45;margin:0 auto 2.5rem;background:linear-gradient(135deg,#FF6B4A 0%,#DC3C3C 15%,#E8195E 28%,#B42850 40%,#A01450 52%,#7A4FB5 64%,#648CC8 76%,#3CDCF0 88%,#50E3C2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .bm-sep{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 2.5rem;max-width:520px;}
+  .bm-sep-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.45),transparent);}
+  .bm-saperlo{font-family:'DM Sans',sans-serif;font-size:clamp(18px,3.5vw,36px);font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:linear-gradient(90deg,#D4A520 0%,#FFD700 40%,#B8860B 70%,#d4a520 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .bm-tagline{font-family:'Playfair Display',serif;font-size:clamp(24px,4.5vw,52px);font-weight:900;font-style:italic;line-height:1.15;margin:0 auto 12px;background:linear-gradient(135deg,#ffffff 0%,#d4a520 50%,#ffffff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .bm-sub{font-family:'DM Sans',sans-serif;font-size:clamp(10px,1.5vw,13px);font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:10px;}
+  @media(max-width:640px){.brand-manifesto{padding:52px 4%;}.bm-saperlo{letter-spacing:0.1em;}.bm-sep{gap:10px;}}
+
 </style>
 </head>
 <body>
+
 <nav class="topbar">
   <a href="https://venderecasapiacenza.it" class="topbar-logo">
-    <div class="logo-ds">DS</div>
-    <div>
-      <div class="logo-name">DAVIDE SCAGLIA</div>
-      <div class="logo-sub">Vendere casa a Piacenza</div>
+    <div class="logo-mark"><span>DS</span></div>
+    <div class="logo-text">
+      <span class="brand">DAVIDE SCAGLIA</span>
+      <span class="sub">Vendere Casa a Piacenza</span>
     </div>
   </a>
   <a href="https://venderecasapiacenza.it" class="topbar-back">← Torna al sito</a>
 </nav>
 
 <div class="wizard-hero">
+  <div class="hero-grid"></div>
   <div class="hero-label">Immobiliare Scaglia · Piacenza · Dal 2007</div>
-  <h1>Qual è il vero valore del progetto<br>che vuoi realizzare<br><em>vendendo la tua casa a Piacenza?</em></h1>
+  <h1>
+    Dimmi qualcosa della tua casa.<br>
+    <em>Il resto lo costruiamo insieme.</em>
+  </h1>
   <div class="hero-body">
-    <p>Vendere casa non è solo una questione di cifre, ma di <strong style="color:rgba(255,255,255,0.95)">decisioni giuste al momento giusto.</strong> Un prezzo non in linea con il mercato di Piacenza non danneggia solo il portafogli — <strong style="color:rgba(255,255,255,0.95)">blocca i tuoi piani per il futuro, mentre gli immobili intorno continuano a vendersi.</strong></p>
-    <p class="hero-p2">Proteggere il valore della tua casa significa capire con chiarezza cosa sta succedendo in questo momento nella tua zona e nel tuo quartiere.</p>
+    <p>Vendere casa a Piacenza non è solo una questione di cifre — è una decisione che merita <strong style="color:rgba(255,255,255,0.92)">la strategia giusta al momento giusto.</strong> Un prezzo fuori mercato blocca i tuoi piani mentre gli immobili intorno continuano a vendersi.</p>
+    <p class="hero-p2">Quattro domande. Già al primo incontro, hai il quadro chiaro.</p>
     <div class="hero-quote">"Le case si scelgono con emozioni.<br>Si vivono con il cuore.<br>Si vendono con strategia e metodo."</div>
   </div>
-  <div class="hero-cta-label">Quattro domande. Il quadro è già chiaro.</div>
+  <div class="hero-cta-label">Non è un preventivo. È il primo passo di una strategia.</div>
   <p class="hero-sub">Rispondi e scopri cosa conviene fare adesso per il tuo immobile a Piacenza.</p>
   <div class="trust-row">
-    <div class="trust-item"><span>📞</span><b>Ti chiamo io entro 24h nei giorni feriali</b></div>
-    <div class="trust-item"><span>📍</span><b>Dal 2007 solo a Piacenza</b></div>
+    <div class="trust-item"><span>📞</span><b>Ti chiamo io personalmente entro 24h</b></div>
+    <div class="trust-item"><span>📍</span><b>Dal 2007 solo a Piacenza e hinterland</b></div>
+    <div class="trust-item"><span>🔒</span><b>Nessun impegno. Solo chiarezza.</b></div>
   </div>
 </div>
 
@@ -141,32 +347,70 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
 <div class="wizard-main">
 <div class="wizard-card">
 
+<!-- STEP 1 -->
 <div class="step active" id="step1">
   <div class="step-num">Passo 1 di 4</div>
-  <h2>Di che immobile<br>si tratta?</h2>
-  <p class="sub">Ogni casa ha la sua storia. Dimmi qual è la tua — ci aiuta a capire subito come muoverci.</p>
+  <h2>Di che immobile si tratta?</h2>
+  <p class="sub">Ogni casa ha la sua storia e le sue dinamiche di mercato. Dimmi qual è la tua — ci aiuta a capire subito come muoverci.</p>
   <div class="options-grid">
-    <button class="option-btn" onclick="sel(this,'tipo','Appartamento')"><span class="option-icon">🏢</span><div><span class="option-label">Appartamento</span><span class="option-hint">Bilocale, trilocale, quadrilocale…</span></div></button>
-    <button class="option-btn" onclick="sel(this,'tipo','Villa / Casa indipendente')"><span class="option-icon">🏡</span><div><span class="option-label">Villa / Casa indipendente</span><span class="option-hint">Giardino, autonomia totale</span></div></button>
-    <button class="option-btn" onclick="sel(this,'tipo','Casa a schiera')"><span class="option-icon">🏘</span><div><span class="option-label">Casa a schiera</span><span class="option-hint">Bifamiliare, a schiera</span></div></button>
-    <button class="option-btn" onclick="sel(this,'tipo','Rustico / Casale')"><span class="option-icon">🌾</span><div><span class="option-label">Rustico / Casale</span><span class="option-hint">Campagna, da ristrutturare o finito</span></div></button>
+    <button class="option-btn" onclick="sel(this,'tipo','Appartamento')">
+      <span class="option-icon">🏢</span>
+      <div><span class="option-label">Appartamento</span><span class="option-hint">Bilocale, trilocale, quadrilocale…</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'tipo','Villa / Casa indipendente')">
+      <span class="option-icon">🏡</span>
+      <div><span class="option-label">Villa / Casa indipendente</span><span class="option-hint">Giardino, autonomia totale</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'tipo','Casa a schiera')">
+      <span class="option-icon">🏘</span>
+      <div><span class="option-label">Casa a schiera</span><span class="option-hint">Bifamiliare, a schiera</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'tipo','Rustico / Casale')">
+      <span class="option-icon">🌾</span>
+      <div><span class="option-label">Rustico / Casale</span><span class="option-hint">Campagna, da ristrutturare o finito</span></div>
+    </button>
   </div>
   <div class="btn-row"><button class="btn-next" id="n1" disabled onclick="go(2)">Avanti →</button></div>
 </div>
 
+<!-- STEP 2 -->
 <div class="step" id="step2">
   <div class="step-num">Passo 2 di 4</div>
-  <h2>Dove si trova<br>il tuo immobile?</h2>
-  <p class="sub">Ogni zona di Piacenza ha dinamiche di mercato diverse. Questo mi permette di arrivare alla nostra conversazione già preparato.</p>
+  <h2>Dove si trova il tuo immobile?</h2>
+  <p class="sub">Ogni zona di Piacenza ha dinamiche di mercato diverse. Questo mi permette di arrivare alla nostra conversazione già preparato sui tuoi dati reali.</p>
   <div class="options-grid">
-    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Centro storico')"><span class="option-icon">🏛</span><div><span class="option-label">Piacenza — Centro storico</span><span class="option-hint">Entro le mura, Capoluogo</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Quartieri residenziali')"><span class="option-icon">🏙</span><div><span class="option-label">Piacenza — Quartieri residenziali</span><span class="option-hint">Farnesiana, Roma, Pittoni…</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Gossolengo')"><span class="option-icon">🌳</span><div><span class="option-label">Gossolengo</span><span class="option-hint">Hinterland, 8 km dal centro</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Rivergaro')"><span class="option-icon">🏔</span><div><span class="option-label">Rivergaro</span><span class="option-hint">Valle Trebbia, 12 km</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Vigolzone')"><span class="option-icon">🌾</span><div><span class="option-label">Vigolzone</span><span class="option-hint">Campagna, 15 km</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Podenzano')"><span class="option-icon">🏡</span><div><span class="option-label">Podenzano</span><span class="option-hint">Pianura, 10 km</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Ponte dell\'Olio')"><span class="option-icon">🍃</span><div><span class="option-label">Ponte dell'Olio</span><span class="option-hint">Valle Nure, 18 km</span></div></button>
-    <button class="option-btn" onclick="sel(this,'zona','Altra zona')"><span class="option-icon">📍</span><div><span class="option-label">Altra zona</span><span class="option-hint">Lo specifico nella nota finale</span></div></button>
+    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Centro storico')">
+      <span class="option-icon">🏛</span>
+      <div><span class="option-label">Piacenza — Centro storico</span><span class="option-hint">Entro le mura, capoluogo</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Quartieri residenziali')">
+      <span class="option-icon">🏙</span>
+      <div><span class="option-label">Piacenza — Quartieri</span><span class="option-hint">Farnesiana, Roma, Pittoni…</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Gossolengo')">
+      <span class="option-icon">🌳</span>
+      <div><span class="option-label">Gossolengo</span><span class="option-hint">Hinterland, 8 km dal centro</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Rivergaro — Valle Trebbia')">
+      <span class="option-icon">🏔</span>
+      <div><span class="option-label">Rivergaro</span><span class="option-hint">Valle Trebbia, 12 km</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Vigolzone')">
+      <span class="option-icon">🌾</span>
+      <div><span class="option-label">Vigolzone</span><span class="option-hint">Campagna, 15 km</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Podenzano')">
+      <span class="option-icon">🏡</span>
+      <div><span class="option-label">Podenzano</span><span class="option-hint">Pianura, 10 km</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Ponte dell\'Olio — Valle Nure')">
+      <span class="option-icon">🍃</span>
+      <div><span class="option-label">Ponte dell'Olio</span><span class="option-hint">Valle Nure, 18 km</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'zona','Altra zona')">
+      <span class="option-icon">📍</span>
+      <div><span class="option-label">Altra zona</span><span class="option-hint">Lo specifico nella nota finale</span></div>
+    </button>
   </div>
   <div class="btn-row">
     <button class="btn-prev" onclick="go(1)">← Indietro</button>
@@ -174,31 +418,54 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
   </div>
 </div>
 
+<!-- STEP 3 -->
 <div class="step" id="step3">
   <div class="step-num">Passo 3 di 4</div>
-  <h2>Raccontami<br>la tua situazione</h2>
-  <p class="sub">Non ci sono risposte giuste o sbagliate. Più capisco il contesto, più la nostra conversazione sarà diretta e utile per te.</p>
+  <h2>Raccontami la tua situazione</h2>
+  <p class="sub">Non ci sono risposte giuste o sbagliate. Più capisco il contesto, più la nostra conversazione sarà diretta e concretamente utile per te.</p>
+
   <span class="field-label">Perché stai pensando di vendere?</span>
   <div class="options-grid" style="margin-bottom:22px;">
-    <button class="option-btn" onclick="sel(this,'motivo','Voglio comprare una casa più adatta')"><span class="option-icon">🔄</span><div><span class="option-label">Cambio casa</span><span class="option-hint">Più grande, più piccola, zona diversa</span></div></button>
-    <button class="option-btn" onclick="sel(this,'motivo','Eredità o successione')"><span class="option-icon">📜</span><div><span class="option-label">Eredità o successione</span><span class="option-hint">Immobile ricevuto, da gestire</span></div></button>
-    <button class="option-btn" onclick="sel(this,'motivo','Separazione o divorzio')"><span class="option-icon">⚖️</span><div><span class="option-label">Separazione o divorzio</span><span class="option-hint">Casa comune da liquidare</span></div></button>
-    <button class="option-btn" onclick="sel(this,'motivo','Trasferimento per lavoro o famiglia')"><span class="option-icon">✈️</span><div><span class="option-label">Trasferimento</span><span class="option-hint">Cambio città, nuova fase di vita</span></div></button>
-    <button class="option-btn" onclick="sel(this,'motivo','Necessità economica')"><span class="option-icon">💶</span><div><span class="option-label">Necessità economica</span><span class="option-hint">Ho bisogno di liquidità</span></div></button>
-    <button class="option-btn" onclick="sel(this,'motivo','Sto ancora valutando')"><span class="option-icon">🤔</span><div><span class="option-label">Sto ancora valutando</span><span class="option-hint">Voglio capire prima le possibilità</span></div></button>
+    <button class="option-btn" onclick="sel(this,'motivo','Voglio comprare una casa più adatta')">
+      <span class="option-icon">🔄</span>
+      <div><span class="option-label">Cambio casa</span><span class="option-hint">Più grande, più piccola, zona diversa</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'motivo','Eredità o successione')">
+      <span class="option-icon">📜</span>
+      <div><span class="option-label">Eredità o successione</span><span class="option-hint">Immobile ricevuto, da gestire</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'motivo','Separazione o divorzio')">
+      <span class="option-icon">⚖️</span>
+      <div><span class="option-label">Separazione o divorzio</span><span class="option-hint">Casa comune da liquidare</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'motivo','Trasferimento per lavoro o famiglia')">
+      <span class="option-icon">✈️</span>
+      <div><span class="option-label">Trasferimento</span><span class="option-hint">Cambio città, nuova fase di vita</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'motivo','Necessità economica')">
+      <span class="option-icon">💶</span>
+      <div><span class="option-label">Necessità economica</span><span class="option-hint">Ho bisogno di liquidità</span></div>
+    </button>
+    <button class="option-btn" onclick="sel(this,'motivo','Sto ancora valutando')">
+      <span class="option-icon">🤔</span>
+      <div><span class="option-label">Sto ancora valutando</span><span class="option-hint">Voglio capire prima le possibilità</span></div>
+    </button>
   </div>
+
   <span class="field-label">Il tuo immobile è attualmente…</span>
   <div class="options-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:22px;">
     <button class="option-btn col3" onclick="sel(this,'stato_uso','Abitato da me')"><span class="option-label">Abitato da me</span></button>
     <button class="option-btn col3" onclick="sel(this,'stato_uso','In affitto')"><span class="option-label">In affitto</span></button>
     <button class="option-btn col3" onclick="sel(this,'stato_uso','Vuoto / inutilizzato')"><span class="option-label">Vuoto</span></button>
   </div>
+
   <span class="field-label">Hai già parlato con altri agenti?</span>
   <div class="options-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:22px;">
     <button class="option-btn col3" onclick="sel(this,'agenti','No, sei il primo')"><span class="option-label">No, sei il primo</span></button>
-    <button class="option-btn col3" onclick="sel(this,'agenti','Sì, ho già valutazioni')"><span class="option-label">Sì, ho già valutazioni</span></button>
+    <button class="option-btn col3" onclick="sel(this,'agenti','Sì, ho già valutazioni')"><span class="option-label">Ho già valutazioni</span></button>
     <button class="option-btn col3" onclick="sel(this,'agenti','Sono già in agenzia')"><span class="option-label">Sono già in agenzia</span></button>
   </div>
+
   <span class="field-label">In quanto tempo vorresti vendere?</span>
   <div class="options-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:4px;">
     <button class="option-btn col3" onclick="sel(this,'tempi','Entro 3 mesi')"><span class="option-label">Entro 3 mesi</span></button>
@@ -206,18 +473,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     <button class="option-btn col3" onclick="sel(this,'tempi','Entro 1 anno')"><span class="option-label">Entro 1 anno</span></button>
     <button class="option-btn col3" onclick="sel(this,'tempi','Non ho fretta')"><span class="option-label">Non ho fretta</span></button>
   </div>
+
   <div class="btn-row" style="margin-top:24px;">
     <button class="btn-prev" onclick="go(2)">← Indietro</button>
     <button class="btn-next" id="n3" disabled onclick="go(4)">Avanti →</button>
   </div>
 </div>
 
-  <div class="step" id="step4">
-  <div class="step-num">Passo 4 di 4</div>
-  <h2>Raccontami l'immobile<br>e dove ti trovo</h2>
-  <p class="sub">Ti chiamo io — Davide Scaglia, direttamente. Più dettagli mi dai, più arrivo preparato.</p>
+<!-- STEP 4 -->
+<div class="step" id="step4">
+  <div class="step-num">Passo 4 di 4 — Ultimo step</div>
+  <h2>Raccontami l'immobile e dove ti trovo</h2>
+  <p class="sub">Ti chiamo io — Davide Scaglia, direttamente. Più dettagli mi dai, più arrivo preparato e la nostra conversazione sarà subito concreta.</p>
 
-  <!-- BLOCCO 1: Immobile -->
+  <!-- L'immobile -->
   <div class="form-block">
     <span class="field-label">L'immobile</span>
     <div class="form-row">
@@ -239,7 +508,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     <div class="form-row">
       <div class="form-group">
         <label>Zona / quartiere</label>
-        <input type="text" id="fquartiere" placeholder="Es. Farnesiana, centro storico...">
+        <input type="text" id="fquartiere" placeholder="Es. Farnesiana, centro storico…">
       </div>
       <div class="form-group">
         <label>Superficie (mq)</label>
@@ -259,11 +528,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     <div class="form-row">
       <div class="form-group">
         <label>Stato conservativo</label>
-        <input type="text" id="fstato" placeholder="Es. abitabile, da ristrutturare...">
+        <input type="text" id="fstato" placeholder="Es. abitabile, da ristrutturare…">
       </div>
       <div class="form-group">
         <label>Classe energetica</label>
-        <input type="text" id="fclasse" placeholder="Es. C, G, non so...">
+        <input type="text" id="fclasse" placeholder="Es. C, G, non so…">
       </div>
     </div>
     <div class="form-row">
@@ -278,11 +547,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     </div>
     <div class="form-group">
       <label>Altre caratteristiche</label>
-      <input type="text" id="faltro" placeholder="Es. cantina, soffitta, riscaldamento autonomo...">
+      <input type="text" id="faltro" placeholder="Es. cantina, soffitta, riscaldamento autonomo…">
     </div>
   </div>
 
-  <!-- BLOCCO 2: Situazione mercato -->
+  <!-- Situazione attuale -->
   <div class="form-block">
     <span class="field-label">Situazione attuale</span>
     <div class="form-row">
@@ -297,11 +566,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     </div>
     <div class="form-group">
       <label>Hai già ricevuto visite o offerte?</label>
-      <input type="text" id="fofferte" placeholder="Es. molte visite ma nessuna offerta...">
+      <input type="text" id="fofferte" placeholder="Es. molte visite ma nessuna offerta…">
     </div>
   </div>
 
-  <!-- BLOCCO 3: Contatti -->
+  <!-- Contatti -->
   <div class="form-block">
     <span class="field-label">I tuoi contatti</span>
     <div class="form-row">
@@ -309,14 +578,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
       <div class="form-group"><label>Cognome</label><input type="text" id="fl" placeholder="Il tuo cognome"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Telefono *</label><input type="tel" id="fp" placeholder="+39 ..." oninput="chk()"></div>
+      <div class="form-group"><label>Telefono *</label><input type="tel" id="fp" placeholder="+39 …" oninput="chk()"></div>
       <div class="form-group"><label>Email (opzionale)</label><input type="email" id="fe" placeholder="la@tua.email"></div>
     </div>
     <div class="form-row">
       <div class="form-group">
         <label>Quando ti chiamo?</label>
         <select id="fo">
-          <option value="">Seleziona...</option>
+          <option value="">Seleziona…</option>
           <option>Mattina (9:00 – 12:00)</option>
           <option>Primo pomeriggio (13:00 – 16:00)</option>
           <option>Pomeriggio (16:00 – 19:00)</option>
@@ -326,7 +595,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
       <div class="form-group">
         <label>Come preferisci essere contattato?</label>
         <select id="fcontatto">
-          <option value="">Seleziona...</option>
+          <option value="">Seleziona…</option>
           <option>Telefonata</option>
           <option>WhatsApp</option>
           <option>Email</option>
@@ -335,19 +604,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
     </div>
     <div class="form-group">
       <label>Qualcosa che vuoi dirmi subito (opzionale)</label>
-      <textarea id="fnote" rows="2" placeholder="Es. è un'eredità, è in affitto, ho già un'offerta, voglio capire il valore reale..." style="resize:none;"></textarea>
+      <textarea id="fnote" rows="2" placeholder="Es. è un'eredità, è in affitto, ho già un'offerta, voglio capire il valore reale…" style="resize:none;"></textarea>
     </div>
   </div>
 
-  <p class="privacy">🔒 I tuoi dati non vengono ceduti a terzi e sono trattati nel rispetto del GDPR. Ti contatto solo io, Davide Scaglia.</p>
+  <p class="privacy">🔒 I tuoi dati non vengono ceduti a terzi e sono trattati nel rispetto del GDPR. Ti contatto solo io, Davide Scaglia — nessun call center.</p>
   <div class="btn-row" style="margin-top:18px;">
     <button class="btn-prev" onclick="go(3)">← Indietro</button>
     <button class="btn-next" id="n4" disabled onclick="showConferma()">Parliamone →</button>
   </div>
+  <p class="submit-note">Nessun impegno. Solo chiarezza.</p>
 </div>
 
-</div>
-</div>
+</div><!-- /wizard-card -->
+</div><!-- /wizard-main -->
 
 <script>
 var d={tipo:'',zona:'',motivo:'',stato_uso:'',agenti:'',tempi:''};
@@ -425,7 +695,7 @@ function showConferma(){
     +'\n🔑 Stato uso: '+d.stato_uso
     +'\n🤝 Agenti: '+d.agenti
     +'\n⏱ Tempi: '+d.tempi
-    +(orario?'\n🕐 Orario: '+orario:'')
+    +(orario?'\n🕐 Orario preferito: '+orario:'')
     +(contatto?'\n📱 Contatto preferito: '+contatto:'')
     +(note?'\n📝 Note: '+note:'')
     +'\n\nAttendo di sentirti.';
