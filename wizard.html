@@ -23,7 +23,8 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 :root{--nero:#1c1a17;--oro:#B8860B;--oro-chiaro:#d4a520;--oro-scuro:#8B6508;--bianco:#fdfcf9;--grigio:#7a7570;--grigio-chiaro:#f2ede3;--verde:#16a34a;--card:#fff;--radius:8px;--radius-lg:16px;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -73,10 +74,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
 .option-hint{font-size:12px;color:var(--grigio);display:block;margin-top:2px;}
 .option-btn.col3{flex-direction:column;text-align:center;padding:14px 10px;justify-content:center;}
 .option-btn.col3 .option-label{font-size:13px;text-align:center;}
-.form-group{margin-bottom:14px;}
-.form-group label{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--grigio);margin-bottom:6px;}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--grigio-chiaro);border:1.5px solid rgba(0,0,0,0.1);color:var(--nero);font-family:'DM Sans',sans-serif;font-size:15px;padding:13px 15px;border-radius:var(--radius);transition:border-color .2s;outline:none;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--oro);background:#fff;}
+.form-group label{display:block;font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#3a3835;margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:#fff;border:1.5px solid rgba(0,0,0,0.18);color:#1c1a17;font-family:'DM Sans',sans-serif;font-size:15px;padding:13px 15px;border-radius:var(--radius);transition:border-color .2s;outline:none;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#888;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--oro);background:#fffef8;}
+.form-group select{color:#1c1a17;}
+.form-group select option{color:#1c1a17;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .btn-row{display:flex;gap:12px;align-items:center;margin-top:6px;}
 .btn-prev{background:transparent;border:1.5px solid rgba(0,0,0,0.12);color:var(--grigio);padding:13px 22px;border-radius:var(--radius);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;transition:all .2s;white-space:nowrap;}
@@ -209,92 +212,134 @@ body{font-family:'DM Sans',sans-serif;background:var(--nero);color:var(--nero);m
   </div>
 </div>
 
-<div class="step" id="step4">
-  <div class="step-num">Passo 4 di 4 — quasi fatto!</div>
-  <h2>Qualche dettaglio<br>sull'immobile e su dove ti trovo</h2>
-  <p class="sub">Più so, più arrivo preparato. Ti chiamo io — Davide Scaglia, direttamente.</p>
+  <div class="step" id="step4">
+  <div class="step-num">Passo 4 di 4</div>
+  <h2>Raccontami l'immobile<br>e dove ti trovo</h2>
+  <p class="sub">Ti chiamo io — Davide Scaglia, direttamente. Più dettagli mi dai, più arrivo preparato.</p>
 
-  <span class="field-label">L'immobile — dati principali</span>
-  <div class="form-row" style="margin-bottom:10px;">
-    <div class="form-group">
-      <label>Superficie (mq indicativi)</label>
-      <select id="fmq">
-        <option value="">Seleziona...</option>
-        <option>Fino a 50 mq</option>
-        <option>50 – 80 mq</option>
-        <option>80 – 120 mq</option>
-        <option>120 – 180 mq</option>
-        <option>Oltre 180 mq</option>
-      </select>
+  <!-- BLOCCO 1: Immobile -->
+  <div class="form-block">
+    <span class="field-label">L'immobile</span>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Tipologia *</label>
+        <select id="ftipologia">
+          <option value="">Seleziona...</option>
+          <option>Appartamento</option>
+          <option>Villa / Casa indipendente</option>
+          <option>Casa a schiera</option>
+          <option>Rustico / Casale</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Via e numero civico</label>
+        <input type="text" id="fvia" placeholder="Es. Via Roma 12, Piacenza">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Zona / quartiere</label>
+        <input type="text" id="fquartiere" placeholder="Es. Farnesiana, centro storico...">
+      </div>
+      <div class="form-group">
+        <label>Superficie (mq)</label>
+        <input type="text" id="fmq" placeholder="Es. 95">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Piano</label>
+        <input type="text" id="fpiano" placeholder="Es. 2° con ascensore">
+      </div>
+      <div class="form-group">
+        <label>Locali / vani</label>
+        <input type="text" id="fvani" placeholder="Es. 3 locali, 2 bagni">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Stato conservativo</label>
+        <input type="text" id="fstato" placeholder="Es. abitabile, da ristrutturare...">
+      </div>
+      <div class="form-group">
+        <label>Classe energetica</label>
+        <input type="text" id="fclasse" placeholder="Es. C, G, non so...">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Box / garage</label>
+        <input type="text" id="fbox" placeholder="Es. sì, box singolo">
+      </div>
+      <div class="form-group">
+        <label>Giardino / terrazzo</label>
+        <input type="text" id="fgiardino" placeholder="Es. terrazzo 20 mq">
+      </div>
     </div>
     <div class="form-group">
-      <label>Numero di vani / locali</label>
-      <select id="fvani">
-        <option value="">Seleziona...</option>
-        <option>Monolocale / bilocale</option>
-        <option>Trilocale (3 locali)</option>
-        <option>Quadrilocale (4 locali)</option>
-        <option>5 locali o più</option>
-      </select>
+      <label>Altre caratteristiche</label>
+      <input type="text" id="faltro" placeholder="Es. cantina, soffitta, riscaldamento autonomo...">
     </div>
-  </div>
-  <div class="form-row" style="margin-bottom:10px;">
-    <div class="form-group">
-      <label>Piano (se appartamento)</label>
-      <select id="fpiano">
-        <option value="">Seleziona...</option>
-        <option>Piano terra</option>
-        <option>1° – 3° piano</option>
-        <option>4° piano o superiore</option>
-        <option>Attico / ultimo piano</option>
-        <option>Non applicabile</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Stato conservativo</label>
-      <select id="fstato">
-        <option value="">Seleziona...</option>
-        <option>Ottimo / ristrutturato</option>
-        <option>Buono / abitabile</option>
-        <option>Da aggiornare</option>
-        <option>Da ristrutturare</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group" style="margin-bottom:18px;">
-    <label>Hai già un prezzo in mente? (opzionale)</label>
-    <select id="fprezzo">
-      <option value="">Preferisco sentire prima la tua opinione</option>
-      <option>Fino a 80.000 €</option>
-      <option>80.000 – 150.000 €</option>
-      <option>150.000 – 250.000 €</option>
-      <option>250.000 – 400.000 €</option>
-      <option>Oltre 400.000 €</option>
-    </select>
   </div>
 
-  <span class="field-label">I tuoi contatti</span>
-  <div class="form-row">
-    <div class="form-group"><label>Nome *</label><input type="text" id="fn" placeholder="Il tuo nome" oninput="chk()"></div>
-    <div class="form-group"><label>Cognome</label><input type="text" id="fl" placeholder="Il tuo cognome"></div>
+  <!-- BLOCCO 2: Situazione mercato -->
+  <div class="form-block">
+    <span class="field-label">Situazione attuale</span>
+    <div class="form-row">
+      <div class="form-group">
+        <label>È già in vendita?</label>
+        <input type="text" id="finvendita" placeholder="Sì / No / Da quanto tempo">
+      </div>
+      <div class="form-group">
+        <label>Prezzo richiesto o in mente</label>
+        <input type="text" id="fprezzo" placeholder="Es. 180.000 €">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Hai già ricevuto visite o offerte?</label>
+      <input type="text" id="fofferte" placeholder="Es. molte visite ma nessuna offerta...">
+    </div>
   </div>
-  <div class="form-group"><label>Telefono * — ti chiamo io</label><input type="tel" id="fp" placeholder="+39 ..." oninput="chk()"></div>
-  <div class="form-group"><label>Email (opzionale)</label><input type="email" id="fe" placeholder="la@tua.email"></div>
-  <div class="form-group">
-    <label>Quando preferisci che ti chiami?</label>
-    <select id="fo">
-      <option value="">Seleziona...</option>
-      <option>Mattina (9:00 – 12:00)</option>
-      <option>Primo pomeriggio (13:00 – 16:00)</option>
-      <option>Pomeriggio (16:00 – 19:00)</option>
-      <option>Qualsiasi orario va bene</option>
-    </select>
+
+  <!-- BLOCCO 3: Contatti -->
+  <div class="form-block">
+    <span class="field-label">I tuoi contatti</span>
+    <div class="form-row">
+      <div class="form-group"><label>Nome *</label><input type="text" id="fn" placeholder="Il tuo nome" oninput="chk()"></div>
+      <div class="form-group"><label>Cognome</label><input type="text" id="fl" placeholder="Il tuo cognome"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Telefono *</label><input type="tel" id="fp" placeholder="+39 ..." oninput="chk()"></div>
+      <div class="form-group"><label>Email (opzionale)</label><input type="email" id="fe" placeholder="la@tua.email"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Quando ti chiamo?</label>
+        <select id="fo">
+          <option value="">Seleziona...</option>
+          <option>Mattina (9:00 – 12:00)</option>
+          <option>Primo pomeriggio (13:00 – 16:00)</option>
+          <option>Pomeriggio (16:00 – 19:00)</option>
+          <option>Qualsiasi orario</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Come preferisci essere contattato?</label>
+        <select id="fcontatto">
+          <option value="">Seleziona...</option>
+          <option>Telefonata</option>
+          <option>WhatsApp</option>
+          <option>Email</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Qualcosa che vuoi dirmi subito (opzionale)</label>
+      <textarea id="fnote" rows="2" placeholder="Es. è un'eredità, è in affitto, ho già un'offerta, voglio capire il valore reale..." style="resize:none;"></textarea>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Qualcosa che vuoi dirmi subito (opzionale)</label>
-    <textarea id="fnote" rows="2" placeholder="Es: è un'eredità con più eredi, l'immobile è in affitto, ho già un'offerta…" style="resize:none;"></textarea>
-  </div>
-  <p class="privacy">🔒 I tuoi dati non vengono ceduti a terzi. Ti contatto solo io, Davide Scaglia.</p>
+
+  <p class="privacy">🔒 I tuoi dati non vengono ceduti a terzi e sono trattati nel rispetto del GDPR. Ti contatto solo io, Davide Scaglia.</p>
   <div class="btn-row" style="margin-top:18px;">
     <button class="btn-prev" onclick="go(3)">← Indietro</button>
     <button class="btn-next" id="n4" disabled onclick="showConferma()">Parliamone →</button>
@@ -342,29 +387,48 @@ function showConferma(){
   var email=document.getElementById('fe').value.trim();
   var orario=document.getElementById('fo').value;
   var note=document.getElementById('fnote').value.trim();
+  var tipologia=document.getElementById('ftipologia').value;
+  var via=document.getElementById('fvia').value;
+  var quartiere=document.getElementById('fquartiere').value;
   var mq=document.getElementById('fmq').value;
-  var vani=document.getElementById('fvani').value;
   var piano=document.getElementById('fpiano').value;
+  var vani=document.getElementById('fvani').value;
   var stato=document.getElementById('fstato').value;
+  var classe=document.getElementById('fclasse').value;
+  var box=document.getElementById('fbox').value;
+  var giardino=document.getElementById('fgiardino').value;
+  var faltro=document.getElementById('faltro').value;
+  var finvendita=document.getElementById('finvendita').value;
   var prezzo=document.getElementById('fprezzo').value;
+  var offerte=document.getElementById('fofferte').value;
+  var contatto=document.getElementById('fcontatto').value;
   var msg='Ciao Davide, ho compilato il modulo sul tuo sito.'
     +'\n\n👤 '+nome+(cognome?' '+cognome:'')
     +(phone?'\n📞 '+phone:'')
     +(email?'\n✉️ '+email:'')
-    +'\n\n🏠 Immobile: '+d.tipo
+    +'\n\n🏠 Tipologia: '+(tipologia||d.tipo)
     +'\n📍 Zona: '+d.zona
-    +'\n📐 Superficie: '+(mq||'non indicata')
-    +'\n🚪 Vani: '+(vani||'non indicati')
-    +'\n🏢 Piano: '+(piano||'non indicato')
-    +'\n🔧 Stato: '+(stato||'non indicato')
-    +'\n💶 Prezzo in mente: '+(prezzo||'da definire')
-    +'\n\n💬 Motivo vendita: '+d.motivo
-    +'\n🔑 Stato attuale: '+d.stato_uso
-    +'\n🤝 Agenti contattati: '+d.agenti
+    +(via?'\n📌 Indirizzo: '+via:'')
+    +(quartiere?'\n🏘 Quartiere: '+quartiere:'')
+    +(mq?'\n📐 Superficie: '+mq+' mq':'')
+    +(piano?'\n🏢 Piano: '+piano:'')
+    +(vani?'\n🚪 Locali: '+vani:'')
+    +(stato?'\n🔧 Stato: '+stato:'')
+    +(classe?'\n⚡ Classe energetica: '+classe:'')
+    +(box?'\n🚗 Box: '+box:'')
+    +(giardino?'\n🌿 Giardino/terrazzo: '+giardino:'')
+    +(faltro?'\n➕ Altro: '+faltro:'')
+    +'\n\n📊 In vendita: '+(finvendita||'non specificato')
+    +(prezzo?'\n💶 Prezzo: '+prezzo:'')
+    +(offerte?'\n🤝 Visite/offerte: '+offerte:'')
+    +'\n\n💬 Motivo: '+d.motivo
+    +'\n🔑 Stato uso: '+d.stato_uso
+    +'\n🤝 Agenti: '+d.agenti
     +'\n⏱ Tempi: '+d.tempi
-    +(orario?'\n🕐 Orario preferito: '+orario:'')
+    +(orario?'\n🕐 Orario: '+orario:'')
+    +(contatto?'\n📱 Contatto preferito: '+contatto:'')
     +(note?'\n📝 Note: '+note:'')
-    +'\n\nAttendo la tua chiamata.';
+    +'\n\nAttendo di sentirti.';
   try{
     sessionStorage.setItem('ds_nome',nome);
     sessionStorage.setItem('ds_wa_msg',msg);
