@@ -1,0 +1,333 @@
+{
+  "generatoIl": "2026-09-17T17:51:51.303Z",
+  "modalita": "produzione",
+  "sorgenti": [
+    {
+      "tipo": "csv",
+      "file": "annunci-manuali.csv",
+      "stato": "ok",
+      "conteggio": 0
+    },
+    {
+      "tipo": "crm",
+      "stato": "assente",
+      "motivo": "file non presente: /home/user/venderecasapiacenza/data/seeds/crm-immocrm.json",
+      "conteggio": 0
+    }
+  ],
+  "conformitaRobots": [
+    {
+      "id": "idealista",
+      "nome": "Idealista",
+      "categoria": "portaliImmobiliari",
+      "url": "https://www.idealista.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "vietato-per-data"
+    },
+    {
+      "id": "immobiliare-it",
+      "nome": "Immobiliare.it",
+      "categoria": "portaliImmobiliari",
+      "url": "https://www.immobiliare.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "consentito-solo-pagine-mercato"
+    },
+    {
+      "id": "casait",
+      "nome": "Casa.it",
+      "categoria": "portaliImmobiliari",
+      "url": "https://www.casa.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "wikicasa",
+      "nome": "Wikicasa",
+      "categoria": "portaliImmobiliari",
+      "url": "https://www.wikicasa.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "gate-away",
+      "nome": "Gate-Away (estero)",
+      "categoria": "portaliImmobiliari",
+      "url": "https://www.gate-away.com/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "subito",
+      "nome": "Subito.it",
+      "categoria": "piattaformeGeneraliste",
+      "url": "https://www.subito.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "facebook-marketplace",
+      "nome": "Facebook Marketplace",
+      "categoria": "piattaformeGeneraliste",
+      "url": "https://www.facebook.com/marketplace/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "vietato"
+    },
+    {
+      "id": "kijiji",
+      "nome": "Kijiji",
+      "categoria": "piattaformeGeneraliste",
+      "url": "https://www.kijiji.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "wallapop-bakeca",
+      "nome": "Bakeca.it",
+      "categoria": "piattaformeGeneraliste",
+      "url": "https://www.bakeca.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "omi",
+      "nome": "OMI — Osservatorio Mercato Immobiliare, Agenzia delle Entrate",
+      "categoria": "aggregatoriDati",
+      "url": "https://www.agenziaentrate.gov.it/portale/osservatorio-mercato-immobiliare",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "consentito"
+    },
+    {
+      "id": "istat",
+      "nome": "ISTAT — dati.istat.it",
+      "categoria": "aggregatoriDati",
+      "url": "https://data.istat.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "consentito"
+    },
+    {
+      "id": "caasa",
+      "nome": "Caasa.it",
+      "categoria": "aggregatoriDati",
+      "url": "https://www.mercato-immobiliare.info/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "realadvisor",
+      "nome": "RealAdvisor",
+      "categoria": "aggregatoriDati",
+      "url": "https://realadvisor.it/it/mercato-immobiliare/provincia-piacenza",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "recasa",
+      "nome": "Recasa",
+      "categoria": "aggregatoriDati",
+      "url": "https://recasa.re/mercato-immobiliare/pc",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "piacenzasera",
+      "nome": "PiacenzaSera",
+      "categoria": "stampa",
+      "url": "https://www.piacenzasera.it/feed/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "consentito-via-rss"
+    },
+    {
+      "id": "liberta",
+      "nome": "Libertà (Piacenza)",
+      "categoria": "stampa",
+      "url": "https://www.liberta.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "ilpiacenza",
+      "nome": "ilPiacenza",
+      "categoria": "stampa",
+      "url": "https://www.ilpiacenza.it/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "googlenews",
+      "nome": "Google News RSS",
+      "categoria": "stampa",
+      "url": "https://news.google.com/rss/search?q={query}&hl=it&gl=IT&ceid=IT:it",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "consentito"
+    },
+    {
+      "id": "idealista-news",
+      "nome": "Idealista News",
+      "categoria": "stampa",
+      "url": "https://www.idealista.it/news/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    },
+    {
+      "id": "mutuisupermarket",
+      "nome": "MutuiSupermarket News",
+      "categoria": "stampa",
+      "url": "https://www.mutuisupermarket.it/news-mutui/",
+      "consentito": false,
+      "motivo": "non verificabile in modalità offline",
+      "raccoltaDichiarata": "da-verificare"
+    }
+  ],
+  "totali": {
+    "annunci": 0,
+    "annunciLordi": 0,
+    "duplicatiEliminati": 0,
+    "conDataPubblicazione": 0,
+    "senzaData": 0
+  },
+  "anzianita": {
+    "giorniMediani": null,
+    "giorniMedi": null,
+    "giorniP90": null,
+    "giorniMassimi": null,
+    "oltre90giorni": 0,
+    "oltreUnAnno": 0,
+    "oltreDueAnni": 0,
+    "distribuzioneFasce": [
+      {
+        "etichetta": "Fresco (0–30 gg)",
+        "min": 0,
+        "max": 31,
+        "conteggio": 0,
+        "pct": 0
+      },
+      {
+        "etichetta": "In linea (31–90 gg)",
+        "min": 31,
+        "max": 91,
+        "conteggio": 0,
+        "pct": 0
+      },
+      {
+        "etichetta": "Rallentato (91–180 gg)",
+        "min": 91,
+        "max": 181,
+        "conteggio": 0,
+        "pct": 0
+      },
+      {
+        "etichetta": "Fermo (181–365 gg)",
+        "min": 181,
+        "max": 366,
+        "conteggio": 0,
+        "pct": 0
+      },
+      {
+        "etichetta": "Bloccato (1–2 anni)",
+        "min": 366,
+        "max": 731,
+        "conteggio": 0,
+        "pct": 0
+      },
+      {
+        "etichetta": "Storico (oltre 2 anni)",
+        "min": 731,
+        "max": null,
+        "conteggio": 0,
+        "pct": 0
+      }
+    ]
+  },
+  "prezzi": {
+    "mediano": null,
+    "medio": null,
+    "p10": null,
+    "p90": null,
+    "prezzoMqMediano": null
+  },
+  "perFascia": [
+    {
+      "id": "fresco",
+      "etichetta": "Fresco (0–30 gg)",
+      "segnale": "nessuno",
+      "azione": "monitorare",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    },
+    {
+      "id": "normale",
+      "etichetta": "In linea (31–90 gg)",
+      "segnale": "nella norma",
+      "azione": "monitorare",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    },
+    {
+      "id": "rallentato",
+      "etichetta": "Rallentato (91–180 gg)",
+      "segnale": "attenzione",
+      "azione": "contatto di cortesia: qui si pianta il seme",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    },
+    {
+      "id": "fermo",
+      "etichetta": "Fermo (181–365 gg)",
+      "segnale": "critico",
+      "azione": "lead caldo: il proprietario ha già provato e non ha ottenuto",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    },
+    {
+      "id": "bloccato",
+      "etichetta": "Bloccato (1–2 anni)",
+      "segnale": "critico",
+      "azione": "lead caldissimo: probabile prezzo sbagliato o agenzia inefficace",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    },
+    {
+      "id": "storico",
+      "etichetta": "Storico (oltre 2 anni)",
+      "segnale": "emergenza",
+      "azione": "priorità assoluta: sfiducia consolidata, serve un approccio di verità sui numeri",
+      "conteggio": 0,
+      "pct": 0,
+      "prezzoMedio": 0,
+      "prezzoMqMediano": 0
+    }
+  ],
+  "perComune": [],
+  "perAgenzia": [],
+  "classificaStallo": [],
+  "leadAcquisizione": []
+}

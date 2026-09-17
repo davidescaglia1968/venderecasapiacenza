@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "descrizione": "Registro dei concorrenti su Piacenza e zone servite. I dati di partenza sono pubblici (elenchi agenzie Idealista e TrovaCasa). Il modulo tools/concorrenza.mjs li arricchisce e calcola gli indicatori.",
+    "aggiornato": "2026-09-17",
+    "densitaMercato": {
+      "agenzieProvincia": 128,
+      "agenzieComunePiacenza": 101,
+      "fonte": "Idealista — elenchi agenzie, consultati il 2026-09-17",
+      "lettura": "101 agenzie si contendono un comune da 102.364 abitanti. Il differenziatore non può essere la presenza: deve essere il metodo e la competenza su una zona specifica."
+    }
+  },
+  "concorrenti": [
+    { "id": "la-piacentina", "nome": "Immobiliare La Piacentina", "tipo": "agenzia-locale", "zona": ["Piacenza", "Rivergaro", "Vigolzone", "Fiorenzuola", "Podenzano", "Carpaneto", "Bettola"], "annunciTotali": 257, "caseVendita": 230, "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "alta", "nota": "Primo operatore locale per volume di annunci. Presidia già Rivergaro e Vigolzone." },
+    { "id": "milanesi", "nome": "Milanesi Geom.", "tipo": "agenzia-locale", "zona": ["Piacenza", "Gossolengo", "Rottofreno", "Vigolzone", "Fiorenzuola"], "annunciTotali": 133, "caseVendita": 123, "indirizzo": "Via Manfredi 77A, 29122 Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "alta", "nota": "Concorrente diretto su Gossolengo, la zona in più forte crescita." },
+    { "id": "il-mediatore", "nome": "Il Mediatore (Angelo Bersani)", "tipo": "agenzia-locale", "zona": ["Piacenza", "Rottofreno", "Podenzano", "San Giorgio", "Calendasco"], "annunciTotali": 132, "caseVendita": 117, "indirizzo": "Via San Vincenzo 12, 29121 Piacenza", "fonte": "https://realadvisor.it/it/agenti-immobiliari/29121-piacenza", "minaccia": "alta", "nota": "Prezzo medio di vendita dichiarato 124k €: posizionamento sulla fascia accessibile." },
+    { "id": "farnese", "nome": "Farnese Soluzioni Immobiliari srl", "tipo": "agenzia-locale", "zona": ["Piacenza"], "annunciTotali": 65, "qualitaPubblicazionePct": 55, "anniSuIdealista": 7, "annunciPrimaPagina": 3, "rangePrezzo": { "min": 88000, "max": 695000 }, "fonte": "https://www.idealista.it/en/agenzie-immobiliari/piacenza-piacenza/agenzie-immobiliari", "minaccia": "media", "nota": "Solo il 55% di qualità di pubblicazione: spazio per differenziarsi sulla qualità delle schede." },
+    { "id": "evo", "nome": "Agenzia Evo Immobiliare", "tipo": "agenzia-locale", "zona": ["Piacenza"], "annunciTotali": 48, "qualitaPubblicazionePct": 49, "anniSuIdealista": 7, "tempoRispostaOre": 2, "rangePrezzo": { "min": 30000, "max": 350000 }, "fonte": "https://www.idealista.it/en/agenzie-immobiliari/piacenza-provincia/agenzie-immobiliari", "minaccia": "media", "nota": "Risponde in meno di 2 ore: il benchmark di reattività da battere. Il sito promette già 'risposta entro 24 ore' — va portata sotto le 2 ore." },
+    { "id": "tempocasa-dante", "nome": "Tempocasa Piacenza Dante", "tipo": "franchising", "zona": ["Piacenza", "Rivergaro", "Gossolengo"], "annunciTotali": 40, "caseVendita": 33, "indirizzo": "Piazzale Medaglie d'Oro 7, Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "alta", "nota": "Franchising con marchio forte, presente su Rivergaro e Gossolengo." },
+    { "id": "tempocasa-centro", "nome": "Tempocasa Piacenza Centro", "tipo": "franchising", "zona": ["Piacenza", "Podenzano", "Rottofreno", "Gazzola", "Bobbio"], "annunciTotali": 38, "caseVendita": 22, "indirizzo": "Via Gaetano Tononi 3, 29122 Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "media" },
+    { "id": "tecnocasa-vendocasa", "nome": "Tecnocasa Vendocasa — Industriale Piacenza srl", "tipo": "franchising", "zona": ["Piacenza", "Somaglia", "Gragnano Trebbiense"], "annunciTotali": 34, "caseVendita": 31, "indirizzo": "Via Genova 2/D, 29121 Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "media" },
+    { "id": "carini", "nome": "Carini Davide Immobiliare", "tipo": "agenzia-locale", "zona": ["Piacenza", "Pontenure", "Calendasco", "Agazzano"], "annunciTotali": 30, "caseVendita": 26, "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "bassa" },
+    { "id": "santa-caterina", "nome": "Immobiliare Santa Caterina srl", "tipo": "agenzia-locale", "zona": ["Piacenza"], "annunciTotali": 21, "caseVendita": 21, "indirizzo": "Via del Castello 42, 29121 Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "bassa" },
+    { "id": "grimaldi-clinica", "nome": "Grimaldi Immobiliare Piacenza Clinica", "tipo": "franchising", "zona": ["Piacenza", "Bobbio", "San Pietro in Cerro"], "annunciTotali": 61, "caseVendita": 55, "indirizzo": "Piazza del Borgo 21, 29121 Piacenza", "fonte": "https://www.trovacasa.it/agenzie-immobiliari/piacenza", "minaccia": "media" },
+    { "id": "gazzola-consulenza", "nome": "Gazzola Consulenza Immobiliare", "tipo": "agenzia-locale", "zona": ["Rivergaro", "Gossolengo", "Vigolzone"], "fonte": "https://www.piacenzacase.it/agenzie-immobiliari/gazzola-consulenza-immobiliare/vendita", "minaccia": "alta", "nota": "Concorrente diretto su tutte e tre le zone di valle. Pubblica anche capannoni e immobili commerciali." },
+    { "id": "idealista", "nome": "Idealista", "tipo": "portale", "zona": ["Provincia di Piacenza"], "minaccia": "competitor-di-attenzione", "nota": "Non vende case ma cattura la domanda. Un venditore che cerca 'quanto vale casa mia' atterra lì, non sul nostro sito." },
+    { "id": "immobiliare-it", "nome": "Immobiliare.it", "tipo": "portale", "zona": ["Provincia di Piacenza"], "minaccia": "competitor-di-attenzione", "nota": "Pubblica le quotazioni per comune: è il riferimento che il venditore usa per farsi un'idea da solo." },
+    { "id": "realadvisor", "nome": "RealAdvisor", "tipo": "portale-valuation", "zona": ["Provincia di Piacenza"], "minaccia": "competitor-di-attenzione", "nota": "Offre valutazioni automatiche online: intercetta il lead del venditore prima dell'agenzia." },
+    { "id": "dove-it", "nome": "Dove.it", "tipo": "agenzia-online", "zona": ["Italia"], "minaccia": "competitor-di-modello", "nota": "Modello a provvigione ridotta. Pubblica contenuti di mercato ottimizzati per la ricerca: compete direttamente sui contenuti." },
+    { "id": "agenteimmobiliareai", "nome": "AgenteImmobiliareAI", "tipo": "software-ai", "zona": ["Italia"], "minaccia": "competitor-di-posizionamento", "nota": "Vende a 2.500 € + IVA con esclusiva territoriale: se un concorrente di Piacenza lo adotta, occupa il posizionamento 'valutazione AI'." }
+  ],
+  "metricheDaTracciare": [
+    { "id": "n_annunci", "nome": "Numero annunci attivi", "frequenza": "settimanale", "perche": "Misura la pressione dell'offerta per zona." },
+    { "id": "qualita_pubblicazione", "nome": "Qualità di pubblicazione (%)", "frequenza": "mensile", "perche": "Idealista la rende pubblica: sotto il 60% c'è spazio per superare il concorrente sulla scheda." },
+    { "id": "tempo_risposta", "nome": "Tempo di risposta dichiarato", "frequenza": "mensile", "perche": "Il benchmark attuale è 'meno di 2 ore'." },
+    { "id": "prezzo_medio", "nome": "Prezzo medio degli annunci", "frequenza": "mensile", "perche": "Rivela il posizionamento di fascia del concorrente." },
+    { "id": "presenza_zone", "nome": "Presidio per zona servita", "frequenza": "mensile", "perche": "Mostra dove il territorio è scoperto." },
+    { "id": "recensioni", "nome": "Numero e voto recensioni Google", "frequenza": "mensile", "perche": "Primo segnale di fiducia per chi cerca 'agenzia immobiliare Piacenza'." }
+  ]
+}

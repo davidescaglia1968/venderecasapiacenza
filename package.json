@@ -1,0 +1,18 @@
+{
+  "name": "venderecasapiacenza-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Macchina di analisi e generazione contenuti per venderecasapiacenza.it — zero dipendenze runtime, solo Node 20+.",
+  "scripts": {
+    "test": "node --test tools/test/",
+    "build": "node tools/build.mjs",
+    "build:demo": "node tools/build.mjs --demo",
+    "market": "node tools/market.mjs",
+    "annunci": "node tools/annunci.mjs",
+    "notizie": "node tools/notizie.mjs",
+    "concorrenza": "node tools/concorrenza.mjs",
+    "social": "node tools/social.mjs"
+  },
+  "engines": { "node": ">=20.11" }
+}

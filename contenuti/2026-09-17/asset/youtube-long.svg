@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#1c1a17"/><stop offset="100%" stop-color="#3a332a"/>
+</linearGradient></defs>
+<rect width="1920" height="1080" fill="url(#g)"/>
+<rect x="0" y="1055" width="1920" height="25" fill="#B8860B"/>
+<text x="960" y="320" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="46" letter-spacing="12" fill="#B8860B">YOUTUBE</text>
+<text x="960" y="587" text-anchor="middle" font-family="Georgia,serif" font-size="117" font-weight="700" fill="#fdfcf9">I documenti che servono per vendere casa, prima di pubblicare</text>
+<text x="960" y="813" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="57" fill="rgba(253,252,249,.72)">venderecasapiacenza.it</text>
+<text x="960" y="956" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="50" letter-spacing="5" fill="#B8860B">DAVIDE SCAGLIA · PIACENZA · DAL 2007</text>
+</svg>

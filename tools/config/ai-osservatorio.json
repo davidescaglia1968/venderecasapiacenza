@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "descrizione": "Osservatorio AI: quali motori di intelligenza artificiale usano le persone quando cercano casa o chiedono come venderla, e quali strumenti AI usano le agenzie concorrenti.",
+    "aggiornato": "2026-09-17",
+    "percheConta": "Nel 2026 una parte crescente delle ricerche immobiliari parte da una domanda a un'assistente AI invece che da Google. Se il sito non è leggibile dalle AI, non esiste in quel canale. Da qui il file llms.txt, gli schema.org, i dati strutturati e i contenuti citabili.",
+    "notaMetriche": "Le quote variano molto a seconda del metodo di misurazione: StatCounter misura i referral web, Similarweb le visite, Sensor Tower le app. Le tre letture sono riportate insieme proprio perché divergono."
+  },
+  "quoteMercato": [
+    {
+      "ai": "ChatGPT",
+      "vendor": "OpenAI",
+      "statcounterReferralPct": 76.87,
+      "similarwebVisitePct": 53.97,
+      "sensorTowerAppPct": 46.4,
+      "periodo": "2026-06",
+      "tendenza": "in calo strutturale",
+      "nota": "Sceso sotto l'80% dei referral per la prima volta a marzo 2026 (78,16%). Resta il canale dominante.",
+      "fonti": ["https://tech-insider.org/chatgpt-market-share-below-50-percent-2026/", "https://gs.statcounter.com/press/google-gemini-overtakes-perplexity-to-become-second-largest-source-of-ai-chatbot-referrals-to-websites"]
+    },
+    {
+      "ai": "Google Gemini",
+      "vendor": "Google",
+      "statcounterReferralPct": 7.94,
+      "similarwebVisitePct": 28.15,
+      "sensorTowerAppPct": 27.7,
+      "periodo": "2026-06",
+      "tendenza": "in forte crescita",
+      "nota": "Quota referral quasi quadruplicata in 12 mesi: 2,31% (apr 2025) → 8,65% (mar 2026). A marzo 2026 ha superato Perplexity come seconda fonte di referral AI al mondo.",
+      "prioritaOttimizzazione": 1,
+      "fonti": ["https://gs.statcounter.com/press/google-gemini-overtakes-perplexity-to-become-second-largest-source-of-ai-chatbot-referrals-to-websites", "https://marketing4ecommerce.net/en/overview-ai-market-chatgpt-gemini/"]
+    },
+    {
+      "ai": "Perplexity",
+      "vendor": "Perplexity AI",
+      "statcounterReferralPct": 7.91,
+      "similarwebVisitePct": 1.34,
+      "periodo": "2026-06",
+      "tendenza": "stabile",
+      "nota": "Motore di ricerca con citazione delle fonti: premia i siti con dati verificabili e datati. Ottimo per i report di mercato.",
+      "prioritaOttimizzazione": 2
+    },
+    {
+      "ai": "Claude",
+      "vendor": "Anthropic",
+      "statcounterReferralPct": 3.74,
+      "similarwebVisitePct": 9.24,
+      "sensorTowerAppPct": 10.3,
+      "periodo": "2026-06",
+      "tendenza": "crescita più rapida del mercato",
+      "nota": "Visite mensili +306% in un trimestre (da 203 a 824 milioni). Forte su documenti lunghi e analisi: utile per guide e documenti tecnici.",
+      "prioritaOttimizzazione": 3,
+      "fonti": ["https://tech-insider.org/chatgpt-market-share-below-50-percent-2026/"]
+    },
+    {
+      "ai": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "statcounterReferralPct": 3.49,
+      "similarwebVisitePct": 1.28,
+      "periodo": "2026-06",
+      "tendenza": "stabile",
+      "prioritaOttimizzazione": 4
+    },
+    {
+      "ai": "Grok",
+      "vendor": "xAI",
+      "similarwebVisitePct": 2.38,
+      "sensorTowerAppPct": null,
+      "periodo": "2026-06",
+      "tendenza": "emergente",
+      "nota": "Accesso diretto ai dati di X: rileva i trend social in tempo reale.",
+      "prioritaOttimizzazione": 4
+    },
+    {
+      "ai": "DeepSeek",
+      "vendor": "DeepSeek",
+      "statcounterReferralPct": 0.03,
+      "similarwebVisitePct": 3.64,
+      "periodo": "2026-06",
+      "tendenza": "emergente, open source",
+      "nota": "Quota web bassa ma quota visite in crescita: da monitorare perché open source e a basso costo.",
+      "prioritaOttimizzazione": 5
+    }
+  ],
+  "segnaliEmergenti": [
+    {
+      "segnale": "Multi-utilizzo",
+      "dato": "Il 25,6% di chi usa principalmente ChatGPT usa anche Gemini; il 40,8% di chi preferisce Gemini usa anche ChatGPT (picco 26,8% a maggio 2026).",
+      "implicazione": "Ottimizzare per un solo motore non basta più: servono contenuti leggibili da tutti.",
+      "fonte": "https://marketing4ecommerce.net/en/overview-ai-market-chatgpt-gemini/"
+    },
+    {
+      "segnale": "GEO — Generative Engine Optimization",
+      "dato": "StatCounter: «l'era della Generative Engine Optimization è pienamente iniziata». I siti devono essere ottimizzati per più chatbot, non per uno solo.",
+      "implicazione": "llms.txt, schema.org completo, dati datati e citabili, pagine a domanda diretta.",
+      "fonte": "https://gs.statcounter.com/press/google-gemini-overtakes-perplexity-to-become-second-largest-source-of-ai-chatbot-referrals-to-websites"
+    },
+    {
+      "segnale": "AI nel lavoro d'agenzia",
+      "dato": "Idealista News (maggio 2026): Hubique aggiorna App Hub Agency con home staging AI, valutazione in tempo reale basata su AI, generazione di annunci ottimizzati per più portali e un agente artificiale per il back office e il follow-up clienti.",
+      "implicazione": "I concorrenti stanno già automatizzando follow-up e annunci. Il vantaggio competitivo si sposta su metodo, dati locali e relazione.",
+      "fonte": "https://www.idealista.it/news/immobiliare/imprese/2026/05/25/378447-intelligenza-artificiale-nell-immobiliare-e-piu-un-pericolo-o-un-opportunita-per-il"
+    }
+  ],
+  "strumentiAiSettore": [
+    { "nome": "Zillow Zestimate", "categoria": "Valutazione automatica", "uso": "Modello neurale su 110M+ immobili con dati MLS e pubblici", "rilevanzaItalia": "bassa — mercato USA", "fonte": "https://www.unite.ai/best-ai-real-estate-tools/" },
+    { "nome": "Restb.ai", "categoria": "Visione artificiale sulle foto", "uso": "Tag automatico foto, descrizione annunci, controlli di conformità, segnali di valutazione", "rilevanzaItalia": "alta — integrabile con qualsiasi gestionale" },
+    { "nome": "Matterport", "categoria": "Tour 3D e digital twin", "uso": "Tour immersivi, planimetrie, dollhouse view", "rilevanzaItalia": "alta — differenzia l'annuncio sui portali" },
+    { "nome": "Styldod / ReimagineHome", "categoria": "Virtual staging", "uso": "Allestimento virtuale, preview di ristrutturazione, controlli di conformità", "rilevanzaItalia": "alta — decisiva per immobili vuoti o datati" },
+    { "nome": "Mashvisor", "categoria": "Analisi investimento", "uso": "Comparabili locativi, dati Airbnb, analisi dinamica", "rilevanzaItalia": "media" },
+    { "nome": "DealMachine (Alma)", "categoria": "Lead off-market", "uso": "Ricerca proprietari, liste lead, outreach automatizzato", "rilevanzaItalia": "bassa — dati USA" },
+    { "nome": "Wise Agent", "categoria": "CRM", "uso": "CRM immobiliare con follow-up automatizzato e scrittura AI", "rilevanzaItalia": "media — il CRM immocrm copre già queste funzioni" },
+    { "nome": "Reonomy", "categoria": "Dati proprietari CRE", "uso": "Ricerca proprietari, storico transazioni, segnali predittivi di vendita", "rilevanzaItalia": "bassa — commerciale USA" },
+    { "nome": "Immobilix / ProVirtualStage", "categoria": "Virtual staging IT", "uso": "Staging virtuale, tour 360, planimetrie 2D/3D, video AI, annunci social, banner", "rilevanzaItalia": "alta — team italiano (Friuli Venezia Giulia)" },
+    { "nome": "AgenteImmobiliareAI", "categoria": "Valutazione AI white label", "uso": "Valutazione automatica da dati OMI, lead 24/7, esclusiva territoriale, da 2.500 € + IVA", "rilevanzaItalia": "alta — concorrente diretto sul posizionamento" },
+    { "nome": "Hubique App Hub Agency", "categoria": "Suite agenzia", "uso": "Home staging, annunci, rilievi 3D, planimetrie quotate, valutazione AI in tempo reale, agente AI di back office", "rilevanzaItalia": "alta — già adottato da agenzie italiane" }
+  ],
+  "checklistOttimizzazioneAi": [
+    { "id": "llms-txt", "azione": "llms.txt aggiornato con dati, zone e contatti in testo semplice", "stato": "presente-da-correggere", "nota": "Contiene 'dal 2008' mentre il sito dice 'dal 2007'." },
+    { "id": "schema-org", "azione": "Schema.org RealEstateAgent + FAQPage + Article su ogni pagina", "stato": "parziale", "nota": "Presente in index.html; assente sulle pagine interne." },
+    { "id": "dati-datati", "azione": "Ogni dato di mercato con data e fonte esplicita", "stato": "da-fare" },
+    { "id": "domande-dirette", "azione": "Una pagina per ogni domanda che un venditore pone a un'AI", "stato": "da-fare" },
+    { "id": "robots-ai", "azione": "robots.txt che consente esplicitamente GPTBot, ClaudeBot, PerplexityBot, Google-Extended", "stato": "fatto" },
+    { "id": "citabilita", "azione": "Tabelle e liste in HTML puro (le AI le leggono meglio del contenuto in JS)", "stato": "da-verificare" }
+  ]
+}

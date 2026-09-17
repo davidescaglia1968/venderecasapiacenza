@@ -1,0 +1,16 @@
+# Dipendenze (il progetto non ne ha a runtime, ma se ne venissero aggiunte)
+node_modules/
+package-lock.json
+
+# Cache HTTP locale dei tool di analisi: non va versionata
+.cache/
+
+# Sistema operativo ed editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Il CRM è un repository separato: nessun export deve finire qui per sbaglio
+data/seeds/crm-immocrm.json

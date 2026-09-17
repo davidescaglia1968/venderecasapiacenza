@@ -1,0 +1,24 @@
+{
+  "generatoIl": "2026-09-17T17:51:51.306Z",
+  "esiti": [
+    {
+      "sorgente": "offline",
+      "stato": "salto",
+      "motivo": "esecuzione offline: nessuna richiesta di rete",
+      "conteggio": 0
+    },
+    {
+      "sorgente": "archivio",
+      "stato": "riusato",
+      "conteggio": 0
+    }
+  ],
+  "totali": {
+    "notizie": 0,
+    "queryMonitorate": 15,
+    "altaRilevanzaLocale": 0
+  },
+  "perPilastro": {},
+  "notizie": [],
+  "spuntiEditoriali": []
+}

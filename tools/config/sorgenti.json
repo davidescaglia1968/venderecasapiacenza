@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "descrizione": "Registro delle sorgenti di dati per l'intelligence immobiliare su Piacenza e zone servite.",
+    "regola": "Nessun adapter può effettuare una richiesta senza aver superato tools/lib/robots.mjs (canFetch). Le sorgenti con stato 'vietato' o 'solo-manuale' non vengono mai richieste in automatico.",
+    "verificato": "2026-09-17"
+  },
+  "portaliImmobiliari": [
+    {
+      "id": "idealista",
+      "nome": "Idealista",
+      "url": "https://www.idealista.it/",
+      "tipo": "portale",
+      "copertura": "128 agenzie in provincia di Piacenza, 101 nel comune di Piacenza",
+      "robots": {
+        "verificato": "2026-09-17",
+        "esito": "parziale",
+        "note": "Disallow esplicito su /*?ordine=pubblicazione-asc e /*?ordine=pubblicazione-desc (ordinamento per data di pubblicazione), su /search-list e sui percorsi con 3+ filtri. Le pagine di ricerca base /vendita-case/ sono consentite."
+      },
+      "raccoltaAutomatica": "vietato-per-data",
+      "strategia": "Usare solo le pagine consentite e le statistiche pubbliche di mercato. La data di pubblicazione degli annunci va inserita dal CRM o da rilievo manuale.",
+      "datiPubbliciUtili": [
+        "Report prezzi provincia: idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+        "Elenco agenzie con n. annunci e 'publication quality': idealista.it/agenzie-immobiliari/piacenza-piacenza/agenzie-immobiliari"
+      ]
+    },
+    {
+      "id": "immobiliare-it",
+      "nome": "Immobiliare.it",
+      "url": "https://www.immobiliare.it/",
+      "tipo": "portale",
+      "robots": {
+        "verificato": "2026-09-17",
+        "esito": "parziale",
+        "note": "Disallow su /search-list, /search-map, /ricerca-mappa/, /dettaglio.php, /utente/. Le pagine /mercato-immobiliare/ e /vendita-case/ NON sono bloccate. Sitemap dichiarata: immobiliare.it/sitemap.xml"
+      },
+      "raccoltaAutomatica": "consentito-solo-pagine-mercato",
+      "strategia": "Leggere le pagine di quotazioni comunali (/mercato-immobiliare/emilia-romagna/<comune>/) per l'andamento prezzi. Non raccogliere le schede annuncio in automatico."
+    },
+    {
+      "id": "casait",
+      "nome": "Casa.it",
+      "url": "https://www.casa.it/",
+      "tipo": "portale",
+      "robots": { "verificato": null, "esito": "da verificare", "note": "Verificare robots.txt prima di qualsiasi richiesta." },
+      "raccoltaAutomatica": "da-verificare"
+    },
+    {
+      "id": "wikicasa",
+      "nome": "Wikicasa",
+      "url": "https://www.wikicasa.it/",
+      "tipo": "portale",
+      "robots": { "verificato": null, "esito": "da verificare" },
+      "raccoltaAutomatica": "da-verificare"
+    },
+    {
+      "id": "gate-away",
+      "nome": "Gate-Away (estero)",
+      "url": "https://www.gate-away.com/",
+      "tipo": "portale",
+      "robots": { "verificato": null, "esito": "da verificare" },
+      "raccoltaAutomatica": "da-verificare",
+      "nota": "Rilevante per rustici e seconde case in Val Trebbia e Val Nure: domanda estera."
+    }
+  ],
+  "piattaformeGeneraliste": [
+    {
+      "id": "subito",
+      "nome": "Subito.it",
+      "url": "https://www.subito.it/",
+      "tipo": "generalista",
+      "robots": { "verificato": null, "esito": "da verificare" },
+      "raccoltaAutomatica": "da-verificare",
+      "nota": "Alta incidenza di privati: qui si trovano i venditori senza agenzia, cioè i lead di acquisizione."
+    },
+    {
+      "id": "facebook-marketplace",
+      "nome": "Facebook Marketplace",
+      "url": "https://www.facebook.com/marketplace/",
+      "tipo": "generalista",
+      "robots": { "verificato": null, "esito": "chiuso", "note": "Accesso solo via app autenticata. Nessuna raccolta automatica legittima." },
+      "raccoltaAutomatica": "vietato",
+      "strategia": "Rilievo manuale settimanale nel CRM: filtro 'Case in vendita' su Piacenza + 40 km, annotare data di pubblicazione e prezzo."
+    },
+    {
+      "id": "kijiji",
+      "nome": "Kijiji",
+      "url": "https://www.kijiji.it/",
+      "tipo": "generalista",
+      "robots": { "verificato": null, "esito": "da verificare" },
+      "raccoltaAutomatica": "da-verificare"
+    },
+    {
+      "id": "wallapop-bakeca",
+      "nome": "Bakeca.it",
+      "url": "https://www.bakeca.it/",
+      "tipo": "generalista",
+      "robots": { "verificato": null, "esito": "da verificare" },
+      "raccoltaAutomatica": "da-verificare"
+    }
+  ],
+  "aggregatoriDati": [
+    { "id": "omi", "nome": "OMI — Osservatorio Mercato Immobiliare, Agenzia delle Entrate", "url": "https://www.agenziaentrate.gov.it/portale/osservatorio-mercato-immobiliare", "tipo": "dato-ufficiale", "raccoltaAutomatica": "consentito", "nota": "Quotazioni semestrali per zona OMI + NTN e IMI trimestrali. Riferimento difendibile in sede di valutazione formale." },
+    { "id": "istat", "nome": "ISTAT — dati.istat.it", "url": "https://data.istat.it/", "tipo": "dato-ufficiale", "raccoltaAutomatica": "consentito", "nota": "SDMX/JSON API pubblica: permessi di costruire, popolazione, prezzi al consumo." },
+    { "id": "caasa", "nome": "Caasa.it", "url": "https://www.mercato-immobiliare.info/", "tipo": "aggregatore", "raccoltaAutomatica": "da-verificare", "nota": "Pubblica medie €/mq per tipologia e comune derivate dagli annunci." },
+    { "id": "realadvisor", "nome": "RealAdvisor", "url": "https://realadvisor.it/it/mercato-immobiliare/provincia-piacenza", "tipo": "aggregatore", "raccoltaAutomatica": "da-verificare", "nota": "Tabella prezzi per tutti i 46 comuni della provincia, con serie storica 2021-2026." },
+    { "id": "recasa", "nome": "Recasa", "url": "https://recasa.re/mercato-immobiliare/pc", "tipo": "aggregatore", "raccoltaAutomatica": "da-verificare" }
+  ],
+  "stampa": [
+    { "id": "piacenzasera", "nome": "PiacenzaSera", "url": "https://www.piacenzasera.it/", "rss": "https://www.piacenzasera.it/feed/", "tipo": "quotidiano-locale", "raccoltaAutomatica": "consentito-via-rss" },
+    { "id": "liberta", "nome": "Libertà (Piacenza)", "url": "https://www.liberta.it/", "rss": null, "tipo": "quotidiano-locale", "raccoltaAutomatica": "da-verificare", "nota": "Testata principale della provincia. Verificare presenza di feed RSS." },
+    { "id": "ilpiacenza", "nome": "ilPiacenza", "url": "https://www.ilpiacenza.it/", "rss": null, "tipo": "quotidiano-online-locale", "raccoltaAutomatica": "da-verificare" },
+    { "id": "googlenews", "nome": "Google News RSS", "url": "https://news.google.com/rss/search", "rss": "https://news.google.com/rss/search?q={query}&hl=it&gl=IT&ceid=IT:it", "tipo": "aggregatore-notizie", "raccoltaAutomatica": "consentito", "nota": "Feed RSS pubblico documentato. È il canale principale per il monitoraggio continuo delle notizie." },
+    { "id": "idealista-news", "nome": "Idealista News", "url": "https://www.idealista.it/news/", "tipo": "stampa-settore", "raccoltaAutomatica": "da-verificare", "nota": "Pubblica analisi di settore (es. AI nell'immobiliare, maggio 2026)." },
+    { "id": "mutuisupermarket", "nome": "MutuiSupermarket News", "url": "https://www.mutuisupermarket.it/news-mutui/", "tipo": "stampa-settore", "raccoltaAutomatica": "da-verificare", "nota": "Commenta le note trimestrali OMI: utile per tassi mutuo." }
+  ],
+  "queryMonitoraggio": [
+    "mercato immobiliare Piacenza",
+    "prezzi case Piacenza",
+    "vendere casa Piacenza",
+    "agenzia immobiliare Piacenza",
+    "compravendite immobiliari Emilia-Romagna",
+    "mutui prima casa tassi {anno}",
+    "Val Trebbia immobili",
+    "Val Nure immobili",
+    "Gossolengo case vendita",
+    "Rivergaro case vendita",
+    "Vigolzone case vendita",
+    "Podenzano case vendita",
+    "Ponte dell'Olio case vendita",
+    "intelligenza artificiale agenzie immobiliari",
+    "OMI nota trimestrale compravendite"
+  ]
+}

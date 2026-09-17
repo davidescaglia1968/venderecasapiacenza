@@ -1,0 +1,164 @@
+[
+  {
+    "id": "z1",
+    "comune": "Piacenza",
+    "zona": "Tutte le zone",
+    "mqMin": 1130,
+    "mqMax": 2137,
+    "mqMedio": 1835,
+    "affittoMq": 9.64,
+    "tempoMedioGiorni": 90,
+    "scontoMedioPct": 6,
+    "variazioneAnnuaPct": 8.7,
+    "abitanti": 102364,
+    "frazioni": [
+      "Centro storico",
+      "Farnesiana",
+      "Besurica",
+      "Infrangibile",
+      "Borgotrebbia",
+      "San Lazzaro",
+      "Zona Stadio",
+      "Via Roma / Porta Galera",
+      "Roncaglia",
+      "Borghetto",
+      "Gerbido",
+      "Mortizza"
+    ],
+    "aggiornataIl": "2026-06",
+    "fonti": [
+      "Idealista — report prezzi provincia di Piacenza (2026-06)",
+      "Immobiliare.it — mercato immobiliare Piacenza provincia (2026)",
+      "PiacenzaSera — Prezzi delle case ancora in crescita (2026-04)"
+    ]
+  },
+  {
+    "id": "z2",
+    "comune": "Gossolengo",
+    "zona": "Intero comune e frazioni",
+    "mqMin": 900,
+    "mqMax": 2400,
+    "mqMedio": 1953,
+    "affittoMq": 8.77,
+    "tempoMedioGiorni": 110,
+    "scontoMedioPct": 7,
+    "variazioneAnnuaPct": 16,
+    "abitanti": 5431,
+    "frazioni": [
+      "Quarto",
+      "Settima",
+      "Cà de Sarti",
+      "Pontenuovo"
+    ],
+    "aggiornataIl": "2026-06",
+    "fonti": [
+      "Idealista — Gossolengo (2026-06)",
+      "Immobiliare.it — Gossolengo (2025-12)"
+    ]
+  },
+  {
+    "id": "z3",
+    "comune": "Rivergaro",
+    "zona": "Intero comune e frazioni",
+    "mqMin": 700,
+    "mqMax": 1964,
+    "mqMedio": 1350,
+    "affittoMq": 6.82,
+    "tempoMedioGiorni": 150,
+    "scontoMedioPct": 9,
+    "variazioneAnnuaPct": 5.7,
+    "abitanti": 6853,
+    "frazioni": [
+      "Rallio",
+      "Ancarano",
+      "Niviano",
+      "Pieve Dugliara",
+      "Castellino",
+      "Bassano",
+      "Roveleto Landi"
+    ],
+    "aggiornataIl": "2026-06",
+    "fonti": [
+      "Idealista — Rivergaro (2026-06)",
+      "Immobiliare.it — Rivergaro (2025-12)",
+      "Requot — Valutazione immobili Rivergaro (zone OMI) (2026)"
+    ]
+  },
+  {
+    "id": "z4",
+    "comune": "Podenzano",
+    "zona": "Intero comune e frazioni",
+    "mqMin": 800,
+    "mqMax": 1900,
+    "mqMedio": 1518,
+    "affittoMq": 6.57,
+    "tempoMedioGiorni": 120,
+    "scontoMedioPct": 7,
+    "variazioneAnnuaPct": 1.3,
+    "abitanti": 8990,
+    "frazioni": [
+      "San Polo",
+      "Turro",
+      "Gariga",
+      "Casoni",
+      "La Verza"
+    ],
+    "aggiornataIl": "2026",
+    "fonti": [
+      "Idealista — Podenzano (2026-06)",
+      "Immobiliare.it — Podenzano (2026)"
+    ]
+  },
+  {
+    "id": "z5",
+    "comune": "Vigolzone",
+    "zona": "Intero comune e frazioni",
+    "mqMin": 500,
+    "mqMax": 1300,
+    "mqMedio": 848,
+    "affittoMq": 5.53,
+    "tempoMedioGiorni": 165,
+    "scontoMedioPct": 10,
+    "variazioneAnnuaPct": -14.1,
+    "abitanti": 4218,
+    "frazioni": [
+      "Villò",
+      "Albarola",
+      "Bettola di Vigolzone",
+      "Carmiano",
+      "Grazzano Visconti",
+      "Centenara"
+    ],
+    "aggiornataIl": "2026",
+    "fonti": [
+      "Idealista — Vigolzone (2026-06)",
+      "Immobiliare.it — Vigolzone (2025-12)"
+    ]
+  },
+  {
+    "id": "z6",
+    "comune": "Ponte dell'Olio",
+    "zona": "Intero comune e frazioni",
+    "mqMin": 400,
+    "mqMax": 1200,
+    "mqMedio": 794,
+    "affittoMq": 4.04,
+    "tempoMedioGiorni": 150,
+    "scontoMedioPct": 9,
+    "variazioneAnnuaPct": 0,
+    "abitanti": 4614,
+    "frazioni": [
+      "Biana",
+      "Castione",
+      "Cassano",
+      "Torchiarra",
+      "Monte Santo",
+      "Raffalda"
+    ],
+    "aggiornataIl": "2026",
+    "fonti": [
+      "Immobiliare.it — Ponte dell'Olio (2025-12)",
+      "RealAdvisor — Provincia di Piacenza (2026-04)"
+    ]
+  }
+]

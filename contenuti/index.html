@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendario contenuti — strumento interno</title>
+<meta name="description" content="Generatore di contenuti social per piattaforma.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://venderecasapiacenza.it/contenuti/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://venderecasapiacenza.it/contenuti/">
+<meta property="og:title" content="Calendario contenuti — strumento interno">
+<meta property="og:description" content="Generatore di contenuti social per piattaforma.">
+<meta property="og:image" content="https://venderecasapiacenza.it/assets/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/davide-scaglia.jpg">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--nero:#1c1a17;--bianco:#fdfcf9;--oro:#B8860B;--oro-scuro:#8B6508;--grigio:#7a7570;--grigio-chiaro:#f2ede3;--verde:#2f6b4f;--rosso:#8b2f2f;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bianco);color:var(--nero);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;line-height:1.25;font-weight:700}
+h1{font-size:clamp(28px,4.4vw,46px);margin-bottom:16px}
+h2{font-size:clamp(22px,3vw,32px);margin:44px 0 14px}
+h3{font-size:clamp(18px,2.2vw,22px);margin:28px 0 10px}
+em{color:var(--oro);font-style:italic}
+a{color:var(--oro-scuro)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav.top{position:sticky;top:0;z-index:20;background:rgba(28,26,23,.96);backdrop-filter:blur(8px);color:#fff;padding:12px 0}
+nav.top .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav.top a{color:rgba(255,255,255,.82);text-decoration:none;font-size:14px;font-weight:600}
+nav.top a.brand{color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:17px;margin-right:auto}
+nav.top a:hover{color:var(--oro)}
+.hero{background:var(--nero);color:#fff;padding:56px 0 44px}
+.hero .wrap{max-width:900px}
+.hero p.lead{color:rgba(255,255,255,.72);font-size:17px;max-width:720px}
+.eyebrow{display:inline-block;color:var(--oro);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+main{padding:34px 0 60px}
+.grid{display:grid;gap:18px}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid #ece7dd;border-radius:var(--radius);padding:20px}
+.card h3{margin-top:0}
+.card .num{font-family:'Playfair Display',Georgia,serif;font-size:34px;color:var(--oro);line-height:1}
+.kpi{background:#fff;border:1px solid #ece7dd;border-left:3px solid var(--oro);border-radius:8px;padding:16px 18px}
+.kpi .k-l{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grigio)}
+.kpi .k-v{font-family:'Playfair Display',Georgia,serif;font-size:30px;color:var(--nero)}
+.kpi .k-s{font-size:13px;color:var(--grigio)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:15px;margin:14px 0}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ece7dd}
+th{background:var(--nero);color:#fff;font-weight:600;font-size:13px;letter-spacing:.04em}
+tbody tr:nth-child(even){background:#faf8f3}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.pos{color:var(--verde);font-weight:700}
+.neg{color:var(--rosso);font-weight:700}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:700;background:var(--grigio-chiaro);color:var(--nero)}
+.badge.critico{background:#f7e0e0;color:var(--rosso)}
+.badge.attenzione{background:#fbf0d8;color:#8a6100}
+.badge.emergenza{background:#f2d3d3;color:#6b1f1f}
+.badge.ok{background:#e2efe7;color:var(--verde)}
+.barra{height:9px;border-radius:99px;background:var(--grigio-chiaro);overflow:hidden;margin-top:6px}
+.barra > span{display:block;height:100%;background:linear-gradient(90deg,var(--oro),var(--oro-scuro))}
+.cta{background:var(--nero);color:#fff;border-radius:var(--radius);padding:30px;margin:40px 0}
+.cta h2{margin-top:0;color:#fff}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--oro),var(--oro-scuro));color:var(--nero);padding:13px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn+.btn{margin-left:10px}
+blockquote{border-left:3px solid var(--oro);padding:8px 0 8px 18px;margin:20px 0;font-family:'Playfair Display',Georgia,serif;font-size:19px;font-style:italic;color:#4a453e}
+ul.check{list-style:none}
+ul.check li{padding-left:26px;position:relative;margin-bottom:9px}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--oro);font-weight:700}
+.fonte{font-size:13px;color:var(--grigio);margin-top:8px}
+.fonte a{color:var(--grigio)}
+footer{background:var(--nero);color:rgba(255,255,255,.62);padding:40px 0;font-size:14px}
+footer a{color:rgba(255,255,255,.85)}
+footer .cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:24px}
+footer h4{color:#fff;font-size:15px;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{margin-bottom:6px}
+.briciole{font-size:13px;color:var(--grigio);margin-bottom:18px}
+.briciole a{color:var(--grigio)}
+@media(max-width:640px){table{font-size:14px}th,td{padding:8px}.hero{padding:38px 0 30px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Calendario contenuti — strumento interno","description":"Generatore di contenuti social per piattaforma.","url":"https://venderecasapiacenza.it/contenuti/","inLanguage":"it-IT","author":{"@type":"Person","name":"Davide Scaglia","jobTitle":"Agente Immobiliare"},"publisher":{"@type":"RealEstateAgent","name":"Immobiliare Scaglia","url":"https://venderecasapiacenza.it"}}</script>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="brand" href="/">Immobiliare Scaglia</a>
+<a href="/#zone">Zone</a>
+<a href="/mercato/">Mercato</a>
+<a href="/concorrenza/">Analisi</a>
+<a href="/blog/">Blog</a>
+<a href="/guide/">Guide</a>
+<a href="/wizard">Valutazione</a>
+<a href="/#contatti">Contatti</a>
+</div></nav>
+<header class="hero"><div class="wrap"><span class="eyebrow">Strumento interno · non indicizzato</span>
+<h1>Fabbrica <em>contenuti</em></h1>
+<p class="lead">8 argomenti trasformati in pacchetti pronti per 15 piattaforme, ciascuno nel formato esatto. Pagina di lavoro.</p></div></header>
+<main><div class="wrap"><div class="grid c3">
+<div class="kpi"><div class="k-l">Pacchetti generati</div><div class="k-v">8</div><div class="k-s">uno per argomento</div></div>
+<div class="kpi"><div class="k-l">Piattaforme coperte</div><div class="k-v">15</div><div class="k-s">testo, immagine e video</div></div>
+<div class="kpi"><div class="k-l">Entro i limiti</div><div class="k-v">100%</div><div class="k-s">caratteri per piattaforma</div></div>
+</div><h2>Pilastri editoriali</h2><table><thead><tr><th>Pilastro</th><th class="num">Quota</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong>Mercato in numeri</strong></td><td class="num">30%</td><td>Prezzi, volumi, tassi, tempi di vendita per zona. Costruisce autorevolezza e viene citato dalle AI.</td></tr><tr><td><strong>Errori dei venditori</strong></td><td class="num">25%</td><td>I 7 errori e le loro varianti. Intercetta il dolore del venditore bloccato da mesi.</td></tr><tr><td><strong>Metodo e documenti</strong></td><td class="num">20%</td><td>Come lavora Davide: valutazione, selezione acquirenti, APE, conformità catastale, rogito.</td></tr><tr><td><strong>Storie e casi reali</strong></td><td class="num">15%</td><td>Vendite concluse, situazioni complesse (eredità, separazioni), testimonianze. Nessuna promessa gonfiata.</td></tr><tr><td><strong>Vita di zona</strong></td><td class="num">10%</td><td>Val Trebbia, Val Nure, quartieri di Piacenza. Radicamento territoriale.</td></tr>
+</tbody></table><h2>Formati per piattaforma</h2><table><thead><tr><th>Piattaforma</th><th>Formato</th><th class="num">Dimensioni</th><th class="num">Durata</th><th class="num">Limite testo</th><th class="num">Priorità</th></tr></thead><tbody>
+<tr><td><strong>Instagram</strong></td><td>Reels</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">30s</td>
+<td class="num">2200</td>
+<td class="num">1</td></tr><tr><td><strong>Instagram</strong></td><td>Post carosello</td>
+<td class="num">1080×1440<br><small>3:4</small></td>
+<td class="num">—</td>
+<td class="num">2200</td>
+<td class="num">1</td></tr><tr><td><strong>Instagram</strong></td><td>Stories</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">15s</td>
+<td class="num">—</td>
+<td class="num">3</td></tr><tr><td><strong>TikTok</strong></td><td>In-feed</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">30s</td>
+<td class="num">4000</td>
+<td class="num">2</td></tr><tr><td><strong>YouTube</strong></td><td>Shorts</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">45s</td>
+<td class="num">—</td>
+<td class="num">2</td></tr><tr><td><strong>YouTube</strong></td><td>Video lungo</td>
+<td class="num">1920×1080<br><small>16:9</small></td>
+<td class="num">480s</td>
+<td class="num">—</td>
+<td class="num">3</td></tr><tr><td><strong>Facebook</strong></td><td>Post feed</td>
+<td class="num">1080×1350<br><small>4:5</small></td>
+<td class="num">—</td>
+<td class="num">63206</td>
+<td class="num">1</td></tr><tr><td><strong>Facebook</strong></td><td>Reels</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">30s</td>
+<td class="num">—</td>
+<td class="num">3</td></tr><tr><td><strong>LinkedIn</strong></td><td>Post</td>
+<td class="num">1200×627<br><small>1.91:1</small></td>
+<td class="num">—</td>
+<td class="num">3000</td>
+<td class="num">2</td></tr><tr><td><strong>X (Twitter)</strong></td><td>Post</td>
+<td class="num">1200×675<br><small>16:9</small></td>
+<td class="num">—</td>
+<td class="num">280</td>
+<td class="num">4</td></tr><tr><td><strong>Threads</strong></td><td>Post</td>
+<td class="num">1080×1350<br><small>4:5</small></td>
+<td class="num">—</td>
+<td class="num">500</td>
+<td class="num">4</td></tr><tr><td><strong>Google Business Profile</strong></td><td>Post / foto</td>
+<td class="num">1280×720<br><small>16:9</small></td>
+<td class="num">—</td>
+<td class="num">1500</td>
+<td class="num">1</td></tr><tr><td><strong>WhatsApp</strong></td><td>Broadcast / Stato</td>
+<td class="num">1080×1920<br><small>9:16</small></td>
+<td class="num">—</td>
+<td class="num">65000</td>
+<td class="num">2</td></tr><tr><td><strong>Pinterest</strong></td><td>Pin</td>
+<td class="num">1000×1500<br><small>2:3</small></td>
+<td class="num">—</td>
+<td class="num">—</td>
+<td class="num">5</td></tr><tr><td><strong>Bluesky</strong></td><td>Post</td>
+<td class="num">1080×1080<br><small>1:1</small></td>
+<td class="num">—</td>
+<td class="num">300</td>
+<td class="num">5</td></tr>
+</tbody></table><h2>Pacchetti pronti</h2><div class="card"><h3>Piacenza: 1835 €/mq e il mercato sale</h3>
+<p class="fonte">mercato · Piacenza · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>Gossolengo: 1953 €/mq e il mercato sale</h3>
+<p class="fonte">mercato · Gossolengo · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>Rivergaro: 1350 €/mq e il mercato sale</h3>
+<p class="fonte">mercato · Rivergaro · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>Podenzano: 1518 €/mq e il mercato è fermo</h3>
+<p class="fonte">mercato · Podenzano · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>Vigolzone: 848 €/mq e il mercato scende</h3>
+<p class="fonte">mercato · Vigolzone · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>Ponte dell'Olio: 794 €/mq e il mercato è fermo</h3>
+<p class="fonte">mercato · Ponte dell'Olio · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>L'errore numero uno di chi vende casa a Piacenza</h3>
+<p class="fonte">errore · Piacenza · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><div class="card"><h3>I documenti che servono per vendere casa, prima di pubblicare</h3>
+<p class="fonte">metodo · Piacenza · 15 piattaforme · ✓ entro i limiti</p>
+<p>File in <code>contenuti/2026-09-17/</code></p></div><h2>Come si usa</h2><ul class="check">
+<li>Esegui <code>npm run social</code> per rigenerare i pacchetti dai dati aggiornati.</li>
+<li>Ogni cartella in <code>contenuti/</code> contiene un file di testo per piattaforma, la copertina SVG alle dimensioni esatte e i sottotitoli SRT per i video.</li>
+<li>Il <code>README.md</code> della cartella riporta tutto in un'unica pagina, pronto da copiare.</li>
+<li>Il master video 9:16 si gira una volta sola e si pubblica su Instagram, TikTok, YouTube, Facebook, Threads.</li>
+<li>Ordine di pubblicazione: prima Facebook e Google Business Profile, che sono i canali di acquisizione dei venditori; poi Instagram e TikTok.</li>
+</ul></div></main>
+<div class="wrap"><div class="cta">
+<h2>Vuoi sapere quanto vale <em>davvero</em> casa tua?</h2>
+<p style="color:rgba(255,255,255,.7);margin-bottom:22px">Una valutazione fatta sui numeri della tua zona, non su una sensazione. Gratuita e senza impegno.</p>
+<a class="btn" href="/wizard">→ Fai la valutazione online</a>
+<a class="btn ghost" href="tel:+393286930033">Oppure chiama: 328 693 0033</a>
+</div></div>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Immobiliare Scaglia</h4><p>Davide Scaglia — agente immobiliare a Piacenza dal 2007.<br>Via Cavallotti 3, Rivergaro (PC)</p><p><a href="tel:+393286930033">+39 328 693 0033</a><br><a href="mailto:info@venderecasapiacenza.it">info@venderecasapiacenza.it</a></p></div>
+<div><h4>Zone</h4><ul>
+<li><a href="/quartieri/piacenza.html">Piacenza</a></li>
+<li><a href="/quartieri/gossolengo.html">Gossolengo</a></li>
+<li><a href="/quartieri/rivergaro.html">Rivergaro</a></li>
+<li><a href="/quartieri/vigolzone.html">Vigolzone</a></li>
+<li><a href="/quartieri/podenzano.html">Podenzano</a></li>
+<li><a href="/quartieri/ponte-dellolio.html">Ponte dell'Olio</a></li>
+</ul></div>
+<div><h4>Risorse</h4><ul>
+<li><a href="/mercato/">Mercato in numeri</a></li>
+<li><a href="/concorrenza/">Analisi annunci</a></li>
+<li><a href="/osservatorio-ai/">Osservatorio AI</a></li>
+<li><a href="/contenuti/">Calendario contenuti</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/guide/">Guide</a></li>
+</ul></div>
+<div><h4>Legale</h4><ul>
+<li><a href="/privacy-policy.html">Privacy policy</a></li>
+<li><a href="/cookie-policy.html">Cookie policy</a></li>
+<li><a href="/termini-condizioni.html">Termini e condizioni</a></li>
+</ul></div>
+</div>
+<p>© 2026 Immobiliare Scaglia — Davide Scaglia · P.IVA 01493570335 · REA PC-168637 · Tutti i diritti riservati</p>
+</div></footer>
+</body>
+</html>
