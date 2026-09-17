@@ -1,0 +1,110 @@
+{
+  "generatoIl": "2026-09-17T17:51:51.399Z",
+  "piattaformeConfigurate": 15,
+  "pilastriContenuto": [
+    {
+      "id": "mercato",
+      "nome": "Mercato in numeri",
+      "quotaPct": 30,
+      "descrizione": "Prezzi, volumi, tassi, tempi di vendita per zona. Costruisce autorevolezza e viene citato dalle AI."
+    },
+    {
+      "id": "errore",
+      "nome": "Errori dei venditori",
+      "quotaPct": 25,
+      "descrizione": "I 7 errori e le loro varianti. Intercetta il dolore del venditore bloccato da mesi."
+    },
+    {
+      "id": "metodo",
+      "nome": "Metodo e documenti",
+      "quotaPct": 20,
+      "descrizione": "Come lavora Davide: valutazione, selezione acquirenti, APE, conformità catastale, rogito."
+    },
+    {
+      "id": "storia",
+      "nome": "Storie e casi reali",
+      "quotaPct": 15,
+      "descrizione": "Vendite concluse, situazioni complesse (eredità, separazioni), testimonianze. Nessuna promessa gonfiata."
+    },
+    {
+      "id": "zona",
+      "nome": "Vita di zona",
+      "quotaPct": 10,
+      "descrizione": "Val Trebbia, Val Nure, quartieri di Piacenza. Radicamento territoriale."
+    }
+  ],
+  "pacchetti": [
+    {
+      "tema": "mercato",
+      "zona": "Piacenza",
+      "titolo": "Piacenza: 1835 €/mq e il mercato sale",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "mercato",
+      "zona": "Gossolengo",
+      "titolo": "Gossolengo: 1953 €/mq e il mercato sale",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "mercato",
+      "zona": "Rivergaro",
+      "titolo": "Rivergaro: 1350 €/mq e il mercato sale",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "mercato",
+      "zona": "Podenzano",
+      "titolo": "Podenzano: 1518 €/mq e il mercato è fermo",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "mercato",
+      "zona": "Vigolzone",
+      "titolo": "Vigolzone: 848 €/mq e il mercato scende",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "mercato",
+      "zona": "Ponte dell'Olio",
+      "titolo": "Ponte dell'Olio: 794 €/mq e il mercato è fermo",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "errore",
+      "zona": "Piacenza",
+      "titolo": "L'errore numero uno di chi vende casa a Piacenza",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    },
+    {
+      "tema": "metodo",
+      "zona": "Piacenza",
+      "titolo": "I documenti che servono per vendere casa, prima di pubblicare",
+      "dataOdierna": "2026-09-17",
+      "piattaforme": 15,
+      "entroLimiti": true,
+      "fuoriLimite": []
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "_meta": {
+    "descrizione": "Specifiche tecniche 2026 per la pubblicazione automatica dei contenuti su ogni piattaforma. I valori derivano dalle guide ufficiali e dalle tabelle di settore aggiornate al 2026 (RecurPost, SocialBee, VeryContent, Doctor-Web).",
+    "aggiornato": "2026-09-17",
+    "notaLimiti": "I limiti di caratteri cambiano spesso: sono centralizzati qui e vanno ricontrollati ogni trimestre. Dove il dato è incerto è marcato con 'stima'."
+  },
+  "piattaforme": [
+    {
+      "id": "instagram-reels",
+      "piattaforma": "Instagram",
+      "formato": "Reels",
+      "canale": "video",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "durataTargetSec": 30,
+      "durataMaxSec": 180,
+      "codec": "MP4 H.264, audio AAC 48 kHz",
+      "safeZone": "250 px in alto e 250 px in basso coperti da UI",
+      "limiteCaratteriCaption": 2200,
+      "limiteCaratteriHashtag": 30,
+      "hashtagConsigliati": 8,
+      "limiteCaratteriHook": 40,
+      "priorita": 1,
+      "stile": "Hook nei primi 2 secondi, sottotitoli sempre attivi (l'85% guarda senza audio), CTA finale in sovrimpressione.",
+      "fonti": [
+        "https://recurpost.com/supported-platforms/social-media-video-sizes/",
+        "https://socialbee.com/blog/social-media-video-sizes/"
+      ],
+      "accettaMaster9x16": true
+    },
+    {
+      "id": "instagram-feed",
+      "piattaforma": "Instagram",
+      "formato": "Post carosello",
+      "canale": "immagine",
+      "larghezza": 1080,
+      "altezza": 1440,
+      "rapporto": "3:4",
+      "numeroSlide": 7,
+      "limiteCaratteriCaption": 2200,
+      "hashtagConsigliati": 8,
+      "priorita": 1,
+      "stile": "Prima slide = titolo forte su fondo pieno. Ultima slide = CTA. Ogni slide un solo concetto.",
+      "nota": "Il 3:4 è il formato nativo della griglia profilo dal 2025/2026; il 4:5 (1080x1350) resta valido per il feed.",
+      "fonti": [
+        "https://www.marcodemaio.it/formato-immagini-video-social/",
+        "https://www.doctor-web.it/dimensioni-immagini-social-misure-aggiornate/"
+      ],
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "instagram-stories",
+      "piattaforma": "Instagram",
+      "formato": "Stories",
+      "canale": "video",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "durataTargetSec": 15,
+      "durataMaxSec": 60,
+      "limiteCaratteriHook": 30,
+      "priorita": 3,
+      "stile": "Sondaggio o domanda diretta. Una sola azione per storia (sticker sondaggio, box domande).",
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "tiktok",
+      "piattaforma": "TikTok",
+      "formato": "In-feed",
+      "canale": "video",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "durataTargetSec": 30,
+      "durataMaxSec": 600,
+      "codec": "MP4 H.264",
+      "limiteCaratteriCaption": 4000,
+      "hashtagConsigliati": 5,
+      "limiteCaratteriHook": 35,
+      "priorita": 2,
+      "stile": "Più diretto e meno patinato di Instagram. Primo fotogramma già parlante. Trend sonoro quando pertinente.",
+      "fonti": [
+        "https://recurpost.com/supported-platforms/social-media-video-sizes/"
+      ],
+      "accettaMaster9x16": true
+    },
+    {
+      "id": "youtube-shorts",
+      "piattaforma": "YouTube",
+      "formato": "Shorts",
+      "canale": "video",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "durataTargetSec": 45,
+      "durataMaxSec": 180,
+      "limiteCaratteriTitolo": 100,
+      "limiteCaratteriDescrizione": 5000,
+      "priorita": 2,
+      "stile": "Stesso master del Reel. Il titolo deve contenere la keyword locale ('Piacenza', 'Rivergaro'...).",
+      "nota": "Il limite è 3 minuti da specifica 2025; alcune guide indicano ancora 60 secondi. Tenere il master sotto i 60 s per la massima compatibilità.",
+      "fonti": [
+        "https://recurpost.com/supported-platforms/social-media-video-sizes/",
+        "https://socialbee.com/blog/social-media-video-sizes/"
+      ],
+      "accettaMaster9x16": true
+    },
+    {
+      "id": "youtube-long",
+      "piattaforma": "YouTube",
+      "formato": "Video lungo",
+      "canale": "video",
+      "larghezza": 1920,
+      "altezza": 1080,
+      "rapporto": "16:9",
+      "durataTargetSec": 480,
+      "durataMaxSec": 43200,
+      "miniatura": {
+        "larghezza": 1280,
+        "altezza": 720
+      },
+      "limiteCaratteriTitolo": 100,
+      "limiteCaratteriDescrizione": 5000,
+      "priorita": 3,
+      "stile": "Il formato che costruisce autorevolezza: analisi di mercato, tour immobili, spiegazioni fiscali. Capitoli nel primo commento.",
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "facebook-feed",
+      "piattaforma": "Facebook",
+      "formato": "Post feed",
+      "canale": "immagine",
+      "larghezza": 1080,
+      "altezza": 1350,
+      "rapporto": "4:5",
+      "limiteCaratteriPost": 63206,
+      "limiteCaratteriOttimale": 500,
+      "priorita": 1,
+      "stile": "Il pubblico di Facebook a Piacenza è quello dei proprietari over 50: è il canale di acquisizione venditori. Testo più lungo e discorsivo, tono di vicinato, niente hashtag o al massimo 2.",
+      "fonti": [
+        "https://socialbee.com/blog/social-media-video-sizes/",
+        "https://www.doctor-web.it/dimensioni-immagini-social-misure-aggiornate/"
+      ],
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "facebook-reels",
+      "piattaforma": "Facebook",
+      "formato": "Reels",
+      "canale": "video",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "durataTargetSec": 30,
+      "durataMaxSec": 90,
+      "priorita": 3,
+      "stile": "Riuso del master Reel Instagram senza modifiche.",
+      "accettaMaster9x16": true
+    },
+    {
+      "id": "linkedin",
+      "piattaforma": "LinkedIn",
+      "formato": "Post",
+      "canale": "immagine",
+      "larghezza": 1200,
+      "altezza": 627,
+      "rapporto": "1.91:1",
+      "limiteCaratteriPost": 3000,
+      "hashtagConsigliati": 3,
+      "priorita": 2,
+      "stile": "Canale B2B: notai, commercialisti, avvocati, amministratori di sostegno, colleghi in collaborazione. Dati, metodo, casi. Niente tono promozionale.",
+      "fonti": [
+        "https://www.doctor-web.it/dimensioni-immagini-social-misure-aggiornate/"
+      ],
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "x",
+      "piattaforma": "X (Twitter)",
+      "formato": "Post",
+      "canale": "testo",
+      "larghezza": 1200,
+      "altezza": 675,
+      "rapporto": "16:9",
+      "limiteCaratteriPost": 280,
+      "priorita": 4,
+      "stile": "Il dato secco del giorno, con fonte. Utile per il presidio della ricerca e per la citabilità dalle AI.",
+      "nota": "280 caratteri per l'account standard; 25.000 per gli account Premium.",
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "threads",
+      "piattaforma": "Threads",
+      "formato": "Post",
+      "canale": "testo",
+      "larghezza": 1080,
+      "altezza": 1350,
+      "rapporto": "4:5",
+      "limiteCaratteriPost": 500,
+      "durataMaxSec": 300,
+      "priorita": 4,
+      "stile": "Riuso del testo Instagram accorciato. Presidio a costo zero.",
+      "accettaMaster9x16": true
+    },
+    {
+      "id": "google-business",
+      "piattaforma": "Google Business Profile",
+      "formato": "Post / foto",
+      "canale": "immagine",
+      "larghezza": 1280,
+      "altezza": 720,
+      "rapporto": "16:9",
+      "durataMaxSec": 30,
+      "limiteCaratteriPost": 1500,
+      "limiteCaratteriOttimale": 750,
+      "priorita": 1,
+      "stile": "Impatto diretto sulla ricerca locale 'agenzia immobiliare Piacenza'. Aggiornamento settimanale + foto geotaggate. È il segnale locale più sottovalutato.",
+      "fonti": [
+        "https://socialbee.com/blog/social-media-video-sizes/"
+      ],
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "whatsapp",
+      "piattaforma": "WhatsApp",
+      "formato": "Broadcast / Stato",
+      "canale": "testo",
+      "larghezza": 1080,
+      "altezza": 1920,
+      "rapporto": "9:16",
+      "limiteCaratteriPost": 65000,
+      "limiteCaratteriOttimale": 350,
+      "priorita": 2,
+      "stile": "Broadcast ai proprietari in lista: aggiornamento di mercato o esito visite. Tono personale, firma sempre. Il tasso di apertura è il più alto di tutti i canali.",
+      "nota": "Attenzione alla normativa: il broadcast richiede il consenso esplicito del destinatario (GDPR).",
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "pinterest",
+      "piattaforma": "Pinterest",
+      "formato": "Pin",
+      "canale": "immagine",
+      "larghezza": 1000,
+      "altezza": 1500,
+      "rapporto": "2:3",
+      "durataMaxSec": 900,
+      "limiteCaratteriTitolo": 100,
+      "limiteCaratteriDescrizione": 500,
+      "priorita": 5,
+      "stile": "Codice a lunga durata: un pin lavora per mesi. Adatto a guide e infografiche di prezzo.",
+      "accettaMaster9x16": false
+    },
+    {
+      "id": "bluesky",
+      "piattaforma": "Bluesky",
+      "formato": "Post",
+      "canale": "testo",
+      "larghezza": 1080,
+      "altezza": 1080,
+      "rapporto": "1:1",
+      "durataMaxSec": 60,
+      "limiteCaratteriPost": 300,
+      "priorita": 5,
+      "stile": "Emergente: presidio del nome a costo zero. Riuso del post X.",
+      "accettaMaster9x16": false
+    }
+  ],
+  "pilastriContenuto": [
+    {
+      "id": "mercato",
+      "nome": "Mercato in numeri",
+      "quotaPct": 30,
+      "descrizione": "Prezzi, volumi, tassi, tempi di vendita per zona. Costruisce autorevolezza e viene citato dalle AI."
+    },
+    {
+      "id": "errore",
+      "nome": "Errori dei venditori",
+      "quotaPct": 25,
+      "descrizione": "I 7 errori e le loro varianti. Intercetta il dolore del venditore bloccato da mesi."
+    },
+    {
+      "id": "metodo",
+      "nome": "Metodo e documenti",
+      "quotaPct": 20,
+      "descrizione": "Come lavora Davide: valutazione, selezione acquirenti, APE, conformità catastale, rogito."
+    },
+    {
+      "id": "storia",
+      "nome": "Storie e casi reali",
+      "quotaPct": 15,
+      "descrizione": "Vendite concluse, situazioni complesse (eredità, separazioni), testimonianze. Nessuna promessa gonfiata."
+    },
+    {
+      "id": "zona",
+      "nome": "Vita di zona",
+      "quotaPct": 10,
+      "descrizione": "Val Trebbia, Val Nure, quartieri di Piacenza. Radicamento territoriale."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+name: Intelligence — aggiornamento dati e contenuti
+
+# Esegue la macchina di analisi: aggiorna i dati di mercato, raccoglie le notizie,
+# ricalcola l'analisi degli annunci e rigenera contenuti, pagine e sitemap.
+# Ogni esecuzione committa i risultati: il sito resta statico e veloce, ma i dati
+# si muovono da soli.
+
+on:
+  schedule:
+    # ogni notte alle 05:15 UTC — prima dell'orario di lavoro
+    - cron: '15 5 * * *'
+  workflow_dispatch:
+    inputs:
+      demo:
+        description: 'Usa il dataset dimostrativo invece dei dati reali'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - 'tools/**'
+      - 'index.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: intelligence
+  cancel-in-progress: false
+
+jobs:
+  intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          # zero dipendenze: il progetto usa solo la libreria standard di Node
+          cache: 'npm'
+          cache-dependency-path: package.json
+
+      - name: Test
+        run: node --test "tools/test/*.test.mjs"
+
+      - name: Build dati e pagine
+        run: |
+          if [ "${{ inputs.demo }}" = "true" ]; then
+            node tools/build.mjs --demo
+          else
+            node tools/build.mjs
+          fi
+
+      - name: Riepilogo
+        run: |
+          echo "### Esito della build" >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat data/build.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- URL in sitemap: $(grep -c '<loc>' sitemap.xml)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Annunci nell'archivio: $(node -e "try{console.log(require('./data/annunci.json').totali.annunci)}catch{console.log(0)}")" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Lead di acquisizione: $(node -e "try{console.log(require('./data/annunci.json').leadAcquisizione.length)}catch{console.log(0)}")" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Notizie raccolte: $(node -e "try{console.log(require('./data/notizie.json').totali.notizie)}catch{console.log(0)}")" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pacchetti contenuti: $(node -e "try{console.log(require('./data/contenuti.json').pacchetti.length)}catch{console.log(0)}")" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit dei risultati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data contenuti sitemap.xml guide blog quartieri mercato osservatorio-ai concorrenza privacy-policy.html cookie-policy.html termini-condizioni.html
+          if git diff --staged --quiet; then
+            echo "Nessuna variazione nei dati: nessun commit."
+          else
+            git commit -m "chore: aggiornamento dati e contenuti $(date -u +%Y-%m-%d)"
+            git push
+          fi

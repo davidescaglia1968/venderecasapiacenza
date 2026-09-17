@@ -1,0 +1,461 @@
+{
+  "generatoIl": "2026-09-17T17:51:51.321Z",
+  "densitaMercato": {
+    "agenzieProvincia": 128,
+    "agenzieComunePiacenza": 101,
+    "fonte": "Idealista — elenchi agenzie, consultati il 2026-09-17",
+    "lettura": "101 agenzie si contendono un comune da 102.364 abitanti. Il differenziatore non può essere la presenza: deve essere il metodo e la competenza su una zona specifica."
+  },
+  "totali": {
+    "agenzieMonitorate": 12,
+    "concorrentiDigitali": 5,
+    "annunciDichiaratiTotali": 859,
+    "annunciOsservati": 0,
+    "zonePresidiate": 5,
+    "zoneScoperte": 1
+  },
+  "indicatori": [
+    {
+      "nome": "Immobiliare La Piacentina",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 257,
+      "caseVendita": 230,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Rivergaro",
+        "Vigolzone",
+        "Fiorenzuola",
+        "Podenzano",
+        "Carpaneto",
+        "Bettola"
+      ],
+      "minaccia": "alta",
+      "nota": "Primo operatore locale per volume di annunci. Presidia già Rivergaro e Vigolzone.",
+      "osservato": null,
+      "debolezze": [
+        "volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce"
+      ]
+    },
+    {
+      "nome": "Milanesi Geom.",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 133,
+      "caseVendita": 123,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Gossolengo",
+        "Rottofreno",
+        "Vigolzone",
+        "Fiorenzuola"
+      ],
+      "minaccia": "alta",
+      "nota": "Concorrente diretto su Gossolengo, la zona in più forte crescita.",
+      "osservato": null,
+      "debolezze": [
+        "volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce"
+      ]
+    },
+    {
+      "nome": "Il Mediatore (Angelo Bersani)",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 132,
+      "caseVendita": 117,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Rottofreno",
+        "Podenzano",
+        "San Giorgio",
+        "Calendasco"
+      ],
+      "minaccia": "alta",
+      "nota": "Prezzo medio di vendita dichiarato 124k €: posizionamento sulla fascia accessibile.",
+      "osservato": null,
+      "debolezze": [
+        "volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce"
+      ]
+    },
+    {
+      "nome": "Tempocasa Piacenza Dante",
+      "tipo": "franchising",
+      "annunciDichiarati": 40,
+      "caseVendita": 33,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Rivergaro",
+        "Gossolengo"
+      ],
+      "minaccia": "alta",
+      "nota": "Franchising con marchio forte, presente su Rivergaro e Gossolengo.",
+      "osservato": null,
+      "debolezze": [
+        "modello in franchising: turnover degli agenti e metodo standardizzato"
+      ]
+    },
+    {
+      "nome": "Gazzola Consulenza Immobiliare",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": null,
+      "caseVendita": null,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Rivergaro",
+        "Gossolengo",
+        "Vigolzone"
+      ],
+      "minaccia": "alta",
+      "nota": "Concorrente diretto su tutte e tre le zone di valle. Pubblica anche capannoni e immobili commerciali.",
+      "osservato": null,
+      "debolezze": [
+        "nessuna debolezza evidente dai dati pubblici: serve rilievo diretto"
+      ]
+    },
+    {
+      "nome": "Farnese Soluzioni Immobiliari srl",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 65,
+      "caseVendita": null,
+      "qualitaPubblicazionePct": 55,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": 7,
+      "zone": [
+        "Piacenza"
+      ],
+      "minaccia": "media",
+      "nota": "Solo il 55% di qualità di pubblicazione: spazio per differenziarsi sulla qualità delle schede.",
+      "osservato": null,
+      "debolezze": [
+        "schede annuncio al 55% di qualità: foto e testi sotto standard"
+      ]
+    },
+    {
+      "nome": "Grimaldi Immobiliare Piacenza Clinica",
+      "tipo": "franchising",
+      "annunciDichiarati": 61,
+      "caseVendita": 55,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Bobbio",
+        "San Pietro in Cerro"
+      ],
+      "minaccia": "media",
+      "nota": "",
+      "osservato": null,
+      "debolezze": [
+        "modello in franchising: turnover degli agenti e metodo standardizzato"
+      ]
+    },
+    {
+      "nome": "Agenzia Evo Immobiliare",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 48,
+      "caseVendita": null,
+      "qualitaPubblicazionePct": 49,
+      "tempoRispostaOre": 2,
+      "anniSuIdealista": 7,
+      "zone": [
+        "Piacenza"
+      ],
+      "minaccia": "media",
+      "nota": "Risponde in meno di 2 ore: il benchmark di reattività da battere. Il sito promette già 'risposta entro 24 ore' — va portata sotto le 2 ore.",
+      "osservato": null,
+      "debolezze": [
+        "schede annuncio al 49% di qualità: foto e testi sotto standard",
+        "dichiara risposta in 2 ore: è il benchmark, non un vantaggio"
+      ]
+    },
+    {
+      "nome": "Tempocasa Piacenza Centro",
+      "tipo": "franchising",
+      "annunciDichiarati": 38,
+      "caseVendita": 22,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Podenzano",
+        "Rottofreno",
+        "Gazzola",
+        "Bobbio"
+      ],
+      "minaccia": "media",
+      "nota": "",
+      "osservato": null,
+      "debolezze": [
+        "modello in franchising: turnover degli agenti e metodo standardizzato"
+      ]
+    },
+    {
+      "nome": "Tecnocasa Vendocasa — Industriale Piacenza srl",
+      "tipo": "franchising",
+      "annunciDichiarati": 34,
+      "caseVendita": 31,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Somaglia",
+        "Gragnano Trebbiense"
+      ],
+      "minaccia": "media",
+      "nota": "",
+      "osservato": null,
+      "debolezze": [
+        "modello in franchising: turnover degli agenti e metodo standardizzato"
+      ]
+    },
+    {
+      "nome": "Carini Davide Immobiliare",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 30,
+      "caseVendita": 26,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza",
+        "Pontenure",
+        "Calendasco",
+        "Agazzano"
+      ],
+      "minaccia": "bassa",
+      "nota": "",
+      "osservato": null,
+      "debolezze": [
+        "nessuna debolezza evidente dai dati pubblici: serve rilievo diretto"
+      ]
+    },
+    {
+      "nome": "Immobiliare Santa Caterina srl",
+      "tipo": "agenzia-locale",
+      "annunciDichiarati": 21,
+      "caseVendita": 21,
+      "qualitaPubblicazionePct": null,
+      "tempoRispostaOre": null,
+      "anniSuIdealista": null,
+      "zone": [
+        "Piacenza"
+      ],
+      "minaccia": "bassa",
+      "nota": "",
+      "osservato": null,
+      "debolezze": [
+        "nessuna debolezza evidente dai dati pubblici: serve rilievo diretto"
+      ]
+    }
+  ],
+  "presidioZone": [
+    {
+      "zona": "Piacenza",
+      "agenziePresenti": 11,
+      "agenzie": [
+        "Immobiliare La Piacentina",
+        "Milanesi Geom.",
+        "Il Mediatore (Angelo Bersani)",
+        "Farnese Soluzioni Immobiliari srl",
+        "Agenzia Evo Immobiliare",
+        "Tempocasa Piacenza Dante",
+        "Tempocasa Piacenza Centro",
+        "Tecnocasa Vendocasa — Industriale Piacenza srl",
+        "Carini Davide Immobiliare",
+        "Immobiliare Santa Caterina srl",
+        "Grimaldi Immobiliare Piacenza Clinica"
+      ],
+      "annunciDichiarati": 859,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "alta",
+      "spazio": "saturo: serve un angolo specifico"
+    },
+    {
+      "zona": "Gossolengo",
+      "agenziePresenti": 3,
+      "agenzie": [
+        "Milanesi Geom.",
+        "Tempocasa Piacenza Dante",
+        "Gazzola Consulenza Immobiliare"
+      ],
+      "annunciDichiarati": 173,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "media",
+      "spazio": "contendibile"
+    },
+    {
+      "zona": "Rivergaro",
+      "agenziePresenti": 3,
+      "agenzie": [
+        "Immobiliare La Piacentina",
+        "Tempocasa Piacenza Dante",
+        "Gazzola Consulenza Immobiliare"
+      ],
+      "annunciDichiarati": 297,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "media",
+      "spazio": "contendibile"
+    },
+    {
+      "zona": "Podenzano",
+      "agenziePresenti": 3,
+      "agenzie": [
+        "Immobiliare La Piacentina",
+        "Il Mediatore (Angelo Bersani)",
+        "Tempocasa Piacenza Centro"
+      ],
+      "annunciDichiarati": 427,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "media",
+      "spazio": "contendibile"
+    },
+    {
+      "zona": "Vigolzone",
+      "agenziePresenti": 3,
+      "agenzie": [
+        "Immobiliare La Piacentina",
+        "Milanesi Geom.",
+        "Gazzola Consulenza Immobiliare"
+      ],
+      "annunciDichiarati": 390,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "media",
+      "spazio": "contendibile"
+    },
+    {
+      "zona": "Ponte dell'Olio",
+      "agenziePresenti": 0,
+      "agenzie": [],
+      "annunciDichiarati": 0,
+      "annunciOsservati": null,
+      "giorniMedianiOsservati": null,
+      "oltreUnAnnoOsservati": null,
+      "saturazione": "assente",
+      "spazio": "territorio scoperto: presidio ad alta resa"
+    }
+  ],
+  "concorrentiDigitali": [
+    {
+      "nome": "Idealista",
+      "tipo": "portale",
+      "percheContano": "Non vende case ma cattura la domanda. Un venditore che cerca 'quanto vale casa mia' atterra lì, non sul nostro sito.",
+      "contromisura": "Il portale vince sulla ricerca generica. Si vince sulla ricerca specifica: \"vendere casa a Gossolengo\" deve portare a una pagina con i numeri di Gossolengo, non a un elenco di annunci."
+    },
+    {
+      "nome": "Immobiliare.it",
+      "tipo": "portale",
+      "percheContano": "Pubblica le quotazioni per comune: è il riferimento che il venditore usa per farsi un'idea da solo.",
+      "contromisura": "Il portale vince sulla ricerca generica. Si vince sulla ricerca specifica: \"vendere casa a Gossolengo\" deve portare a una pagina con i numeri di Gossolengo, non a un elenco di annunci."
+    },
+    {
+      "nome": "RealAdvisor",
+      "tipo": "portale-valuation",
+      "percheContano": "Offre valutazioni automatiche online: intercetta il lead del venditore prima dell'agenzia.",
+      "contromisura": "La valutazione automatica dà un numero senza contesto. La risposta è una valutazione che spiega il numero con i comparabili della via, e che resta in mano al proprietario."
+    },
+    {
+      "nome": "Dove.it",
+      "tipo": "agenzia-online",
+      "percheContano": "Modello a provvigione ridotta. Pubblica contenuti di mercato ottimizzati per la ricerca: compete direttamente sui contenuti.",
+      "contromisura": "Il modello a provvigione ridotta compete sul prezzo. La contromisura è spostare la conversazione sul risultato netto in tasca, non sulla percentuale."
+    },
+    {
+      "nome": "AgenteImmobiliareAI",
+      "tipo": "software-ai",
+      "percheContano": "Vende a 2.500 € + IVA con esclusiva territoriale: se un concorrente di Piacenza lo adotta, occupa il posizionamento 'valutazione AI'.",
+      "contromisura": "Presidiare per primi il posizionamento \"valutazione con dati a Piacenza\": se lo occupa un concorrente locale, recuperarlo costa molto."
+    }
+  ],
+  "metricheDaTracciare": [
+    {
+      "id": "n_annunci",
+      "nome": "Numero annunci attivi",
+      "frequenza": "settimanale",
+      "perche": "Misura la pressione dell'offerta per zona."
+    },
+    {
+      "id": "qualita_pubblicazione",
+      "nome": "Qualità di pubblicazione (%)",
+      "frequenza": "mensile",
+      "perche": "Idealista la rende pubblica: sotto il 60% c'è spazio per superare il concorrente sulla scheda."
+    },
+    {
+      "id": "tempo_risposta",
+      "nome": "Tempo di risposta dichiarato",
+      "frequenza": "mensile",
+      "perche": "Il benchmark attuale è 'meno di 2 ore'."
+    },
+    {
+      "id": "prezzo_medio",
+      "nome": "Prezzo medio degli annunci",
+      "frequenza": "mensile",
+      "perche": "Rivela il posizionamento di fascia del concorrente."
+    },
+    {
+      "id": "presenza_zone",
+      "nome": "Presidio per zona servita",
+      "frequenza": "mensile",
+      "perche": "Mostra dove il territorio è scoperto."
+    },
+    {
+      "id": "recensioni",
+      "nome": "Numero e voto recensioni Google",
+      "frequenza": "mensile",
+      "perche": "Primo segnale di fiducia per chi cerca 'agenzia immobiliare Piacenza'."
+    }
+  ],
+  "posizionamento": {
+    "dichiarazione": "Non si vince sulla quantità di annunci: 101 agenzie a Piacenza hanno già saturato quel terreno. Si vince sulla competenza verificabile su un numero limitato di zone e sulla qualità della scheda, dove i concorrenti monitorati si fermano sotto il 60%.",
+    "leve": [
+      {
+        "id": "zona",
+        "leva": "Specializzazione dichiarata e misurabile su Piacenza + 5 comuni, con dati pubblici per ciascuno",
+        "evidenza": "Nessun concorrente monitorato pubblica dati di mercato per singola zona servita."
+      },
+      {
+        "id": "qualita-scheda",
+        "leva": "Qualità di pubblicazione annuncio sopra il 90% contro il 49–55% osservato sui concorrenti principali",
+        "evidenza": "Idealista rende pubblica la percentuale di qualità di pubblicazione."
+      },
+      {
+        "id": "reattivita",
+        "leva": "Risposta entro 2 ore: il benchmark attuale del mercato locale",
+        "evidenza": "Il sito promette 24 ore; il concorrente più rapido dichiara meno di 2 ore."
+      },
+      {
+        "id": "anzianita-annunci",
+        "leva": "Uso dell’archivio annunci fermi: contattare i proprietari delusi, non aspettare i lead",
+        "evidenza": "L’archivio ordina gli annunci per data di pubblicazione e segnala quelli oltre i 180 giorni."
+      },
+      {
+        "id": "dati-aperti",
+        "leva": "Pubblicare i dati di mercato con fonte e data: citabilità da parte dei motori AI e dei giornalisti locali",
+        "evidenza": "I contenuti datati e verificabili sono il criterio con cui Perplexity e Gemini scelgono le fonti."
+      }
+    ]
+  }
+}

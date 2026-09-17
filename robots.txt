@@ -1,14 +1,25 @@
+# robots.txt — venderecasapiacenza.it
+# Aggiornato il 2026-09-17.
+#
+# Scelte deliberate:
+#  - nessun Crawl-delay sui bot principali: rallenta solo l'indicizzazione,
+#    non protegge il server (il sito è statico e servito da CDN)
+#  - tutti gli agent AI sono esplicitamente consentiti: una quota crescente di
+#    ricerche immobiliari parte da un assistente AI, e se il sito non è
+#    leggibile da quegli agent non esiste in quel canale
+#  - le pagine di lavoro interne sono escluse dall'indicizzazione
+
 User-agent: *
 Allow: /
-Crawl-delay: 1
-Disallow: /cdn-cgi/
-Disallow: /admin/
+Disallow: /data/
+Disallow: /tools/
+Disallow: /analisi/
+Disallow: /.cache/
+Disallow: /concorrenza/
+Disallow: /contenuti/
 
+# --- Motori di ricerca ---
 User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Google-Extended
 Allow: /
 
 User-agent: Googlebot-Image
@@ -17,6 +28,20 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+User-agent: MicrosoftBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- Agenti di addestramento e indicizzazione AI ---
+# Consentiti: è il canale in cui cresce la domanda "quanto vale casa mia a Piacenza".
 User-agent: GPTBot
 Allow: /
 
@@ -26,26 +51,28 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: Applebot
+User-agent: CCBot
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: MicrosoftBot
+User-agent: Amazonbot
 Allow: /
 
 User-agent: cohere-ai
@@ -54,25 +81,22 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-User-agent: Amazonbot
-Allow: /
-
 User-agent: YouBot
-Allow: /
-
-User-agent: Bard
-Allow: /
-
-User-agent: Gemini
-Allow: /
-
-User-agent: Grok
 Allow: /
 
 User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Il nostro bot di analisi ---
+# Raccoglie dati di mercato. Rispetta a sua volta il robots.txt dei siti che legge:
+# la verifica è in tools/lib/robots.mjs e nessuna richiesta parte senza il via libera.
+User-agent: ImmobiliareScagliaBot
 Allow: /
 
 Sitemap: https://venderecasapiacenza.it/sitemap.xml

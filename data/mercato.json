@@ -1,0 +1,568 @@
+{
+  "generatoIl": "2026-09-17T17:51:51.308Z",
+  "copertura": {
+    "zone": 6,
+    "comuniProvincia": 46,
+    "provincia": "Provincia di Piacenza"
+  },
+  "provincia": {
+    "nome": "Provincia di Piacenza",
+    "prezzoMq": 1335,
+    "variazioni": {
+      "mensilePct": 0.6,
+      "trimestralePct": 3.5,
+      "annualePct": 8.4
+    },
+    "massimoStorico": {
+      "valore": 1728,
+      "periodo": "2012-10",
+      "gapPct": -22.8
+    },
+    "comuniCensiti": 46,
+    "capoluoghiEmiliaRomagna2026": [
+      {
+        "citta": "Ravenna",
+        "prezzoMq": 2015
+      },
+      {
+        "citta": "Reggio nell'Emilia",
+        "prezzoMq": 1926
+      },
+      {
+        "citta": "Piacenza",
+        "prezzoMq": 1734
+      },
+      {
+        "citta": "Forlì",
+        "prezzoMq": 1706
+      },
+      {
+        "citta": "Ferrara",
+        "prezzoMq": 1635
+      }
+    ],
+    "fonte": {
+      "nome": "PiacenzaSera, 2 aprile 2026",
+      "url": "https://www.piacenzasera.it/2026/04/prezzi-delle-case-ancora-in-crescita-ma-piacenza-e-la-provincia-piu-economica-della-regione/639824/"
+    }
+  },
+  "macro": {
+    "omiQ1_2026": {
+      "abitazioniCompravendute": 179654,
+      "variazioneAnnuaPct": 4.4,
+      "quotaAcquistiConMutuoPct": 47.8,
+      "tassoMedioPrimaRataPct": 3.62,
+      "fonte": {
+        "nome": "OMI Agenzia delle Entrate — Nota trimestrale Q1 2026",
+        "url": "https://www.simplybiz.eu/omi-agenzia-entrate-immobiliare-compravendite-1-trimestre-2026/"
+      }
+    },
+    "omiQ2_2026": {
+      "abitazioniCompravendute": 201596,
+      "variazioneAnnuaPct": 0.1,
+      "abitazioniConMutuo": 89000,
+      "capitaleErogatoMld": 12.7,
+      "tassoMedioPct": 3.57,
+      "nota": "Primo arretramento del tasso medio dopo oltre un anno di rialzi: -0,05 punti. Su base annua resta più alto di quasi 30 centesimi.",
+      "fonte": {
+        "nome": "MutuiSupermarket — Dati OMI secondo trimestre 2026, 17 settembre 2026",
+        "url": "https://www.mutuisupermarket.it/news-mutui/mercato-immobiliare-secondo-trimestre-2026-dati-omi/"
+      }
+    },
+    "rapportoImmobiliare2026": {
+      "stockResidenziale": 34805781,
+      "ntnResidenziale2025": 766757,
+      "variazioneNtnPct": 6.4,
+      "imiResidenzialePct": 2.2,
+      "imiCapoluoghiPct": 2.49,
+      "imiComuniMinoriPct": 2.1,
+      "quotaCompravenditeComuniNonCapoluogoPct": 52,
+      "fonte": {
+        "nome": "Rapporto Immobiliare 2026 — Agenzia delle Entrate, 28 maggio 2026",
+        "url": "https://www.agenziaentrate.gov.it/portale/documents/20143/263609/RI_2026_NON_RES_28052026.pdf/cd9f9c2b-3d2c-7955-e871-f15fb7827fac"
+      }
+    }
+  },
+  "zone": [
+    {
+      "id": "piacenza",
+      "nome": "Piacenza",
+      "tipo": "capoluogo",
+      "slug": "piacenza",
+      "valle": "Pianura Padana — capoluogo",
+      "abitanti": 102364,
+      "priorita": 1,
+      "prezzoMq": {
+        "media": 1835,
+        "min": 1130,
+        "max": 2137,
+        "rilevato": "2026-06"
+      },
+      "affittoMqMese": 9.64,
+      "variazioni": {
+        "mensilePct": 0.5,
+        "trimestralePct": 3.1,
+        "annualePct": 8.7
+      },
+      "quartieri": [
+        "Centro storico",
+        "Farnesiana",
+        "Besurica",
+        "Infrangibile",
+        "Borgotrebbia",
+        "San Lazzaro",
+        "Zona Stadio",
+        "Via Roma / Porta Galera",
+        "Roncaglia",
+        "Borghetto",
+        "Gerbido",
+        "Mortizza"
+      ],
+      "quartieriPrezzoMq": [
+        {
+          "zona": "Clinica Piacenza / Infrangibile",
+          "prezzoMq": 2137,
+          "nota": "zona più cara del comune"
+        },
+        {
+          "zona": "Centro storico",
+          "prezzoMq": 1920,
+          "nota": "range 1.564 – 2.295 €/mq (marzo 2026)"
+        },
+        {
+          "zona": "Roncaglia / Borghetto / Gerbido / Mortizza",
+          "prezzoMq": 1130,
+          "nota": "zona più economica del comune"
+        }
+      ],
+      "driver": [
+        "Capoluogo: concentra la domanda di prima casa e la domanda di investimento da reddito",
+        "Zona più economica dell'Emilia-Romagna fra i capoluoghi (1.734 €/mq ad aprile 2026)",
+        "Centro storico e Infrangibile tirano la media verso l'alto"
+      ],
+      "fonti": [
+        {
+          "nome": "Idealista — report prezzi provincia di Piacenza",
+          "url": "https://www.idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+          "valore": 1788,
+          "periodo": "2026-06"
+        },
+        {
+          "nome": "Immobiliare.it — mercato immobiliare Piacenza provincia",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/emilia-romagna/piacenza-provincia/",
+          "valore": 1835,
+          "periodo": "2026"
+        },
+        {
+          "nome": "PiacenzaSera — Prezzi delle case ancora in crescita",
+          "url": "https://www.piacenzasera.it/2026/04/prezzi-delle-case-ancora-in-crescita-ma-piacenza-e-la-provincia-piu-economica-della-regione/639824/",
+          "valore": 1734,
+          "periodo": "2026-04"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 1734,
+        "massimo": 1835,
+        "mediana": 1788,
+        "dispersionePct": 5.8,
+        "nFonti": 3
+      },
+      "gapDaMassimo": null
+    },
+    {
+      "id": "gossolengo",
+      "nome": "Gossolengo",
+      "tipo": "hinterland",
+      "slug": "gossolengo",
+      "valle": "Hinterland est di Piacenza, verso la Val Trebbia",
+      "abitanti": 5431,
+      "priorita": 2,
+      "prezzoMq": {
+        "media": 1953,
+        "min": 900,
+        "max": 2400,
+        "rilevato": "2026-06"
+      },
+      "affittoMqMese": 8.77,
+      "variazioni": {
+        "mensilePct": 0.4,
+        "trimestralePct": 13.3,
+        "annualePct": 16
+      },
+      "frazioni": [
+        "Quarto",
+        "Settima",
+        "Cà de Sarti",
+        "Pontenuovo"
+      ],
+      "driver": [
+        "Comune in più forte crescita della provincia: +16,0% su base annua e +13,3% sul trimestre",
+        "Massimo storico di prezzo raggiunto a giugno 2026 (2.093 €/mq su Idealista)",
+        "Domanda di ville e soluzioni indipendenti da parte di famiglie in uscita da Piacenza",
+        "Quarto è sulla SS45: forte passaggio, interessante anche per il commerciale"
+      ],
+      "segnaleMercato": "in forte ascesa",
+      "fonti": [
+        {
+          "nome": "Idealista — Gossolengo",
+          "url": "https://www.idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+          "valore": 2093,
+          "periodo": "2026-06"
+        },
+        {
+          "nome": "Immobiliare.it — Gossolengo",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/emilia-romagna/gossolengo/",
+          "valore": 1964,
+          "periodo": "2025-12"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 1964,
+        "massimo": 2093,
+        "mediana": 2029,
+        "dispersionePct": 6.6,
+        "nFonti": 2
+      },
+      "gapDaMassimo": null
+    },
+    {
+      "id": "rivergaro",
+      "nome": "Rivergaro",
+      "tipo": "valle",
+      "slug": "rivergaro",
+      "valle": "Val Trebbia",
+      "abitanti": 6853,
+      "priorita": 2,
+      "prezzoMq": {
+        "media": 1350,
+        "min": 700,
+        "max": 1964,
+        "rilevato": "2026-06"
+      },
+      "affittoMqMese": 6.82,
+      "variazioni": {
+        "mensilePct": -0.5,
+        "trimestralePct": -1.8,
+        "annualePct": 5.7
+      },
+      "frazioni": [
+        "Rallio",
+        "Ancarano",
+        "Niviano",
+        "Pieve Dugliara",
+        "Castellino",
+        "Bassano",
+        "Roveleto Landi"
+      ],
+      "sede": "Via Cavallotti 3, 29029 Rivergaro (PC) — sede di Immobiliare Scaglia",
+      "driver": [
+        "Porta della Val Trebbia: domanda mista prima casa + seconda casa + investimento turistico",
+        "Zona OMI B1 (centro storico) fino a 1.800 €/mq, R1 (frazioni e fabbricati sparsi) da 700 €/mq",
+        "Picco storico a 1.923 €/mq (agosto 2012): oggi -29,8% da quel massimo",
+        "Mercato a due velocità: capoluogo in tenuta, frazioni più lente"
+      ],
+      "segnaleMercato": "stabile con crescita annua moderata",
+      "fonti": [
+        {
+          "nome": "Idealista — Rivergaro",
+          "url": "https://www.idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+          "valore": 1351,
+          "periodo": "2026-06"
+        },
+        {
+          "nome": "Immobiliare.it — Rivergaro",
+          "url": "https://www.immobiliare.it/en/mercato-immobiliare/emilia-romagna/rivergaro/",
+          "valore": 1376,
+          "periodo": "2025-12"
+        },
+        {
+          "nome": "Requot — Valutazione immobili Rivergaro (zone OMI)",
+          "url": "https://www.requot.com/valutazione-immobili/Rivergaro.html",
+          "valore": null,
+          "periodo": "2026"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 0,
+        "massimo": 1376,
+        "mediana": 1351,
+        "dispersionePct": 0,
+        "nFonti": 3
+      },
+      "gapDaMassimo": null
+    },
+    {
+      "id": "podenzano",
+      "nome": "Podenzano",
+      "tipo": "pianura",
+      "slug": "podenzano",
+      "valle": "Pianura, asse sud verso la Val Nure",
+      "abitanti": 8990,
+      "priorita": 3,
+      "prezzoMq": {
+        "media": 1518,
+        "min": 800,
+        "max": 1900,
+        "rilevato": "2026"
+      },
+      "affittoMqMese": 6.57,
+      "variazioni": {
+        "mensilePct": 4.8,
+        "trimestralePct": 2.8,
+        "annualePct": 1.3
+      },
+      "frazioni": [
+        "San Polo",
+        "Turro",
+        "Gariga",
+        "Casoni",
+        "La Verza"
+      ],
+      "driver": [
+        "Terzo comune della provincia per abitanti fra le zone servite",
+        "Servizi e scuole: domanda familiare costante in uscita dal capoluogo",
+        "Massimo storico 1.735 €/mq (luglio 2012): oggi -17,4% da quel picco",
+        "Balzo mensile +4,8% a giugno 2026: offerta scarsa rispetto alla domanda"
+      ],
+      "segnaleMercato": "domanda superiore all'offerta",
+      "fonti": [
+        {
+          "nome": "Idealista — Podenzano",
+          "url": "https://www.idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+          "valore": 1433,
+          "periodo": "2026-06"
+        },
+        {
+          "nome": "Immobiliare.it — Podenzano",
+          "url": "https://www.immobiliare.it/en/mercato-immobiliare/emilia-romagna/podenzano/",
+          "valore": 1518,
+          "periodo": "2026"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 1433,
+        "massimo": 1518,
+        "mediana": 1476,
+        "dispersionePct": 5.9,
+        "nFonti": 2
+      },
+      "gapDaMassimo": null
+    },
+    {
+      "id": "vigolzone",
+      "nome": "Vigolzone",
+      "tipo": "campagna",
+      "slug": "vigolzone",
+      "valle": "Bassa Val Nure",
+      "abitanti": 4218,
+      "priorita": 3,
+      "prezzoMq": {
+        "media": 848,
+        "min": 500,
+        "max": 1300,
+        "rilevato": "2026"
+      },
+      "affittoMqMese": 5.53,
+      "variazioni": {
+        "mensilePct": -0.3,
+        "trimestralePct": -4.7,
+        "annualePct": -14.1
+      },
+      "frazioni": [
+        "Villò",
+        "Albarola",
+        "Bettola di Vigolzone",
+        "Carmiano",
+        "Grazzano Visconti",
+        "Centenara"
+      ],
+      "driver": [
+        "Prezzo più basso fra le zone servite: 804 €/mq su Idealista a giugno 2026",
+        "Unica zona servita con variazione annua negativa (-14,1%): chi vende qui deve presidiare il prezzo con metodo",
+        "Massimo storico 1.296 €/mq (settembre 2017): oggi -37,9%",
+        "Grazzano Visconti è un attrattore turistico: domanda specifica per rustici e seconde case"
+      ],
+      "segnaleMercato": "in correzione — presidio del prezzo essenziale",
+      "fonti": [
+        {
+          "nome": "Idealista — Vigolzone",
+          "url": "https://www.idealista.it/sala-stampa/report-prezzo-immobile/vendita/emilia-romagna/piacenza-provincia/",
+          "valore": 804,
+          "periodo": "2026-06"
+        },
+        {
+          "nome": "Immobiliare.it — Vigolzone",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/emilia-romagna/gazzola/",
+          "valore": 789,
+          "periodo": "2025-12"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 789,
+        "massimo": 804,
+        "mediana": 797,
+        "dispersionePct": 1.9,
+        "nFonti": 2
+      },
+      "gapDaMassimo": null
+    },
+    {
+      "id": "ponte-dellolio",
+      "nome": "Ponte dell'Olio",
+      "tipo": "valle",
+      "slug": "ponte-dellolio",
+      "valle": "Media Val Nure",
+      "abitanti": 4614,
+      "priorita": 3,
+      "prezzoMq": {
+        "media": 794,
+        "min": 400,
+        "max": 1200,
+        "rilevato": "2026"
+      },
+      "affittoMqMese": 4.04,
+      "variazioni": {
+        "mensilePct": 0,
+        "trimestralePct": 0,
+        "annualePct": 0
+      },
+      "frazioni": [
+        "Biana",
+        "Castione",
+        "Cassano",
+        "Torchiarra",
+        "Monte Santo",
+        "Raffalda"
+      ],
+      "driver": [
+        "Affitto più basso della provincia fra le zone servite: 4,04 €/mq al mese",
+        "Mercato sottile: pochi annunci, tempi di vendita lunghi, prezzo molto sensibile",
+        "Domanda reale su rustici e case indipendenti con terreno",
+        "Zona non coperta dal report comunale Idealista: serve valutazione caso per caso"
+      ],
+      "segnaleMercato": "mercato sottile, prezzi fermi",
+      "fonti": [
+        {
+          "nome": "Immobiliare.it — Ponte dell'Olio",
+          "url": "https://www.immobiliare.it/mercato-immobiliare/emilia-romagna/gazzola/",
+          "valore": 794,
+          "periodo": "2025-12"
+        },
+        {
+          "nome": "RealAdvisor — Provincia di Piacenza",
+          "url": "https://realadvisor.it/it/mercato-immobiliare/provincia-piacenza",
+          "valore": 765,
+          "periodo": "2026-04"
+        }
+      ],
+      "osservato": null,
+      "coerenzaFonti": {
+        "minimo": 765,
+        "massimo": 794,
+        "mediana": 780,
+        "dispersionePct": 3.8,
+        "nFonti": 2
+      },
+      "gapDaMassimo": null
+    }
+  ],
+  "classificaOpportunita": [
+    {
+      "id": "gossolengo",
+      "nome": "Gossolengo",
+      "prezzoMq": 1953,
+      "crescitaAnnuaPct": 16,
+      "indiceOpportunita": 10.94,
+      "segnale": "in forte ascesa"
+    },
+    {
+      "id": "piacenza",
+      "nome": "Piacenza",
+      "prezzoMq": 1835,
+      "crescitaAnnuaPct": 8.7,
+      "indiceOpportunita": 6.33,
+      "segnale": "in crescita"
+    },
+    {
+      "id": "rivergaro",
+      "nome": "Rivergaro",
+      "prezzoMq": 1350,
+      "crescitaAnnuaPct": 5.7,
+      "indiceOpportunita": 5.64,
+      "segnale": "in crescita"
+    },
+    {
+      "id": "podenzano",
+      "nome": "Podenzano",
+      "prezzoMq": 1518,
+      "crescitaAnnuaPct": 1.3,
+      "indiceOpportunita": 1.14,
+      "segnale": "stabile"
+    },
+    {
+      "id": "ponte-dellolio",
+      "nome": "Ponte dell'Olio",
+      "prezzoMq": 794,
+      "crescitaAnnuaPct": 0,
+      "indiceOpportunita": 0,
+      "segnale": "stabile"
+    },
+    {
+      "id": "vigolzone",
+      "nome": "Vigolzone",
+      "prezzoMq": 848,
+      "crescitaAnnuaPct": -14.1,
+      "indiceOpportunita": -22.2,
+      "segnale": "in correzione"
+    }
+  ],
+  "osservazioni": [
+    {
+      "tipo": "opportunita",
+      "titolo": "Gossolengo è la zona che si muove di più",
+      "testo": "Crescita annua del 16% su un prezzo medio di 1953 €/mq. Per un proprietario significa: il momento di vendere è adesso, e il prezzo va costruito su comparabili recenti, non su quello che il vicino \"ha chiesto\".",
+      "zone": [
+        "gossolengo"
+      ]
+    },
+    {
+      "tipo": "rischio",
+      "titolo": "Vigolzone: chi vende qui non può improvvisare",
+      "testo": "Variazione annua -14,1%. In un mercato che scende, l'errore classico è partire alti \"per provarci\": ogni mese di attesa brucia valore. Qui il metodo conta più che altrove.",
+      "zone": [
+        "vigolzone"
+      ]
+    },
+    {
+      "tipo": "contesto",
+      "titolo": "I prezzi restano sotto il massimo del 2012",
+      "testo": "La provincia tocca 1335 €/mq contro il massimo storico di 1728 €/mq (2012-10): -22,8%. Chi ha comprato nel 2012 non ha ancora recuperato. È il dato che smonta la frase \"aspetto, tanto i prezzi salgono\".",
+      "zone": []
+    },
+    {
+      "tipo": "macro",
+      "titolo": "Il mercato nazionale ha smesso di correre",
+      "testo": "Q1 2026: 179.654 compravendite, +4,4% sull'anno. Q2 2026: 201.596, +0,1%. Il tasso medio scende al 3,57% per la prima volta dopo un anno. Tradotto per un venditore di Piacenza: la domanda c'è ma è più selettiva, e chi è priced giusto chiude.",
+      "zone": []
+    },
+    {
+      "tipo": "locale",
+      "titolo": "Piacenza resta il capoluogo più economico della regione",
+      "testo": "Ravenna 2015 €/mq · Reggio nell'Emilia 1926 €/mq · Piacenza 1734 €/mq · Forlì 1706 €/mq · Ferrara 1635 €/mq. Per chi compra è un'occasione; per chi vende a Piacenza significa che il concorrente non è solo l'altra agenzia, è il confronto con città vicine percepite come \"più vive\".",
+      "zone": [
+        "piacenza"
+      ]
+    }
+  ],
+  "metodo": {
+    "cosaMisura": "Prezzi RICHIESTI (asking price) rilevati dagli annunci, non prezzi di compravendita registrati. I due valori divergono: il prezzo di chiusura è in media più basso del prezzo richiesto.",
+    "fonti": "Idealista (report prezzi provincia), Immobiliare.it (quotazioni comunali), RealAdvisor, PiacenzaSera. Ogni valore ha la sua fonte e la sua data nel campo `fonti`.",
+    "frequenzaAggiornamento": "settimanale via GitHub Actions; i valori di mercato dei portali si aggiornano mensilmente.",
+    "avvertenza": "Questi dati servono a orientare una conversazione con il proprietario. La valutazione di un singolo immobile richiede sopralluogo, verifica catastale, APE e comparabili reali."
+  }
+}

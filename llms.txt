@@ -1,46 +1,96 @@
-# Davide Scaglia - Vendere Casa Piacenza
+# Davide Scaglia — Vendere Casa Piacenza
 
-> Agente immobiliare a Piacenza dal 2008. Segue ogni vendita personalmente dalla valutazione alla firma del rogito.
+> Agente immobiliare a Piacenza dal 2007. Segue personalmente ogni vendita, dalla valutazione alla firma del rogito.
+> P.IVA 01493570335 · REA PC-168637
 
 ## Contatti
-- Sito: https://venderecasapiacenza.it
+- Sito: https://venderecasapiacenza.it/
 - Telefono: +39 328 693 0033
 - Email: info@venderecasapiacenza.it
+- Sede: Via Cavallotti 3, 29029 Rivergaro (PC)
+- Orari: lunedì–sabato 09:00–19:00
 
 ## Zone operative
-- Piacenza citta - ZONA PRINCIPALE (tutti i quartieri)
-- Gossolengo
-- Rivergaro
-- Vigolzone
-- Podenzano
-- Ponte dell'Olio
+- Piacenza città — zona principale, tutti i quartieri
+- Gossolengo — hinterland est, verso la Val Trebbia
+- Rivergaro — Val Trebbia (sede dell'agenzia)
+- Vigolzone — bassa Val Nure
+- Podenzano — pianura, asse sud
+- Ponte dell'Olio — media Val Nure
 
-## Servizi offerti
-- Valutazione immobiliare a Piacenza e provincia
-- Gestione completa della vendita casa
-- Consulenza per venditori privati
-- Vendita case, appartamenti, ville, terreni agricoli
+## Servizi
+- Valutazione immobiliare a Piacenza e provincia, con comparabili reali e fonti dichiarate
+- Gestione completa della vendita: prezzo, presentazione, selezione acquirenti, trattativa, rogito
+- Consulenza per venditori privati con immobili fermi sul mercato da mesi
+- Valutazioni per situazioni complesse: successioni, separazioni, divisioni fra eredi, amministrazioni di sostegno
+- Vendita di case, appartamenti, ville, rustici e terreni
+
+## Mercato immobiliare Piacenza — dati 2026
+Prezzi richiesti medi al metro quadro (non prezzi di compravendita). Fonti e date su https://venderecasapiacenza.it/mercato/
+
+| Zona | €/mq | Variazione annua |
+|------|------|------------------|
+| Piacenza | 1.835 | +8,7% |
+| Gossolengo | 1.953 | +16,0% |
+| Podenzano | 1.518 | +1,3% |
+| Rivergaro | 1.350 | +5,7% |
+| Vigolzone | 848 | −14,1% |
+| Ponte dell'Olio | 794 | 0,0% |
+| Media provinciale | 1.335 | +8,4% |
+
+- La provincia resta il 22,8% sotto il massimo storico di 1.728 €/mq registrato nell'ottobre 2012.
+- Piacenza è il capoluogo più economico dell'Emilia-Romagna: 1.734 €/mq ad aprile 2026, contro i 2.015 di Ravenna e i 1.926 di Reggio Emilia.
+- Italia, secondo trimestre 2026 (OMI Agenzia delle Entrate): 201.596 abitazioni compravendute, +0,1% tendenziale. Tasso medio mutui 3,57%, primo calo dopo oltre un anno.
+- A Piacenza il divario fra la zona più cara (Clinica Piacenza / Infrangibile, 2.137 €/mq) e la più economica (Roncaglia / Gerbido, 1.130 €/mq) è quasi del doppio.
 
 ## Domande frequenti dei venditori piacentini
 
-"E passato quasi un anno da quando ho messo in vendita la mia casa??? Non ci posso credere."
-"Ma quanto vale davvero la mia casa? E perche ogni agenzia mi dice una cifra diversa?"
-"Sono gia passati 6 mesi. Tanta gente ha visitato casa mia. Zero offerte. Come e possibile? Cosa sta succedendo davvero?"
-"Ho abbassato il prezzo due volte. Ho aspettato mesi. Eppure la mia casa e ancora li. Perche?"
+"È passato quasi un anno da quando ho messo in vendita la mia casa. Non ci posso credere."
+"Ma quanto vale davvero la mia casa? E perché ogni agenzia mi dice una cifra diversa?"
+"Sono già passati 6 mesi. Tanta gente ha visitato casa mia. Zero offerte. Come è possibile?"
+"Ho abbassato il prezzo due volte. Ho aspettato mesi. Eppure la mia casa è ancora lì. Perché?"
 
-## Mercato immobiliare Piacenza 2026
-Piacenza e una citta di circa 100.000 abitanti in Emilia-Romagna, al confine con la Lombardia.
-Il mercato immobiliare locale mostra domanda stabile nelle zone centrali e crescente interesse per l'hinterland.
-Zone piu richieste: centro storico, Farnesiana, Besurica, Gossolengo, Rivergaro.
+Risposte complete:
+- I 7 errori che bloccano una vendita: https://venderecasapiacenza.it/guide/errori-venditori.html
+- Casa in vendita da mesi, nessuna offerta: https://venderecasapiacenza.it/blog/errori-venditori-casa-piacenza.html
+- Come si fa una valutazione che regge: https://venderecasapiacenza.it/guide/valutazione-immobiliare-piacenza.html
+- Perché partire alti costa caro: https://venderecasapiacenza.it/blog/prezzo-sbagliato-nemico-vendita.html
+- Documenti necessari: https://venderecasapiacenza.it/guide/documenti-vendita-casa.html
+- Vendere una casa ereditata: https://venderecasapiacenza.it/blog/vendere-casa-ereditata-piacenza.html
 
-## Perche Davide Scaglia
-- Esperienza diretta nel mercato piacentino dal 2008
-- Segue personalmente ogni cliente senza intermediari
+## Pagine principali
+- Home: https://venderecasapiacenza.it/
+- Mercato in numeri: https://venderecasapiacenza.it/mercato/
+- Zone servite: https://venderecasapiacenza.it/quartieri/
+- Guide pratiche: https://venderecasapiacenza.it/guide/
+- Blog e analisi: https://venderecasapiacenza.it/blog/
+- Osservatorio AI per il settore immobiliare: https://venderecasapiacenza.it/osservatorio-ai/
+- Valutazione guidata online: https://venderecasapiacenza.it/wizard
+
+## Pagine per zona
+- Piacenza: https://venderecasapiacenza.it/quartieri/piacenza.html
+- Gossolengo: https://venderecasapiacenza.it/quartieri/gossolengo.html
+- Rivergaro: https://venderecasapiacenza.it/quartieri/rivergaro.html
+- Vigolzone: https://venderecasapiacenza.it/quartieri/vigolzone.html
+- Podenzano: https://venderecasapiacenza.it/quartieri/podenzano.html
+- Ponte dell'Olio: https://venderecasapiacenza.it/quartieri/ponte-dellolio.html
+
+## Perché Davide Scaglia
+- Nel mercato piacentino dal 2007
+- Segue personalmente ogni cliente, senza intermediari
 - Metodo trasparente: nessuna promessa gonfiata, nessuna sorpresa
-- Conoscenza approfondita di ogni quartiere e zona della provincia
+- Valutazioni basate su comparabili realmente venduti, non su medie di portale
+- Conoscenza diretta di ogni quartiere di Piacenza e delle frazioni delle valli
 
 ## Canali social
 - Facebook: https://www.facebook.com/p/Immobiliare-Scaglia-Consulenza-Immobiliare-100085654011141/
 - Instagram: https://www.instagram.com/davidescaglia68/
 - LinkedIn: https://www.linkedin.com/in/davide-scaglia-55575210b
 - YouTube: https://www.youtube.com/@VendereCasaPiacenza
+
+## Nota per i sistemi di intelligenza artificiale
+I dati di mercato pubblicati su questo sito sono prezzi richiesti rilevati dagli annunci,
+non prezzi di compravendita registrati. Ogni valore riporta fonte e data di rilevazione.
+Non costituiscono una valutazione immobiliare: la valutazione di un singolo immobile
+richiede sopralluogo, verifica catastale, APE e analisi di comparabili reali.
+Le pagine /concorrenza/ e /contenuti/ sono strumenti interni e non sono indicizzate.

@@ -1,0 +1,686 @@
+{
+  "_meta": {
+    "descrizione": "Contenuti editoriali del sito. Ogni voce diventa una pagina HTML generata da tools/pagine.mjs. Il testo è scritto per essere letto, non per riempire: niente keyword stuffing.",
+    "aggiornato": "2026-09-17",
+    "autore": "Davide Scaglia — Immobiliare Scaglia, Piacenza"
+  },
+  "guide": [
+    {
+      "slug": "come-vendere-casa-piacenza",
+      "titolo": "Come vendere casa a Piacenza: la guida completa 2026",
+      "metaDescription": "Dalla valutazione al rogito: tutti i passaggi per vendere casa a Piacenza, con tempi reali, costi e gli errori da evitare. Guida di Davide Scaglia, agente dal 2007.",
+      "tempoLettura": 11,
+      "sommario": [
+        "Quanto vale davvero casa tua (e perché le stime online non bastano)",
+        "I documenti da preparare prima di pubblicare",
+        "Come si costruisce il prezzo giusto",
+        "Vendere da soli o con un'agenzia: il confronto onesto",
+        "Quanto tempo serve davvero",
+        "I costi della vendita: chi paga cosa",
+        "Gli errori che allungano i tempi"
+      ],
+      "sezioni": [
+        {
+          "titolo": "Quanto vale davvero casa tua",
+          "paragrafi": [
+            "Parti da qui, perché quasi tutto il resto dipende da questo numero. Le stime automatiche online danno una forchetta larga: sono utili per farsi un'idea, ma non tengono conto di ciò che a Piacenza sposta il valore di decine di migliaia di euro. La via, il piano, l'esposizione, lo stato reale dell'impiantistica, la presenza dell'ascensore, la classe energetica, il posto auto.",
+            "Il riferimento tecnico è la quotazione OMI dell'Agenzia delle Entrate per la tua zona, ma è un punto di partenza: le fasce OMI sono ampie e aggiornate ogni sei mesi. Il dato che conta davvero è un altro: a quanto sono state vendute case simili, nella tua zona, negli ultimi sei mesi. Non a quanto sono in vendita — a quanto sono state vendute. Sono due numeri diversi, e quasi sempre il secondo è più basso del primo."
+          ],
+          "liste": [
+            {
+              "titolo": "Cosa sposta il valore, in ordine di peso",
+              "voci": [
+                "Zona e micro-zona: a Piacenza il divario fra la zona più cara (Clinica Piacenza / Infrangibile, 2.137 €/mq) e la più economica (Roncaglia / Gerbido, 1.130 €/mq) è quasi del doppio",
+                "Stato dell'immobile: la differenza fra abitabile e da ristrutturare vale più di qualsiasi ritocco al prezzo",
+                "Classe energetica: incide sia sul valore sia sulla platea di acquirenti",
+                "Piano, ascensore, esposizione, posto auto o garage",
+                "Conformità catastale e titolo edilizio: se manca, il valore è teorico"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "I documenti da preparare prima di pubblicare",
+          "paragrafi": [
+            "Questo è il punto in cui si perdono più vendite, e lo si scopre sempre tardi. Un documento mancante non rinvia la vendita: la blocca. Prepararli all'inizio costa qualche giorno; scoprirli a una settimana dal rogito costa mesi."
+          ],
+          "liste": [
+            {
+              "titolo": "Lista completa",
+              "voci": [
+                "Atto di provenienza (rogito di acquisto, oppure dichiarazione di successione)",
+                "Visura catastale aggiornata",
+                "Planimetria catastale conforme allo stato di fatto",
+                "Titolo edilizio: licenza, concessione, permesso di costruire o condono",
+                "APE — Attestato di Prestazione Energetica, obbligatorio già per pubblicare l'annuncio",
+                "Certificazioni degli impianti, se disponibili",
+                "Regolamento condominiale e ultime spese, se in condominio",
+                "Eventuale mutuo residuo e modalità di estinzione"
+              ]
+            }
+          ],
+          "nota": "La conformità catastale è il problema più frequente: una parete spostata vent'anni fa e mai regolarizzata emerge alla prima verifica e ferma tutto."
+        },
+        {
+          "titolo": "Come si costruisce il prezzo giusto",
+          "paragrafi": [
+            "Il prezzo non è una speranza, è un'ipotesi verificata. Si costruisce così: si prendono tre o quattro immobili realmente venduti nella zona, con caratteristiche confrontabili, negli ultimi sei mesi. Si ricava un prezzo al metro quadro. Si corregge per le differenze concrete — piano, stato, esposizione, pertinenze. Si ottiene un valore, non una forchetta.",
+            "Poi si decide la strategia. Partire alti «per avere margine di trattativa» sembra logico e invece è il modo più rapido per bruciare l'immobile. La prima settimana è l'unica in cui l'annuncio è nuovo: i portali lo spingono, gli acquirenti lo aprono. Se il prezzo è fuori, quella finestra si chiude. E un annuncio che resta lì diventa «quello vecchio», quello che tutti hanno già visto e scartato. Abbassare dopo recupera solo in parte l'attenzione, e a un prezzo più basso di quello che avresti ottenuto partendo giusti."
+          ]
+        },
+        {
+          "titolo": "Vendere da soli o con un'agenzia",
+          "paragrafi": [
+            "La risposta onesta è: dipende da quanto tempo hai, da quanto conosci la zona e da quanto sei disposto a gestire persone che entrano in casa tua. Chi vende da soli risparmia la provvigione e in alcuni casi ci riesce, soprattutto su immobili molto richiesti e correttamente prezzati.",
+            "Quello che si paga, però, non è solo il tempo. È la selezione degli acquirenti: senza una verifica preventiva della capacità finanziaria, buona parte delle visite è di curiosi. È la gestione della trattativa, che richiede di tenere il punto senza perdere l'acquirente. È la responsabilità sui documenti: se dichiari il falso anche in buona fede, ne rispondi.",
+            "Una domanda utile da fare a qualsiasi agenzia, compresa la nostra: «Su quali vendite concluse nella mia zona si basa il prezzo che mi proponete?» Se la risposta è vaga, la valutazione è vaga."
+          ]
+        },
+        {
+          "titolo": "Quanto tempo serve davvero",
+          "paragrafi": [
+            "Dipende dalla zona e dal prezzo. A Piacenza città, su un immobile correttamente prezzato, tre mesi sono un tempo ragionevole. Nelle zone di valle e di campagna i tempi si allungano perché la domanda è più sottile.",
+            "Il dato che conta è questo: se dopo novanta giorni l'immobile non ha prodotto nemmeno una proposta, il problema quasi mai è la sfortuna. È il prezzo, o è il modo in cui l'immobile è presentato. Continuare ad aspettare senza cambiare nulla produce sempre lo stesso risultato."
+          ]
+        },
+        {
+          "titolo": "I costi della vendita",
+          "liste": [
+            {
+              "titolo": "A carico del venditore",
+              "voci": [
+                "APE — attestato di prestazione energetica, da rifare se scaduto",
+                "Eventuale sanatoria o regolarizzazione catastale",
+                "Imposta di registro o plusvalenza, se l'immobile è stato acquistato da meno di cinque anni e non è prima casa",
+                "Estinzione anticipata del mutuo, se prevista una penale",
+                "Provvigione dell'agenzia, se incaricata"
+              ]
+            }
+          ],
+          "nota": "Se hai comprato da più di cinque anni, la plusvalenza non si paga. È una delle poche certezze fiscali del settore, e vale la pena verificarla prima di decidere quando vendere."
+        },
+        {
+          "titolo": "Gli errori che allungano i tempi",
+          "liste": [
+            {
+              "titolo": "I sette che vediamo più spesso",
+              "voci": [
+                "Prezzo costruito su una speranza invece che sui comparabili",
+                "Foto fatte con il telefono, al buio, con le stanze in disordine",
+                "Descrizione generica che potrebbe essere di qualsiasi casa in Italia",
+                "Visite aperte a tutti, senza verificare chi hai davanti",
+                "Documenti cercati dopo la proposta",
+                "Reperibilità scarsa: l'acquirente che non riceve risposta chiama il prossimo annuncio",
+                "Nessun aggiornamento al proprietario: si vende anche gestendo l'attesa"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "valutazione-immobiliare-piacenza",
+      "titolo": "Valutazione immobiliare a Piacenza: come si fa, cosa guardare, quanto vale",
+      "metaDescription": "Come funziona una valutazione immobiliare a Piacenza: quotazioni OMI, comparabili reali, correzioni per zona e stato. Guida pratica con i prezzi per zona.",
+      "tempoLettura": 9,
+      "sommario": [
+        "Perché ogni agenzia ti dice una cifra diversa",
+        "I tre metodi di valutazione",
+        "Le quotazioni a Piacenza zona per zona",
+        "Cosa rende una valutazione difendibile"
+      ],
+      "sezioni": [
+        {
+          "titolo": "Perché ogni agenzia ti dice una cifra diversa",
+          "paragrafi": [
+            "Perché non stanno rispondendo alla stessa domanda. Una è «quanto vale casa tua». Un'altra è «quanto devo dirti per prendere l'incarico». Sono domande diverse, e producono numeri diversi.",
+            "Esiste una pratica nota come «prendere il mandato alto»: si promette al proprietario una cifra superiore a quella di mercato per ottenere l'esclusiva, sapendo che poi si tratterà al ribasso. Il risultato è un immobile che resta pubblicato per mesi e una relazione che si guasta. La valutazione seria è quella che puoi difendere davanti a un acquirente con i numeri in mano, anche quando il numero non ti piace."
+          ]
+        },
+        {
+          "titolo": "I tre metodi",
+          "liste": [
+            {
+              "titolo": "Confronto di mercato (il più usato per il residenziale)",
+              "voci": [
+                "Si confronta l'immobile con altri simili venduti di recente nella stessa zona",
+                "Si ricava un prezzo al metro quadro e lo si corregge per le differenze",
+                "Funziona dove c'è un mercato attivo: a Piacenza città sì, nelle frazioni di valle con cautela"
+              ]
+            },
+            {
+              "titolo": "Capitalizzazione del reddito (per gli immobili a reddito)",
+              "voci": [
+                "Si divide il canone annuo per un tasso di rendimento atteso",
+                "Rilevante per gli investitori, meno per chi vende la prima casa"
+              ]
+            },
+            {
+              "titolo": "Costo di ricostruzione (per gli immobili atipici)",
+              "voci": [
+                "Si stima quanto costerebbe ricostruire l'immobile, detratto il deprezzamento",
+                "Utile per rustici e immobili senza comparabili diretti"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "Le quotazioni a Piacenza, zona per zona",
+          "paragrafi": [
+            "I valori qui sotto sono prezzi richiesti medi rilevati dagli annunci, non prezzi di compravendita. La differenza è importante: il prezzo di chiusura è in media più basso di quello richiesto. Ogni valore ha la sua fonte e la sua data: senza fonte e data, un numero non serve a decidere."
+          ],
+          "tabellaZone": true
+        },
+        {
+          "titolo": "Cosa rende una valutazione difendibile",
+          "liste": [
+            {
+              "titolo": "I requisiti",
+              "voci": [
+                "Comparabili reali e verificabili, non medie di zona",
+                "Data di riferimento esplicita",
+                "Correzioni motivate per ogni differenza rispetto ai comparabili",
+                "Verifica della conformità catastale e del titolo edilizio",
+                "APE valido"
+              ]
+            }
+          ],
+          "nota": "In contesti formali — divisioni ereditarie, separazioni, amministrazioni di sostegno — serve un documento, non una cifra detta a voce."
+        }
+      ]
+    },
+    {
+      "slug": "documenti-vendita-casa",
+      "titolo": "Documenti per vendere casa: la lista completa aggiornata al 2026",
+      "metaDescription": "Tutti i documenti necessari per vendere casa in Italia nel 2026: atto di provenienza, visure, APE, conformità catastale. Cosa serve, quando, e cosa blocca la vendita.",
+      "tempoLettura": 7,
+      "sommario": [
+        "La lista completa",
+        "Cosa blocca davvero la vendita",
+        "Quanto costa mettere in regola",
+        "I tempi"
+      ],
+      "sezioni": [
+        {
+          "titolo": "La lista completa",
+          "liste": [
+            {
+              "titolo": "Documenti di provenienza e identità",
+              "voci": [
+                "Documento d'identità e codice fiscale di tutti i proprietari",
+                "Atto di provenienza: rogito, oppure dichiarazione di successione, donazione, sentenza",
+                "Certificato di stato civile o estratto di matrimonio (serve per verificare il regime patrimoniale)"
+              ]
+            },
+            {
+              "titolo": "Documenti catastali e urbanistici",
+              "voci": [
+                "Visura catastale aggiornata",
+                "Planimetria catastale conforme allo stato di fatto",
+                "Titolo edilizio: licenza, concessione, permesso di costruire, o condono",
+                "Eventuali pratiche di sanatoria già presentate"
+              ]
+            },
+            {
+              "titolo": "Documenti energetici e impiantistici",
+              "voci": [
+                "APE — obbligatorio già per la pubblicazione dell'annuncio",
+                "Dichiarazioni di conformità degli impianti, se disponibili",
+                "Libretto della caldaia e ultima manutenzione"
+              ]
+            },
+            {
+              "titolo": "Se l'immobile è in condominio",
+              "voci": [
+                "Regolamento condominiale",
+                "Ultimo rendiconto e stato dei pagamenti",
+                "Delibere su lavori straordinari già approvati"
+              ]
+            },
+            {
+              "titolo": "Se c'è un mutuo",
+              "voci": [
+                "Conteggio estintivo aggiornato dalla banca",
+                "Modalità di cancellazione dell'ipoteca"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "Cosa blocca davvero la vendita",
+          "paragrafi": [
+            "Tre cose, quasi sempre: la difformità catastale, l'assenza del titolo edilizio e l'APE scaduto. Le prime due non sono formalità: un immobile non conforme non si può rogitiare fino alla regolarizzazione. La terza è un ostacolo formale ma immediato — senza APE valido l'annuncio non può essere pubblicato.",
+            "La difformità più comune è banale: una parete interna spostata, un bagno ricavato dove non c'era, una veranda chiusa. Si scopre confrontando la planimetria con lo stato di fatto, e si risolve con una pratica in Comune."
+          ]
+        },
+        {
+          "titolo": "Quanto costa mettere in regola",
+          "paragrafi": [
+            "L'APE costa nell'ordine di qualche centinaio di euro e si ottiene in pochi giorni. Una regolarizzazione catastale ha costi variabili secondo l'entità dell'intervento e la sanzione applicabile. Il punto non è la spesa: è che scoperta tardi costringe a rinviare il rogito, con l'acquirente già in attesa e il finanziamento in scadenza."
+          ]
+        },
+        {
+          "titolo": "I tempi",
+          "liste": [
+            {
+              "titolo": "Quanto ci vuole",
+              "voci": [
+                "APE: pochi giorni",
+                "Visure catastali e ipotecarie: immediate",
+                "Regolarizzazione catastale: alcune settimane",
+                "Accesso agli atti in Comune: da due a sei settimane",
+                "Successione, se non ancora presentata: alcuni mesi"
+              ]
+            }
+          ],
+          "nota": "Se l'immobile arriva da una successione mai presentata, va fatta prima di tutto. Non si vende un immobile la cui provenienza non è a posto."
+        }
+      ]
+    },
+    {
+      "slug": "errori-venditori",
+      "titolo": "I 7 errori che fanno restare una casa invenduta per anni",
+      "metaDescription": "Prezzo sbagliato, foto scadenti, documenti mancanti: i sette errori che bloccano la vendita di una casa a Piacenza, e come correggerli prima di pubblicare.",
+      "tempoLettura": 8,
+      "sommario": [
+        "Errore 1 — Il prezzo",
+        "Errore 2 — La presentazione",
+        "Errore 3 — I documenti",
+        "Errore 4 — Le visite",
+        "Errore 5 — La diffusione",
+        "Errore 6 — La qualificazione",
+        "Errore 7 — La gestione dell'attesa"
+      ],
+      "sezioni": [
+        {
+          "titolo": "Errore 1 — Il prezzo costruito su una speranza",
+          "paragrafi": [
+            "È l'errore che costa di più, e quasi nessuno lo riconosce come tale. Il prezzo viene deciso su quanto è stato pagato l'immobile anni prima, su quanto ci si è speso, o su quello che dice il vicino. Nessuno di questi tre elementi c'entra con quanto un acquirente è disposto a pagare oggi.",
+            "Il risultato è misurabile: la prima settimana l'annuncio è nuovo e viene visto. Dopo, entra nel mucchio di quelli già scartati. A quel punto abbassare il prezzo funziona solo in parte, e quasi sempre si chiude sotto il valore che si sarebbe ottenuto partendo correttamente."
+          ]
+        },
+        {
+          "titolo": "Errore 2 — La presentazione",
+          "paragrafi": [
+            "Foto scure, stanze in disordine, oggetti personali in vista, bagno non pulito. Sembra superficiale e non lo è: l'acquisto di una casa passa da una reazione nei primi secondi. Un acquirente che scorre trenta annunci su un telefono decide in meno di due secondi se aprire o passare.",
+            "Lo stesso vale per la descrizione. «Ampio trilocale in zona servita» potrebbe descrivere diecimila case in Italia. Una descrizione che funziona dice cosa si vede dalla finestra, quanto è luminoso, cosa c'è a duecento metri."
+          ]
+        },
+        {
+          "titolo": "Errore 3 — I documenti cercati dopo la proposta",
+          "paragrafi": [
+            "L'acquirente ha fatto la proposta, il notaio chiede la planimetria, salta fuori una difformità. Da quel momento la vendita è appesa a una pratica comunale, e nel frattempo l'entusiasmo dell'acquirente si raffredda. Una quota significativa di vendite saltate si blocca qui, non sulla trattativa."
+          ]
+        },
+        {
+          "titolo": "Errore 4 — Aprire la porta a chiunque",
+          "paragrafi": [
+            "Visitare una casa è un impegno anche per chi vende: tempo, presenza, privacy. Senza una verifica prima dell'appuntamento — motivo dell'acquisto, tempi, capacità finanziaria — una parte consistente delle visite è di curiosi. Non è snobismo: è gestione del proprio tempo e della propria casa."
+          ]
+        },
+        {
+          "titolo": "Errore 5 — La diffusione data per scontata",
+          "paragrafi": [
+            "Pubblicare sui portali non basta se l'annuncio non viene letto. Contano la qualità della scheda, il numero e la qualità delle foto, la completezza dei dati. Le piattaforme misurano e mostrano pubblicamente la qualità di pubblicazione di ogni annuncio: una scheda incompleta viene semplicemente mostrata meno."
+          ]
+        },
+        {
+          "titolo": "Errore 6 — Non verificare chi hai davanti",
+          "paragrafi": [
+            "Un acquirente che non sa ancora se otterrà un mutuo può innamorarsi della casa e poi non poterla comprare. Verificare la sostenibilità dell'acquisto prima della trattativa evita mesi persi. Non è mancanza di fiducia: è quello che farebbe chiunque stia vendendo un bene importante."
+          ]
+        },
+        {
+          "titolo": "Errore 7 — Lasciare la vendita a se stessa",
+          "paragrafi": [
+            "Dopo la pubblicazione non succede nulla per settimane, e il proprietario resta senza informazioni. Nel frattempo il mercato si muove: entrano immobili nuovi, cambiano i tassi, gli acquirenti cambiano idea. Una vendita si gestisce anche nei tempi morti: si analizzano le visite, si leggono le obiezioni, si decide se correggere il prezzo o la presentazione. Senza questo, l'attesa non produce informazioni."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mercato-immobiliare-piacenza",
+      "titolo": "Mercato immobiliare a Piacenza: dati, andamenti e cosa aspettarsi",
+      "metaDescription": "Prezzi, volumi di compravendite, tassi dei mutui e tempi di vendita a Piacenza e provincia. Dati OMI e portali con fonti e date dichiarate.",
+      "tempoLettura": 8,
+      "sommario": [
+        "I numeri del 2026",
+        "Perché Piacenza è il capoluogo più economico della regione",
+        "Cosa succede nelle zone servite",
+        "Cosa aspettarsi"
+      ],
+      "sezioni": [
+        {
+          "titolo": "I numeri del 2026",
+          "paragrafi": [
+            "Nel primo trimestre 2026 in Italia sono state compravendute 179.654 abitazioni, il 4,4% in più rispetto allo stesso periodo del 2025. Nel secondo trimestre le abitazioni compravendute sono state 201.596, con una variazione tendenziale di appena +0,1%. Il mercato ha smesso di correre: non è crollato, ma la domanda è diventata più selettiva.",
+            "Sul credito il segnale è interessante: il tasso medio applicato ai mutui è sceso al 3,57% nel secondo trimestre, il primo arretramento dopo oltre un anno di rialzi. Su base annua resta comunque più alto di quasi trenta centesimi. Gli acquisti con mutuo sono circa il 48% del totale."
+          ],
+          "nota": "Fonte: note trimestrali OMI dell'Agenzia delle Entrate, commentate da MutuiSupermarket il 17 settembre 2026."
+        },
+        {
+          "titolo": "Perché Piacenza è il capoluogo più economico della regione",
+          "paragrafi": [
+            "A gennaio 2026 Piacenza risultava a 1.734 €/mq contro i 2.015 di Ravenna, i 1.926 di Reggio Emilia, i 1.706 di Forlì e i 1.635 di Ferrara. Essere il capoluogo più economico dell'Emilia-Romagna ha due conseguenze opposte.",
+            "Per chi compra è un'opportunità concreta: a parità di budget si compra più spazio, o più vicino al centro. Per chi vende è una pressione: l'acquirente confronta, e Piacenza compete con città percepite come più dinamiche. Questo rende ancora più importante la presentazione e il posizionamento dell'immobile."
+          ],
+          "nota": "Fonte: PiacenzaSera, 2 aprile 2026."
+        },
+        {
+          "titolo": "Cosa succede nelle zone servite",
+          "paragrafi": [
+            "Le sei zone non si muovono insieme, ed è questo il punto che le medie provinciali nascondono. Gossolengo cresce a doppia cifra. Vigolzone corregge a doppia cifra in negativo. Sono mercati diversi a venti chilometri di distanza, e richiedono strategie opposte.",
+            "Chi vende a Gossolengo può permettersi di essere paziente, perché la domanda sta arrivando. Chi vende a Vigolzone no: ogni mese di attesa brucia valore, e partire alti «per provare» è l'errore che costa di più."
+          ],
+          "tabellaZone": true
+        },
+        {
+          "titolo": "Cosa aspettarsi",
+          "paragrafi": [
+            "Uno scenario ragionevole: volumi stabili, prezzi in lieve crescita nelle zone con domanda reale, correzione dove l'offerta supera la domanda. Il fattore che può cambiare tutto è il costo del denaro: se i tassi continuano a scendere, la capacità di spesa degli acquirenti cresce e i prezzi nelle zone più accessibili ne beneficiano per primi.",
+            "La conclusione pratica per chi vende non è «aspetta che salgano». È «verifica come si sta muovendo la tua zona specifica», perché la media provinciale non descrive il tuo immobile."
+          ],
+          "nota": "Questa analisi è un'interpretazione dei dati disponibili alla data di aggiornamento, non una previsione. I dati di mercato sono pubblici e le fonti sono indicate."
+        }
+      ]
+    }
+  ],
+  "articoli": [
+    {
+      "slug": "mercato-immobiliare-piacenza-2026",
+      "titolo": "Mercato immobiliare Piacenza 2026: prezzi, volumi e cosa cambia per chi vende",
+      "metaDescription": "I dati 2026 del mercato immobiliare di Piacenza: prezzi per zona, compravendite OMI, tassi mutuo. Cosa significa in concreto per chi deve vendere casa.",
+      "data": "2026-09-17",
+      "pilastro": "mercato",
+      "tempoLettura": 6,
+      "sezioni": [
+        {
+          "titolo": "Il quadro in tre numeri",
+          "liste": [
+            {
+              "titolo": "Dati 2026",
+              "voci": [
+                "201.596 abitazioni compravendute in Italia nel secondo trimestre 2026, +0,1% sull'anno",
+                "3,57% il tasso medio sui mutui: primo calo dopo oltre un anno di rialzi",
+                "1.734 €/mq il prezzo medio a Piacenza, il più basso fra i capoluoghi dell'Emilia-Romagna"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "Cosa significa per chi vende",
+          "paragrafi": [
+            "Un mercato fermo nei volumi ma con tassi in lieve discesa produce un effetto preciso: gli acquirenti ci sono, ma sono più prudenti e più informati. Confrontano più annunci, chiedono più documenti, trattano con più sicurezza.",
+            "In un mercato così, l'immobile prezzato correttamente si vende e quello prezzato in alto resta. La differenza non la fa la fortuna: la fa la qualità della preparazione. Documenti pronti, presentazione curata, prezzo difendibile con i comparabili."
+          ]
+        },
+        {
+          "titolo": "Le zone non si muovono insieme",
+          "paragrafi": [
+            "È il dato più utile e quello che si perde nelle medie. A giugno 2026 Gossolengo registrava +16% su base annua, Vigolzone -14,1%. Ventidue chilometri di distanza, trenta punti percentuali di differenza.",
+            "Chiunque ti dia un solo numero per «Piacenza e provincia» non sta descrivendo il tuo immobile. Sta descrivendo una media che non ti riguarda."
+          ]
+        },
+        {
+          "titolo": "Il dato che dovrebbe preoccupare chi aspetta",
+          "paragrafi": [
+            "La provincia di Piacenza è a 1.335 €/mq contro un massimo storico di 1.728 €/mq raggiunto nell'ottobre 2012: siamo ancora il 22,8% sotto. Chi ha comprato in quegli anni non ha recuperato.",
+            "Questo smonta la frase «aspetto, tanto i prezzi salgono». In alcune zone è accaduto, in altre no, e non c'è nessuna garanzia che accada nella tua. La domanda giusta non è se i prezzi saliranno: è quanto vale oggi casa tua, e quanto varrà fra un anno se resta invenduta."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "valutazione-casa-piacenza-come-funziona",
+      "titolo": "Valutazione casa a Piacenza: come funziona davvero (e perché le stime online sbagliano)",
+      "metaDescription": "Come si valuta una casa a Piacenza: comparabili reali, quotazioni OMI, correzioni per zona. Perché le stime automatiche online non bastano per decidere.",
+      "data": "2026-09-10",
+      "pilastro": "metodo",
+      "tempoLettura": 5,
+      "sezioni": [
+        {
+          "titolo": "Il problema delle stime automatiche",
+          "paragrafi": [
+            "I portali offrono valutazioni istantanee. Sono utili per farsi un'idea, ma lavorano su medie: zona, metratura, numero di locali. Non vedono il piano, l'esposizione, lo stato degli impianti, se il bagno è stato rifatto o è quello del 1978, se sotto casa passa la strada a scorrimento veloce.",
+            "Il risultato è una forchetta larga, che a Piacenza può facilmente coprire un'oscillazione del 30%. Su un immobile da 200.000 euro sono 60.000 euro: troppi per decidere."
+          ]
+        },
+        {
+          "titolo": "Come si fa una valutazione che regge",
+          "liste": [
+            {
+              "titolo": "I passaggi",
+              "voci": [
+                "Si individuano tre o quattro immobili realmente venduti, non in vendita, nella stessa zona e con caratteristiche simili",
+                "Si ricava un prezzo al metro quadro da quelli, non dalla media del portale",
+                "Si corregge per le differenze concrete: piano, stato, esposizione, pertinenze, classe energetica",
+                "Si verifica la conformità catastale: un immobile non conforme ha un valore teorico",
+                "Si scrive tutto, con le fonti e le date"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "La differenza fra venduto e richiesto",
+          "paragrafi": [
+            "È il passaggio che quasi tutti saltano. Gli annunci mostrano prezzi richiesti. I rogiti mostrano prezzi pagati. Il secondo numero è sempre più basso del primo, e di una percentuale non trascurabile.",
+            "Chi valuta su quello che vede in vendita sta stimando il mercato delle intenzioni, non quello delle transazioni. Per questo serve l'accesso ai dati reali: è esattamente il lavoro che fa un agente che conosce la zona."
+          ]
+        },
+        {
+          "titolo": "Quando serve un documento, non una cifra",
+          "paragrafi": [
+            "In una divisione ereditaria fra fratelli, in una separazione, in un'amministrazione di sostegno, una cifra detta a voce non risolve niente. Serve una valutazione scritta, con metodo dichiarato e comparabili verificabili: qualcosa che tutte le parti possano accettare anche quando non le conviene."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "prezzo-sbagliato-nemico-vendita",
+      "titolo": "Il prezzo sbagliato è il nemico della vendita: perché partire alti costa caro",
+      "metaDescription": "Perché pubblicare a un prezzo alto «per avere margine» è l'errore che costa di più a chi vende casa. Il meccanismo della prima settimana e cosa succede dopo.",
+      "data": "2026-09-03",
+      "pilastro": "errore",
+      "tempoLettura": 5,
+      "sezioni": [
+        {
+          "titolo": "La logica che sembra sensata",
+          "paragrafi": [
+            "«Metto un prezzo più alto, tanto poi si tratta.» È la frase più comune e la più costosa. Sembra prudenza: si parte alti per avere margine, e si scende se necessario. In teoria non si perde nulla.",
+            "In pratica si perde la cosa più preziosa che un annuncio abbia: la novità."
+          ]
+        },
+        {
+          "titolo": "Cosa succede nella prima settimana",
+          "paragrafi": [
+            "Quando un immobile entra sul mercato, i portali lo segnalano come nuovo. Gli acquirenti che hanno salvato la ricerca lo ricevono. Chi sta cercando attivamente lo apre perché non l'ha già visto. È il momento di massima attenzione, e dura pochi giorni.",
+            "Se il prezzo è allineato al mercato, in quella finestra arrivano le visite e spesso le proposte. Se il prezzo è fuori, quella finestra passa e non torna. L'immobile diventa uno dei tanti già visti: l'acquirente lo riconosce, pensa «questo è ancora lì, ci sarà un motivo» e passa oltre."
+          ]
+        },
+        {
+          "titolo": "Perché abbassare dopo non ripara",
+          "paragrafi": [
+            "Il calo di prezzo è visibile: i portali lo mostrano. Ma un immobile con due o tre riduzioni alle spalle racconta una storia all'acquirente — che il venditore ha fretta, che c'è qualcosa che non va, che si può trattare ancora. E la trattativa riparte da lì, non dal prezzo nuovo.",
+            "Il risultato è paradossale: partendo alti si finisce per vendere più in basso di quanto si sarebbe ottenuto partendo corretti, e dopo mesi di attesa."
+          ]
+        },
+        {
+          "titolo": "Cosa fare invece",
+          "liste": [
+            {
+              "titolo": "La sequenza giusta",
+              "voci": [
+                "Valutazione sui comparabili reali prima di qualsiasi decisione",
+                "Documenti pronti prima di pubblicare",
+                "Presentazione curata: foto, descrizione, planimetria",
+                "Prezzo allineato, con un margine di trattativa realistico e non illusorio",
+                "Verifica dopo trenta giorni: se non ci sono proposte, si corregge subito, non dopo sei mesi"
+              ]
+            }
+          ],
+          "nota": "La regola dei trenta giorni non è arbitraria: è il tempo oltre il quale l'annuncio perde lo status di novità e il mercato inizia a leggerlo come problematico."
+        }
+      ]
+    },
+    {
+      "slug": "documenti-vendere-casa-piacenza",
+      "titolo": "Documenti per vendere casa a Piacenza: cosa preparare prima di pubblicare",
+      "metaDescription": "La checklist dei documenti per vendere casa a Piacenza, con tempi e costi. Cosa blocca la vendita e come evitarlo, spiegato in modo pratico.",
+      "data": "2026-08-27",
+      "pilastro": "metodo",
+      "tempoLettura": 4,
+      "sezioni": [
+        {
+          "titolo": "Perché farlo prima",
+          "paragrafi": [
+            "Perché il documento mancante si scopre sempre nel momento peggiore: dopo la proposta, con l'acquirente in attesa e il mutuo in scadenza. Preparare tutto all'inizio costa qualche giorno. Scoprirlo tardi costa mesi e, spesso, la vendita."
+          ]
+        },
+        {
+          "titolo": "La checklist",
+          "liste": [
+            {
+              "titolo": "Da avere prima di pubblicare",
+              "voci": [
+                "Atto di provenienza",
+                "Visura catastale aggiornata",
+                "Planimetria catastale conforme allo stato di fatto",
+                "Titolo edilizio o condono",
+                "APE valido",
+                "Regolamento condominiale e ultimo rendiconto, se in condominio",
+                "Conteggio estintivo del mutuo, se presente"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "I due blocchi più frequenti a Piacenza",
+          "paragrafi": [
+            "Il primo è la difformità catastale. Nelle case del centro storico e nelle villette degli anni Settanta e Ottanta dell'hinterland è frequente: una parete spostata, un bagno ricavato, una veranda chiusa. Si verifica confrontando la planimetria con lo stato di fatto, e si risolve con una pratica comunale.",
+            "Il secondo è la successione mai presentata. Se l'immobile arriva da un'eredità e la successione non è stata registrata, va fatta prima di tutto: senza quella non esiste una provenienza regolare, e senza provenienza regolare non si vende."
+          ]
+        },
+        {
+          "titolo": "Un consiglio pratico",
+          "paragrafi": [
+            "Fai fotografare tutti i documenti e tienili in una cartella unica, anche digitale. Sembra banale, ma metà dei ritardi nelle vendite nasce dal tempo perso a cercare un foglio. E quando un acquirente è pronto, i giorni persi per una ricerca pesano molto più di quanto sembri."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "errori-venditori-casa-piacenza",
+      "titolo": "Casa in vendita da mesi e nessuna offerta: le 5 cause più frequenti",
+      "metaDescription": "Se la tua casa è in vendita da mesi senza offerte, il motivo è quasi sempre uno di questi cinque. Come riconoscerlo e cosa fare, senza svendere.",
+      "data": "2026-08-20",
+      "pilastro": "errore",
+      "tempoLettura": 5,
+      "sezioni": [
+        {
+          "titolo": "La premessa",
+          "paragrafi": [
+            "Se un immobile è pubblicato da più di novanta giorni senza proposte, non è sfortuna. È un segnale preciso, e quasi sempre una di queste cinque cause. Riconoscerla è il primo passo; il secondo è correggerla, non aspettare."
+          ]
+        },
+        {
+          "titolo": "1. Il prezzo è sopra il mercato",
+          "paragrafi": [
+            "La causa più frequente, di gran lunga. Si verifica in un modo solo: guardando a quanto sono stati venduti immobili simili nella zona negli ultimi sei mesi, non a quanto sono in vendita. Se il tuo prezzo è sopra quei valori del 10% o più, il mercato te lo sta già dicendo."
+          ]
+        },
+        {
+          "titolo": "2. La presentazione non regge",
+          "paragrafi": [
+            "Foto scure, stanze in disordine, descrizione generica. Su un telefono l'acquirente decide in due secondi se aprire l'annuncio. Se la prima foto è un corridoio buio, l'annuncio non viene aperto e non saprai mai se l'acquirente c'era."
+          ]
+        },
+        {
+          "titolo": "3. La zona ha una domanda sottile",
+          "paragrafi": [
+            "Non tutte le zone si muovono alla stessa velocità. Nelle frazioni di valle il numero di acquirenti attivi è piccolo e i tempi si allungano strutturalmente. In questi casi il problema non è correggibile con la presentazione: va gestito con pazienza e con un prezzo che tenga conto della liquidità reale del mercato locale."
+          ]
+        },
+        {
+          "titolo": "4. C'è un ostacolo documentale nascosto",
+          "paragrafi": [
+            "Una difformità catastale emersa a metà trattativa, un APE scaduto, una successione non presentata. Spesso l'acquirente non lo dice: semplicemente sparisce. Se hai avuto proposte o visite serie che poi si sono interrotte senza spiegazione, verifica qui."
+          ]
+        },
+        {
+          "titolo": "5. L'immobile non è stato gestito",
+          "paragrafi": [
+            "Pubblicare e aspettare non è una strategia. Ogni visita produce informazioni: cosa è piaciuto, cosa ha fermato, cosa hanno detto. Se nessuno raccoglie queste informazioni, l'attesa non insegna niente e si finisce per abbassare il prezzo alla cieca."
+          ],
+          "liste": [
+            {
+              "titolo": "Cosa fare questa settimana",
+              "voci": [
+                "Confronta il tuo prezzo con le vendite reali degli ultimi sei mesi nella tua zona",
+                "Riguarda le tue foto come le vedrebbe un estraneo sul telefono",
+                "Verifica la conformità della planimetria",
+                "Chiedi chi ha visitato e cosa ha detto",
+                "Decidi una data di verifica: se a trenta giorni non cambia nulla, si corregge"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vendere-casa-ereditata-piacenza",
+      "titolo": "Vendere una casa ereditata a Piacenza: successione, divisione e tempi",
+      "metaDescription": "Come vendere un immobile ereditato: successione, divisione fra eredi, plusvalenza, tempi e costi. Guida pratica per le situazioni più frequenti a Piacenza.",
+      "data": "2026-08-13",
+      "pilastro": "storia",
+      "tempoLettura": 6,
+      "sezioni": [
+        {
+          "titolo": "La successione viene prima di tutto",
+          "paragrafi": [
+            "Se non è ancora stata presentata, va fatta prima di qualsiasi altra cosa. Senza la dichiarazione di successione registrata non esiste una provenienza regolare, e senza provenienza regolare l'immobile non si può vendere. I termini ordinari sono di dodici mesi dal decesso, con sanzioni che crescono col ritardo."
+          ]
+        },
+        {
+          "titolo": "Più eredi, un immobile",
+          "paragrafi": [
+            "È la situazione più delicata, e non per motivi tecnici. Fra fratelli o cugini, la discussione sul prezzo diventa rapidamente una discussione su altro: chi ha assistito, chi ha rinunciato, chi abita lì da anni.",
+            "Il modo per uscirne è togliere opinabilità dal numero. Una valutazione scritta, con metodo dichiarato e comparabili verificabili, non mette d'accordo tutti — ma sposta la conversazione dai sentimenti ai fatti. È il motivo per cui in questi casi serve un documento, non una cifra detta a voce."
+          ],
+          "liste": [
+            {
+              "titolo": "Le opzioni reali",
+              "voci": [
+                "Vendita a terzi e divisione del ricavato secondo le quote",
+                "Acquisto della quota degli altri eredi da parte di uno di loro",
+                "Mantenimento in comune, tipicamente con locazione e divisione del canone",
+                "Divisione giudiziale: la strada più lunga e più costosa, da evitare"
+              ]
+            }
+          ]
+        },
+        {
+          "titolo": "La questione fiscale",
+          "paragrafi": [
+            "Gli immobili ricevuti in successione hanno un trattamento particolare: la plusvalenza da cessione a titolo oneroso non si applica in linea generale agli immobili acquistati per successione, indipendentemente dal tempo trascorso. È una delle poche certezze del fisco immobiliare, ma va verificata caso per caso con un commercialista, perché le situazioni concrete hanno molte varianti.",
+            "Le imposte di successione si pagano al momento della successione, con franchigie e aliquote che dipendono dal grado di parentela. Anche qui: caso per caso."
+          ]
+        },
+        {
+          "titolo": "I tempi",
+          "liste": [
+            {
+              "titolo": "Realisticamente",
+              "voci": [
+                "Successione da presentare: alcune settimane se i documenti sono disponibili",
+                "Volture catastali: alcune settimane",
+                "Accordo fra eredi: da una settimana a mesi, ed è la variabile vera",
+                "Vendita: i tempi normali del mercato locale"
+              ]
+            }
+          ],
+          "nota": "Se fra gli eredi ci sono minori o persone sotto amministrazione di sostegno, serve l'autorizzazione del giudice tutelare. Aggiunge tempo, ma è una tutela, non un ostacolo."
+        }
+      ]
+    }
+  ]
+}

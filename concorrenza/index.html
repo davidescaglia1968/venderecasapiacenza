@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisi concorrenza Piacenza — strumento interno</title>
+<meta name="description" content="Analisi interna della concorrenza immobiliare su Piacenza e zone servite.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://venderecasapiacenza.it/concorrenza/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://venderecasapiacenza.it/concorrenza/">
+<meta property="og:title" content="Analisi concorrenza Piacenza — strumento interno">
+<meta property="og:description" content="Analisi interna della concorrenza immobiliare su Piacenza e zone servite.">
+<meta property="og:image" content="https://venderecasapiacenza.it/assets/og-image.jpg">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/davide-scaglia.jpg">
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--nero:#1c1a17;--bianco:#fdfcf9;--oro:#B8860B;--oro-scuro:#8B6508;--grigio:#7a7570;--grigio-chiaro:#f2ede3;--verde:#2f6b4f;--rosso:#8b2f2f;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bianco);color:var(--nero);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;line-height:1.25;font-weight:700}
+h1{font-size:clamp(28px,4.4vw,46px);margin-bottom:16px}
+h2{font-size:clamp(22px,3vw,32px);margin:44px 0 14px}
+h3{font-size:clamp(18px,2.2vw,22px);margin:28px 0 10px}
+em{color:var(--oro);font-style:italic}
+a{color:var(--oro-scuro)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+nav.top{position:sticky;top:0;z-index:20;background:rgba(28,26,23,.96);backdrop-filter:blur(8px);color:#fff;padding:12px 0}
+nav.top .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav.top a{color:rgba(255,255,255,.82);text-decoration:none;font-size:14px;font-weight:600}
+nav.top a.brand{color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:17px;margin-right:auto}
+nav.top a:hover{color:var(--oro)}
+.hero{background:var(--nero);color:#fff;padding:56px 0 44px}
+.hero .wrap{max-width:900px}
+.hero p.lead{color:rgba(255,255,255,.72);font-size:17px;max-width:720px}
+.eyebrow{display:inline-block;color:var(--oro);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+main{padding:34px 0 60px}
+.grid{display:grid;gap:18px}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid #ece7dd;border-radius:var(--radius);padding:20px}
+.card h3{margin-top:0}
+.card .num{font-family:'Playfair Display',Georgia,serif;font-size:34px;color:var(--oro);line-height:1}
+.kpi{background:#fff;border:1px solid #ece7dd;border-left:3px solid var(--oro);border-radius:8px;padding:16px 18px}
+.kpi .k-l{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--grigio)}
+.kpi .k-v{font-family:'Playfair Display',Georgia,serif;font-size:30px;color:var(--nero)}
+.kpi .k-s{font-size:13px;color:var(--grigio)}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:15px;margin:14px 0}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #ece7dd}
+th{background:var(--nero);color:#fff;font-weight:600;font-size:13px;letter-spacing:.04em}
+tbody tr:nth-child(even){background:#faf8f3}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.pos{color:var(--verde);font-weight:700}
+.neg{color:var(--rosso);font-weight:700}
+.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:700;background:var(--grigio-chiaro);color:var(--nero)}
+.badge.critico{background:#f7e0e0;color:var(--rosso)}
+.badge.attenzione{background:#fbf0d8;color:#8a6100}
+.badge.emergenza{background:#f2d3d3;color:#6b1f1f}
+.badge.ok{background:#e2efe7;color:var(--verde)}
+.barra{height:9px;border-radius:99px;background:var(--grigio-chiaro);overflow:hidden;margin-top:6px}
+.barra > span{display:block;height:100%;background:linear-gradient(90deg,var(--oro),var(--oro-scuro))}
+.cta{background:var(--nero);color:#fff;border-radius:var(--radius);padding:30px;margin:40px 0}
+.cta h2{margin-top:0;color:#fff}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--oro),var(--oro-scuro));color:var(--nero);padding:13px 26px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn+.btn{margin-left:10px}
+blockquote{border-left:3px solid var(--oro);padding:8px 0 8px 18px;margin:20px 0;font-family:'Playfair Display',Georgia,serif;font-size:19px;font-style:italic;color:#4a453e}
+ul.check{list-style:none}
+ul.check li{padding-left:26px;position:relative;margin-bottom:9px}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--oro);font-weight:700}
+.fonte{font-size:13px;color:var(--grigio);margin-top:8px}
+.fonte a{color:var(--grigio)}
+footer{background:var(--nero);color:rgba(255,255,255,.62);padding:40px 0;font-size:14px}
+footer a{color:rgba(255,255,255,.85)}
+footer .cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:24px}
+footer h4{color:#fff;font-size:15px;margin-bottom:10px}
+footer ul{list-style:none}
+footer li{margin-bottom:6px}
+.briciole{font-size:13px;color:var(--grigio);margin-bottom:18px}
+.briciole a{color:var(--grigio)}
+@media(max-width:640px){table{font-size:14px}th,td{padding:8px}.hero{padding:38px 0 30px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Analisi concorrenza Piacenza — strumento interno","description":"Analisi interna della concorrenza immobiliare su Piacenza e zone servite.","url":"https://venderecasapiacenza.it/concorrenza/","inLanguage":"it-IT","author":{"@type":"Person","name":"Davide Scaglia","jobTitle":"Agente Immobiliare"},"publisher":{"@type":"RealEstateAgent","name":"Immobiliare Scaglia","url":"https://venderecasapiacenza.it"}}</script>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+<a class="brand" href="/">Immobiliare Scaglia</a>
+<a href="/#zone">Zone</a>
+<a href="/mercato/">Mercato</a>
+<a href="/concorrenza/">Analisi</a>
+<a href="/blog/">Blog</a>
+<a href="/guide/">Guide</a>
+<a href="/wizard">Valutazione</a>
+<a href="/#contatti">Contatti</a>
+</div></nav>
+<header class="hero"><div class="wrap"><span class="eyebrow">Strumento interno · non indicizzato</span>
+<h1>Analisi <em>concorrenza</em></h1>
+<p class="lead">12 agenzie monitorate, 859 annunci dichiarati, 6 zone analizzate. Pagina di lavoro: esclusa dall'indicizzazione.</p></div></header>
+<main><div class="wrap"><div class="grid c3">
+<div class="kpi"><div class="k-l">Agenzie in provincia</div><div class="k-v">128</div><div class="k-s">101 nel comune di Piacenza</div></div>
+<div class="kpi"><div class="k-l">Agenzie monitorate</div><div class="k-v">12</div><div class="k-s">5 concorrenti digitali</div></div>
+<div class="kpi"><div class="k-l">Annunci dichiarati</div><div class="k-v">859</div><div class="k-s">somma dei volumi pubblici</div></div>
+<div class="kpi"><div class="k-l">Zone scoperte</div><div class="k-v">1</div><div class="k-s">con 2 o meno agenzie presenti</div></div>
+<div class="kpi"><div class="k-l">Annunci osservati</div><div class="k-v">0</div><div class="k-s">dal nostro archivio</div></div>
+</div><blockquote>Non si vince sulla quantità di annunci: 101 agenzie a Piacenza hanno già saturato quel terreno. Si vince sulla competenza verificabile su un numero limitato di zone e sulla qualità della scheda, dove i concorrenti monitorati si fermano sotto il 60%.</blockquote><h2>Presidio per zona</h2><table><thead><tr><th>Zona</th><th class="num">Agenzie</th><th class="num">Annunci</th><th>Saturazione</th><th>Lettura</th></tr></thead><tbody>
+<tr><td><strong>Piacenza</strong><br><small>Immobiliare La Piacentina, Milanesi Geom., Il Mediatore (Angelo Bersani), Farnese Soluzioni Immobiliari srl, Agenzia Evo Immobiliare, Tempocasa Piacenza Dante, Tempocasa Piacenza Centro, Tecnocasa Vendocasa — Industriale Piacenza srl, Carini Davide Immobiliare, Immobiliare Santa Caterina srl, Grimaldi Immobiliare Piacenza Clinica</small></td>
+<td class="num">11</td><td class="num">859</td>
+<td><span class="badge critico">alta</span></td>
+<td>saturo: serve un angolo specifico</td></tr><tr><td><strong>Gossolengo</strong><br><small>Milanesi Geom., Tempocasa Piacenza Dante, Gazzola Consulenza Immobiliare</small></td>
+<td class="num">3</td><td class="num">173</td>
+<td><span class="badge attenzione">media</span></td>
+<td>contendibile</td></tr><tr><td><strong>Rivergaro</strong><br><small>Immobiliare La Piacentina, Tempocasa Piacenza Dante, Gazzola Consulenza Immobiliare</small></td>
+<td class="num">3</td><td class="num">297</td>
+<td><span class="badge attenzione">media</span></td>
+<td>contendibile</td></tr><tr><td><strong>Podenzano</strong><br><small>Immobiliare La Piacentina, Il Mediatore (Angelo Bersani), Tempocasa Piacenza Centro</small></td>
+<td class="num">3</td><td class="num">427</td>
+<td><span class="badge attenzione">media</span></td>
+<td>contendibile</td></tr><tr><td><strong>Vigolzone</strong><br><small>Immobiliare La Piacentina, Milanesi Geom., Gazzola Consulenza Immobiliare</small></td>
+<td class="num">3</td><td class="num">390</td>
+<td><span class="badge attenzione">media</span></td>
+<td>contendibile</td></tr><tr><td><strong>Ponte dell'Olio</strong><br><small>nessuna</small></td>
+<td class="num">0</td><td class="num">0</td>
+<td><span class="badge ok">assente</span></td>
+<td>territorio scoperto: presidio ad alta resa</td></tr>
+</tbody></table><h2>Indicatori per agenzia</h2><table><thead><tr><th>Agenzia</th><th class="num">Annunci</th><th class="num">Qualità pubbl.</th><th>Zone</th><th>Debolezze osservate</th></tr></thead><tbody>
+<tr><td><strong>Immobiliare La Piacentina</strong><br><small>agenzia-locale · minaccia alta</small></td>
+<td class="num">257</td>
+<td class="num">—</td>
+<td>Piacenza, Rivergaro, Vigolzone, Fiorenzuola, Podenzano, Carpaneto, Bettola</td>
+<td>volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce</td></tr><tr><td><strong>Milanesi Geom.</strong><br><small>agenzia-locale · minaccia alta</small></td>
+<td class="num">133</td>
+<td class="num">—</td>
+<td>Piacenza, Gossolengo, Rottofreno, Vigolzone, Fiorenzuola</td>
+<td>volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce</td></tr><tr><td><strong>Il Mediatore (Angelo Bersani)</strong><br><small>agenzia-locale · minaccia alta</small></td>
+<td class="num">132</td>
+<td class="num">—</td>
+<td>Piacenza, Rottofreno, Podenzano, San Giorgio, Calendasco</td>
+<td>volume alto: difficile seguire ogni immobile con attenzione — il venditore lo percepisce</td></tr><tr><td><strong>Tempocasa Piacenza Dante</strong><br><small>franchising · minaccia alta</small></td>
+<td class="num">40</td>
+<td class="num">—</td>
+<td>Piacenza, Rivergaro, Gossolengo</td>
+<td>modello in franchising: turnover degli agenti e metodo standardizzato</td></tr><tr><td><strong>Gazzola Consulenza Immobiliare</strong><br><small>agenzia-locale · minaccia alta</small></td>
+<td class="num">—</td>
+<td class="num">—</td>
+<td>Rivergaro, Gossolengo, Vigolzone</td>
+<td>nessuna debolezza evidente dai dati pubblici: serve rilievo diretto</td></tr><tr><td><strong>Farnese Soluzioni Immobiliari srl</strong><br><small>agenzia-locale · minaccia media</small></td>
+<td class="num">65</td>
+<td class="num">55%</td>
+<td>Piacenza</td>
+<td>schede annuncio al 55% di qualità: foto e testi sotto standard</td></tr><tr><td><strong>Grimaldi Immobiliare Piacenza Clinica</strong><br><small>franchising · minaccia media</small></td>
+<td class="num">61</td>
+<td class="num">—</td>
+<td>Piacenza, Bobbio, San Pietro in Cerro</td>
+<td>modello in franchising: turnover degli agenti e metodo standardizzato</td></tr><tr><td><strong>Agenzia Evo Immobiliare</strong><br><small>agenzia-locale · minaccia media</small></td>
+<td class="num">48</td>
+<td class="num">49%</td>
+<td>Piacenza</td>
+<td>schede annuncio al 49% di qualità: foto e testi sotto standard<br>dichiara risposta in 2 ore: è il benchmark, non un vantaggio</td></tr><tr><td><strong>Tempocasa Piacenza Centro</strong><br><small>franchising · minaccia media</small></td>
+<td class="num">38</td>
+<td class="num">—</td>
+<td>Piacenza, Podenzano, Rottofreno, Gazzola, Bobbio</td>
+<td>modello in franchising: turnover degli agenti e metodo standardizzato</td></tr><tr><td><strong>Tecnocasa Vendocasa — Industriale Piacenza srl</strong><br><small>franchising · minaccia media</small></td>
+<td class="num">34</td>
+<td class="num">—</td>
+<td>Piacenza, Somaglia, Gragnano Trebbiense</td>
+<td>modello in franchising: turnover degli agenti e metodo standardizzato</td></tr><tr><td><strong>Carini Davide Immobiliare</strong><br><small>agenzia-locale · minaccia bassa</small></td>
+<td class="num">30</td>
+<td class="num">—</td>
+<td>Piacenza, Pontenure, Calendasco, Agazzano</td>
+<td>nessuna debolezza evidente dai dati pubblici: serve rilievo diretto</td></tr><tr><td><strong>Immobiliare Santa Caterina srl</strong><br><small>agenzia-locale · minaccia bassa</small></td>
+<td class="num">21</td>
+<td class="num">—</td>
+<td>Piacenza</td>
+<td>nessuna debolezza evidente dai dati pubblici: serve rilievo diretto</td></tr>
+</tbody></table><h2>Leve di posizionamento</h2><ul class="check">
+<li><strong>Specializzazione dichiarata e misurabile su Piacenza + 5 comuni, con dati pubblici per ciascuno</strong><br><small>Nessun concorrente monitorato pubblica dati di mercato per singola zona servita.</small></li><li><strong>Qualità di pubblicazione annuncio sopra il 90% contro il 49–55% osservato sui concorrenti principali</strong><br><small>Idealista rende pubblica la percentuale di qualità di pubblicazione.</small></li><li><strong>Risposta entro 2 ore: il benchmark attuale del mercato locale</strong><br><small>Il sito promette 24 ore; il concorrente più rapido dichiara meno di 2 ore.</small></li><li><strong>Uso dell’archivio annunci fermi: contattare i proprietari delusi, non aspettare i lead</strong><br><small>L’archivio ordina gli annunci per data di pubblicazione e segnala quelli oltre i 180 giorni.</small></li><li><strong>Pubblicare i dati di mercato con fonte e data: citabilità da parte dei motori AI e dei giornalisti locali</strong><br><small>I contenuti datati e verificabili sono il criterio con cui Perplexity e Gemini scelgono le fonti.</small></li>
+</ul><h2>Concorrenti digitali</h2><table><thead><tr><th>Chi</th><th>Tipo</th><th>Perché contano</th><th>Contromisura</th></tr></thead><tbody>
+<tr><td><strong>Idealista</strong></td><td>portale</td><td>Non vende case ma cattura la domanda. Un venditore che cerca 'quanto vale casa mia' atterra lì, non sul nostro sito.</td><td>Il portale vince sulla ricerca generica. Si vince sulla ricerca specifica: &quot;vendere casa a Gossolengo&quot; deve portare a una pagina con i numeri di Gossolengo, non a un elenco di annunci.</td></tr><tr><td><strong>Immobiliare.it</strong></td><td>portale</td><td>Pubblica le quotazioni per comune: è il riferimento che il venditore usa per farsi un'idea da solo.</td><td>Il portale vince sulla ricerca generica. Si vince sulla ricerca specifica: &quot;vendere casa a Gossolengo&quot; deve portare a una pagina con i numeri di Gossolengo, non a un elenco di annunci.</td></tr><tr><td><strong>RealAdvisor</strong></td><td>portale-valuation</td><td>Offre valutazioni automatiche online: intercetta il lead del venditore prima dell'agenzia.</td><td>La valutazione automatica dà un numero senza contesto. La risposta è una valutazione che spiega il numero con i comparabili della via, e che resta in mano al proprietario.</td></tr><tr><td><strong>Dove.it</strong></td><td>agenzia-online</td><td>Modello a provvigione ridotta. Pubblica contenuti di mercato ottimizzati per la ricerca: compete direttamente sui contenuti.</td><td>Il modello a provvigione ridotta compete sul prezzo. La contromisura è spostare la conversazione sul risultato netto in tasca, non sulla percentuale.</td></tr><tr><td><strong>AgenteImmobiliareAI</strong></td><td>software-ai</td><td>Vende a 2.500 € + IVA con esclusiva territoriale: se un concorrente di Piacenza lo adotta, occupa il posizionamento 'valutazione AI'.</td><td>Presidiare per primi il posizionamento &quot;valutazione con dati a Piacenza&quot;: se lo occupa un concorrente locale, recuperarlo costa molto.</td></tr>
+</tbody></table><h2>Archivio annunci</h2>
+<div class="card"><h3>L'archivio è vuoto</h3>
+<p>L'analisi degli annunci funziona, ma non ci sono ancora annunci caricati. Si popola in tre modi:</p>
+<ul class="check">
+<li><strong>Rilievo manuale</strong> — aggiungi righe a <code>data/seeds/annunci-manuali.csv</code> con le colonne <code>comune, zona, tipo, prezzo, mq, dataPubblicazione, agenzia, sorgente, url, ape</code>. È il canale che funziona sempre, anche per Facebook Marketplace.</li>
+<li><strong>Import dal CRM</strong> — salva l'export di immocrm in <code>data/seeds/crm-immocrm.json</code>: il CRM è la fonte primaria perché contiene le date reali di primo incarico.</li>
+<li><strong>Adattatori automatici</strong> — le sorgenti consentite dal robots.txt vengono interrogate a ogni build.</li>
+</ul>
+<p>Le pagine di mercato, concorrenza e osservatorio AI sono già complete: non dipendono dall'archivio annunci.</p>
+<p class="fonte">Per vedere la macchina lavorare su dati di esempio senza toccare la produzione: <code>node tools/build.mjs --demo</code></p>
+</div><h2>Conformità delle sorgenti (0/20 consentite)</h2>
+<p>Il sistema non raccoglie dati da chi lo ha vietato. Ogni richiesta passa da una verifica di robots.txt: se il percorso è bloccato, la richiesta non parte e la sorgente viene marcata per il rilievo manuale.</p>
+<table><thead><tr><th>Sorgente</th><th>Categoria</th><th>Esito</th><th>Regola</th></tr></thead><tbody>
+<tr><td>Idealista</td><td>portaliImmobiliari</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Immobiliare.it</td><td>portaliImmobiliari</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Casa.it</td><td>portaliImmobiliari</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Wikicasa</td><td>portaliImmobiliari</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Gate-Away (estero)</td><td>portaliImmobiliari</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Subito.it</td><td>piattaformeGeneraliste</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Facebook Marketplace</td><td>piattaformeGeneraliste</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Kijiji</td><td>piattaformeGeneraliste</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Bakeca.it</td><td>piattaformeGeneraliste</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>OMI — Osservatorio Mercato Immobiliare, Agenzia delle Entrate</td><td>aggregatoriDati</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>ISTAT — dati.istat.it</td><td>aggregatoriDati</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Caasa.it</td><td>aggregatoriDati</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>RealAdvisor</td><td>aggregatoriDati</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Recasa</td><td>aggregatoriDati</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>PiacenzaSera</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Libertà (Piacenza)</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>ilPiacenza</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Google News RSS</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>Idealista News</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr><tr><td>MutuiSupermarket News</td><td>stampa</td>
+<td><span class="badge critico">non consentito</span></td>
+<td><small>non verificabile in modalità offline</small></td></tr>
+</tbody></table></div></main>
+<div class="wrap"><div class="cta">
+<h2>Vuoi sapere quanto vale <em>davvero</em> casa tua?</h2>
+<p style="color:rgba(255,255,255,.7);margin-bottom:22px">Una valutazione fatta sui numeri della tua zona, non su una sensazione. Gratuita e senza impegno.</p>
+<a class="btn" href="/wizard">→ Fai la valutazione online</a>
+<a class="btn ghost" href="tel:+393286930033">Oppure chiama: 328 693 0033</a>
+</div></div>
+<footer><div class="wrap"><div class="cols">
+<div><h4>Immobiliare Scaglia</h4><p>Davide Scaglia — agente immobiliare a Piacenza dal 2007.<br>Via Cavallotti 3, Rivergaro (PC)</p><p><a href="tel:+393286930033">+39 328 693 0033</a><br><a href="mailto:info@venderecasapiacenza.it">info@venderecasapiacenza.it</a></p></div>
+<div><h4>Zone</h4><ul>
+<li><a href="/quartieri/piacenza.html">Piacenza</a></li>
+<li><a href="/quartieri/gossolengo.html">Gossolengo</a></li>
+<li><a href="/quartieri/rivergaro.html">Rivergaro</a></li>
+<li><a href="/quartieri/vigolzone.html">Vigolzone</a></li>
+<li><a href="/quartieri/podenzano.html">Podenzano</a></li>
+<li><a href="/quartieri/ponte-dellolio.html">Ponte dell'Olio</a></li>
+</ul></div>
+<div><h4>Risorse</h4><ul>
+<li><a href="/mercato/">Mercato in numeri</a></li>
+<li><a href="/concorrenza/">Analisi annunci</a></li>
+<li><a href="/osservatorio-ai/">Osservatorio AI</a></li>
+<li><a href="/contenuti/">Calendario contenuti</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/guide/">Guide</a></li>
+</ul></div>
+<div><h4>Legale</h4><ul>
+<li><a href="/privacy-policy.html">Privacy policy</a></li>
+<li><a href="/cookie-policy.html">Cookie policy</a></li>
+<li><a href="/termini-condizioni.html">Termini e condizioni</a></li>
+</ul></div>
+</div>
+<p>© 2026 Immobiliare Scaglia — Davide Scaglia · P.IVA 01493570335 · REA PC-168637 · Tutti i diritti riservati</p>
+</div></footer>
+</body>
+</html>
