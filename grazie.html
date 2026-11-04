@@ -8,7 +8,9 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --nero:#1c1a17;
@@ -16,7 +18,7 @@
   --oro-chiaro:#d4a520;
   --oro-scuro:#8B6508;
   --bianco:#fdfcf9;
-  --grigio:#7a7570;
+  --grigio:#5f5a55;
   --verde:#16a34a;
   --radius:8px;
   --radius-lg:16px;
@@ -32,6 +34,13 @@ body{
   display:flex;
   flex-direction:column;
 }
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:2000;
+  background:var(--oro-chiaro);color:var(--nero);
+  padding:12px 20px;border-radius:var(--radius);
+  font-weight:700;font-size:14px;text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:12px;outline:2px solid #fff;}
 
 /* ===== TOPBAR ===== */
 .topbar{
@@ -79,20 +88,20 @@ body{
   display:block;
 }
 .logo-text .sub{
-  font-size:9px;color:var(--oro);
+  font-size:9px;color:var(--oro-chiaro);
   letter-spacing:3px;text-transform:uppercase;
   font-weight:500;margin-top:3px;
   display:block;
 }
 .topbar-back{
-  color:rgba(255,255,255,0.5);
+  color:rgba(255,255,255,0.78);
   font-size:13px;text-decoration:none;
   display:flex;align-items:center;gap:6px;
   transition:color .2s;
-  border:1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
   padding:8px 16px;border-radius:100px;
 }
-.topbar-back:hover{color:var(--oro);border-color:rgba(184,134,11,0.4);}
+.topbar-back:hover{color:var(--oro-chiaro);border-color:rgba(184,134,11,0.4);}
 
 /* ===== HERO ===== */
 .hero{
@@ -145,7 +154,7 @@ body{
 .hero-label{
   font-size:10px;font-weight:700;
   letter-spacing:3.5px;text-transform:uppercase;
-  color:var(--oro);margin-bottom:20px;
+  color:var(--oro-chiaro);margin-bottom:20px;
   position:relative;z-index:1;
   animation:fadeUp .5s .2s both;
 }
@@ -158,10 +167,10 @@ body{
   position:relative;z-index:1;
   animation:fadeUp .5s .3s both;
 }
-.hero h1 em{font-style:italic;color:var(--oro);}
+.hero h1 em{font-style:italic;color:var(--oro-chiaro);}
 
 .hero-sub{
-  color:rgba(255,255,255,0.68);
+  color:rgba(255,255,255,0.78);
   font-size:clamp(15px,1.8vw,18px);
   max-width:560px;margin:0 auto 36px;
   line-height:1.78;
@@ -179,7 +188,7 @@ body{
   animation:fadeUp .5s .5s both;
 }
 .btn-wa{
-  background:#25d366;color:#fff;
+  background:#25d366;color:var(--nero);
   border:none;padding:15px 28px;
   border-radius:var(--radius);
   font-family:'DM Sans',sans-serif;
@@ -224,9 +233,10 @@ body{
   animation:fadeUp .5s .7s both;
 }
 .cards-title{
-  font-size:10px;font-weight:700;
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;font-weight:700;
   letter-spacing:3px;text-transform:uppercase;
-  color:rgba(255,255,255,0.3);
+  color:rgba(255,255,255,0.68);
   margin-bottom:22px;text-align:center;
 }
 .cards-grid{
@@ -245,7 +255,7 @@ body{
 .card-step{
   font-size:10px;font-weight:700;
   letter-spacing:2.5px;text-transform:uppercase;
-  color:var(--oro);margin-bottom:14px;
+  color:var(--oro-chiaro);margin-bottom:14px;
 }
 .card-icon{font-size:26px;margin-bottom:12px;display:block;}
 .card h3{
@@ -253,7 +263,7 @@ body{
   color:#fff;font-size:17px;
   margin-bottom:9px;line-height:1.3;
 }
-.card p{font-size:13px;color:rgba(255,255,255,0.52);line-height:1.65;}
+.card p{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65;}
 
 /* divider */
 .divider{
@@ -272,14 +282,14 @@ body{
 }
 .social-link{
   display:flex;align-items:center;gap:8px;
-  color:rgba(255,255,255,0.42);
+  color:rgba(255,255,255,0.78);
   font-size:13px;text-decoration:none;
   padding:9px 16px;
-  border:1px solid rgba(255,255,255,0.09);
+  border:1px solid rgba(255,255,255,0.18);
   border-radius:100px;
   transition:all .2s;
 }
-.social-link:hover{color:var(--oro);border-color:rgba(184,134,11,0.38);}
+.social-link:hover{color:var(--oro-chiaro);border-color:rgba(184,134,11,0.38);}
 
 /* footer */
 .page-footer{
@@ -288,9 +298,9 @@ body{
   padding:22px 5%;text-align:center;
   flex-shrink:0;
 }
-.page-footer p{font-size:11px;color:rgba(255,255,255,0.18);line-height:1.8;}
-.page-footer a{color:rgba(255,255,255,0.28);text-decoration:none;}
-.page-footer a:hover{color:var(--oro);}
+.page-footer p{font-size:12px;color:rgba(255,255,255,0.62);line-height:1.8;}
+.page-footer a{color:rgba(255,255,255,0.75);text-decoration:none;display:inline-block;padding:4px 2px;min-height:24px;}
+.page-footer a:hover{color:var(--oro-chiaro);}
 
 /* WhatsApp float */
 .wa-float{
@@ -357,10 +367,11 @@ body{
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-<nav class="topbar">
+<nav class="topbar" aria-label="Navigazione principale">
   <a href="https://venderecasapiacenza.it" class="topbar-logo">
-    <div class="logo-mark"><span>DS</span></div>
+    <div class="logo-mark" aria-hidden="true"><span>DS</span></div>
     <div class="logo-text">
       <span class="brand">DAVIDE SCAGLIA</span>
       <span class="sub">Vendere Casa a Piacenza</span>
@@ -369,10 +380,10 @@ body{
   <a href="https://venderecasapiacenza.it" class="topbar-back">← Torna al sito</a>
 </nav>
 
-<main class="hero">
+<main class="hero" id="main-content">
   <div class="hero-grid"></div>
 
-  <div class="check-wrap">
+  <div class="check-wrap" aria-hidden="true">
     <svg viewBox="0 0 52 52"><polyline points="14,26 22,34 38,18"/></svg>
   </div>
 
@@ -387,10 +398,10 @@ body{
   </p>
 
   <div class="cta-row">
-    <a href="https://wa.me/393286930033?text=Ciao%20Davide%2C%20ho%20appena%20compilato%20il%20modulo%20sul%20tuo%20sito.%20Quando%20possiamo%20sentirci%3F" class="btn-wa" id="btnWa" target="_blank">
-      💬 Scrivimi su WhatsApp
+    <a href="https://wa.me/393286930033?text=Ciao%20Davide%2C%20ho%20appena%20compilato%20il%20modulo%20sul%20tuo%20sito.%20Quando%20possiamo%20sentirci%3F" class="btn-wa" id="btnWa" target="_blank" rel="noopener">
+      <span aria-hidden="true">💬</span> Scrivimi su WhatsApp
     </a>
-    <a href="tel:+393286930033" class="btn-tel">📞 328 693 0033</a>
+    <a href="tel:+393286930033" class="btn-tel"><span aria-hidden="true">📞</span> 328 693 0033</a>
   </div>
 
   <div class="hero-quote">
@@ -400,23 +411,23 @@ body{
   </div>
 
   <div class="cards-section">
-    <div class="cards-title">Cosa succede adesso</div>
+    <h2 class="cards-title">Cosa succede adesso</h2>
     <div class="cards-grid">
       <div class="card">
         <div class="card-step">01 — Entro 24h</div>
-        <span class="card-icon">📞</span>
+        <span class="card-icon" aria-hidden="true">📞</span>
         <h3>Ti chiamo io</h3>
         <p>Non un assistente. Non un call center. Sono Davide Scaglia — direttamente, con già il quadro chiaro della tua situazione.</p>
       </div>
       <div class="card">
         <div class="card-step">02 — Prima chiamata</div>
-        <span class="card-icon">🎯</span>
+        <span class="card-icon" aria-hidden="true">🎯</span>
         <h3>Ascolto e analisi</h3>
         <p>Parliamo del tuo immobile, del contesto e dei tuoi obiettivi. Solo chiarezza su cosa sta succedendo nel tuo mercato oggi.</p>
       </div>
       <div class="card">
         <div class="card-step">03 — Se ha senso insieme</div>
-        <span class="card-icon">🏠</span>
+        <span class="card-icon" aria-hidden="true">🏠</span>
         <h3>Strategia su misura</h3>
         <p>Vengo a vedere l'immobile di persona e ti presento una strategia concreta — con dati reali sul mercato di Piacenza, non stime generiche.</p>
       </div>
@@ -426,11 +437,11 @@ body{
   <div class="divider"></div>
 
   <div class="social-strip">
-    <a href="https://www.instagram.com/davidescaglia68/" target="_blank" class="social-link"><span>📸</span> Instagram</a>
-    <a href="https://www.facebook.com/p/Immobiliare-Scaglia-Consulenza-Immobiliare-100085654011141/" target="_blank" class="social-link"><span>👥</span> Facebook</a>
-    <a href="https://www.youtube.com/@VendereCasaPiacenza" target="_blank" class="social-link"><span>▶️</span> YouTube</a>
-    <a href="https://www.linkedin.com/in/davide-scaglia-55575210b" target="_blank" class="social-link"><span>💼</span> LinkedIn</a>
-    <a href="https://venderecasapiacenza.it/blog" target="_blank" class="social-link"><span>📰</span> Magazine</a>
+    <a href="https://www.instagram.com/davidescaglia68/" target="_blank" rel="noopener" class="social-link"><span aria-hidden="true">📸</span> Instagram</a>
+    <a href="https://www.facebook.com/p/Immobiliare-Scaglia-Consulenza-Immobiliare-100085654011141/" target="_blank" rel="noopener" class="social-link"><span aria-hidden="true">👥</span> Facebook</a>
+    <a href="https://www.youtube.com/@VendereCasaPiacenza" target="_blank" rel="noopener" class="social-link"><span aria-hidden="true">▶️</span> YouTube</a>
+    <a href="https://www.linkedin.com/in/davide-scaglia-55575210b" target="_blank" rel="noopener" class="social-link"><span aria-hidden="true">💼</span> LinkedIn</a>
+    <a href="https://venderecasapiacenza.it/blog" target="_blank" rel="noopener" class="social-link"><span aria-hidden="true">📰</span> Magazine</a>
   </div>
 
 </main>
@@ -445,16 +456,24 @@ body{
   </p>
 </footer>
 
-<a href="https://wa.me/393286930033" class="wa-float" target="_blank" aria-label="Scrivimi su WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<aside aria-label="Contatto rapido WhatsApp">
+<a href="https://wa.me/393286930033" class="wa-float" target="_blank" rel="noopener" aria-label="Scrivimi su WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
+</aside>
 
 <script>
 (function(){
   var params = new URLSearchParams(window.location.search);
   var nome = params.get('nome');
   if(nome && nome.length > 1){
-    document.getElementById('heroTitle').innerHTML = nome + ', ci sentiamo presto.<br><em>Preparati.</em>';
+    var el = document.getElementById('heroTitle');
+    el.textContent = '';
+    el.appendChild(document.createTextNode(nome + ', ci sentiamo presto.'));
+    el.appendChild(document.createElement('br'));
+    var em = document.createElement('em');
+    em.textContent = 'Preparati.';
+    el.appendChild(em);
   }
   try{
     var msg = sessionStorage.getItem('ds_wa_msg');

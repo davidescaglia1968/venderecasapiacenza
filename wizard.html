@@ -24,15 +24,18 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --nero:#1c1a17;
   --oro:#B8860B;
   --oro-chiaro:#d4a520;
   --oro-scuro:#8B6508;
+  --oro-testo:#7A5505;
   --bianco:#fdfcf9;
-  --grigio:#7a7570;
+  --grigio:#5f5a55;
   --grigio-chiaro:#f2ede3;
   --verde:#16a34a;
   --card:#fff;
@@ -48,6 +51,13 @@ body{
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
 }
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:2000;
+  background:var(--oro-chiaro);color:var(--nero);
+  padding:12px 20px;border-radius:var(--radius);
+  font-weight:700;font-size:14px;text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:12px;outline:2px solid #fff;}
 
 /* ===== TOPBAR ===== */
 .topbar{
@@ -74,15 +84,15 @@ body{
 }
 .logo-text{color:#fff;}
 .logo-text .brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;display:block;}
-.logo-text .sub{font-size:9px;color:var(--oro);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-top:3px;display:block;}
+.logo-text .sub{font-size:9px;color:var(--oro-chiaro);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-top:3px;display:block;}
 .topbar-back{
-  color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;
+  color:rgba(255,255,255,0.78);font-size:13px;text-decoration:none;
   display:flex;align-items:center;gap:6px;
-  border:1px solid rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
   padding:8px 16px;border-radius:100px;
   transition:all .2s;
 }
-.topbar-back:hover{color:var(--oro);border-color:rgba(184,134,11,0.4);}
+.topbar-back:hover{color:var(--oro-chiaro);border-color:rgba(184,134,11,0.4);}
 
 /* ===== WIZARD HERO ===== */
 .wizard-hero{
@@ -104,7 +114,7 @@ body{
 }
 .hero-label{
   font-size:10px;font-weight:700;letter-spacing:3.5px;
-  text-transform:uppercase;color:var(--oro);
+  text-transform:uppercase;color:var(--oro-chiaro);
   margin-bottom:20px;position:relative;z-index:1;
 }
 .wizard-hero h1{
@@ -115,14 +125,14 @@ body{
   margin-bottom:24px;
   position:relative;z-index:1;
 }
-.wizard-hero h1 em{font-style:italic;color:var(--oro);}
+.wizard-hero h1 em{font-style:italic;color:var(--oro-chiaro);}
 .hero-body{position:relative;z-index:1;}
 .hero-body p{
-  color:rgba(255,255,255,0.68);
+  color:rgba(255,255,255,0.78);
   font-size:clamp(15px,1.7vw,17px);
   max-width:600px;margin:0 auto 14px;line-height:1.78;
 }
-.hero-p2{color:rgba(255,255,255,0.85)!important;font-style:italic;}
+.hero-p2{color:rgba(255,255,255,0.88)!important;font-style:italic;}
 .hero-quote{
   font-family:'Playfair Display',serif;
   font-size:clamp(17px,2.2vw,26px);
@@ -140,7 +150,7 @@ body{
   position:relative;z-index:1;
 }
 .hero-sub{
-  color:rgba(255,255,255,0.58);
+  color:rgba(255,255,255,0.72);
   font-size:clamp(14px,1.5vw,16px);
   max-width:500px;margin:0 auto 28px;line-height:1.65;
   position:relative;z-index:1;
@@ -149,8 +159,8 @@ body{
   display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
   position:relative;z-index:1;
 }
-.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.5);font-size:13px;}
-.trust-item b{color:rgba(255,255,255,0.88);}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.72);font-size:13px;}
+.trust-item b{color:rgba(255,255,255,0.92);}
 
 /* ===== PROGRESS ===== */
 .progress-wrap{
@@ -162,7 +172,7 @@ body{
 .progress-inner{max-width:660px;margin:0 auto;}
 .progress-labels{display:flex;justify-content:space-between;margin-bottom:8px;}
 .progress-label{font-size:11px;color:var(--grigio);font-weight:500;letter-spacing:.4px;transition:color .3s;}
-.progress-label.active{color:var(--oro);font-weight:700;}
+.progress-label.active{color:var(--oro-testo);font-weight:700;}
 .progress-bar{height:3px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden;}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--oro),var(--oro-chiaro));border-radius:2px;transition:width .5s ease;}
 
@@ -174,7 +184,7 @@ body{
 .step{display:none;animation:fadeIn .3s ease;}
 .step.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
-.step-num{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro);margin-bottom:12px;}
+.step-num{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro-testo);margin-bottom:12px;}
 .step h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--nero);margin-bottom:10px;line-height:1.2;}
 .step .sub{font-size:clamp(14px,1.5vw,16px);color:var(--grigio);margin-bottom:28px;line-height:1.65;}
 
@@ -204,13 +214,13 @@ body{
 .form-group label{display:block;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#3a3835;margin-bottom:6px;}
 .form-group input,.form-group select,.form-group textarea{
   width:100%;background:#fff;
-  border:1.5px solid rgba(0,0,0,0.14);
+  border:1.5px solid rgba(0,0,0,0.16);
   color:#1c1a17;font-family:'DM Sans',sans-serif;
   font-size:15px;padding:13px 15px;
   border-radius:var(--radius);
   transition:border-color .2s;outline:none;
 }
-.form-group input::placeholder,.form-group textarea::placeholder{color:#aaa;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#6b6560;}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--oro);background:#fffef9;}
 .form-group select{color:#1c1a17;}
 .form-group select option{color:#1c1a17;}
@@ -219,7 +229,7 @@ body{
 /* btn row */
 .btn-row{display:flex;gap:12px;align-items:center;margin-top:8px;}
 .btn-prev{
-  background:transparent;border:1.5px solid rgba(0,0,0,0.12);
+  background:transparent;border:1.5px solid rgba(0,0,0,0.18);
   color:var(--grigio);padding:13px 22px;
   border-radius:var(--radius);cursor:pointer;
   font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;
@@ -227,8 +237,8 @@ body{
 }
 .btn-prev:hover{border-color:var(--nero);color:var(--nero);}
 .btn-next{
-  background:linear-gradient(135deg,var(--oro),var(--oro-scuro));
-  color:#fff;border:none;padding:14px 28px;
+  background:linear-gradient(135deg,var(--oro-chiaro),var(--oro));
+  color:var(--nero);border:none;padding:14px 28px;
   border-radius:var(--radius);cursor:pointer;
   font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;
   flex:1;transition:all .25s;letter-spacing:.3px;
@@ -299,10 +309,11 @@ body{
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-<nav class="topbar">
+<nav class="topbar" aria-label="Navigazione principale">
   <a href="https://venderecasapiacenza.it" class="topbar-logo">
-    <div class="logo-mark"><span>DS</span></div>
+    <div class="logo-mark" aria-hidden="true"><span>DS</span></div>
     <div class="logo-text">
       <span class="brand">DAVIDE SCAGLIA</span>
       <span class="sub">Vendere Casa a Piacenza</span>
@@ -311,6 +322,7 @@ body{
   <a href="https://venderecasapiacenza.it" class="topbar-back">← Torna al sito</a>
 </nav>
 
+<main id="main-content">
 <div class="wizard-hero">
   <div class="hero-grid"></div>
   <div class="hero-label">Immobiliare Scaglia · Piacenza · Dal 2007</div>
@@ -326,9 +338,9 @@ body{
   <div class="hero-cta-label">Non è un preventivo. È il primo passo di una strategia.</div>
   <p class="hero-sub">Rispondi e scopri cosa conviene fare adesso per il tuo immobile a Piacenza.</p>
   <div class="trust-row">
-    <div class="trust-item"><span>📞</span><b>Ti chiamo io personalmente entro 24h</b></div>
-    <div class="trust-item"><span>📍</span><b>Dal 2007 solo a Piacenza e hinterland</b></div>
-    <div class="trust-item"><span>🔒</span><b>Nessun impegno. Solo chiarezza.</b></div>
+    <div class="trust-item"><span aria-hidden="true">📞</span><b>Ti chiamo io personalmente entro 24h</b></div>
+    <div class="trust-item"><span aria-hidden="true">📍</span><b>Dal 2007 solo a Piacenza e hinterland</b></div>
+    <div class="trust-item"><span aria-hidden="true">🔒</span><b>Nessun impegno. Solo chiarezza.</b></div>
   </div>
 </div>
 
@@ -353,24 +365,24 @@ body{
   <h2>Di che immobile si tratta?</h2>
   <p class="sub">Ogni casa ha la sua storia e le sue dinamiche di mercato. Dimmi qual è la tua — ci aiuta a capire subito come muoverci.</p>
   <div class="options-grid">
-    <button class="option-btn" onclick="sel(this,'tipo','Appartamento')">
-      <span class="option-icon">🏢</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'tipo','Appartamento')">
+      <span class="option-icon" aria-hidden="true">🏢</span>
       <div><span class="option-label">Appartamento</span><span class="option-hint">Bilocale, trilocale, quadrilocale…</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'tipo','Villa / Casa indipendente')">
-      <span class="option-icon">🏡</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'tipo','Villa / Casa indipendente')">
+      <span class="option-icon" aria-hidden="true">🏡</span>
       <div><span class="option-label">Villa / Casa indipendente</span><span class="option-hint">Giardino, autonomia totale</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'tipo','Casa a schiera')">
-      <span class="option-icon">🏘</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'tipo','Casa a schiera')">
+      <span class="option-icon" aria-hidden="true">🏘</span>
       <div><span class="option-label">Casa a schiera</span><span class="option-hint">Bifamiliare, a schiera</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'tipo','Rustico / Casale')">
-      <span class="option-icon">🌾</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'tipo','Rustico / Casale')">
+      <span class="option-icon" aria-hidden="true">🌾</span>
       <div><span class="option-label">Rustico / Casale</span><span class="option-hint">Campagna, da ristrutturare o finito</span></div>
     </button>
   </div>
-  <div class="btn-row"><button class="btn-next" id="n1" disabled onclick="go(2)">Avanti →</button></div>
+  <div class="btn-row"><button type="button" class="btn-next" id="n1" disabled onclick="go(2)">Avanti →</button></div>
 </div>
 
 <!-- STEP 2 -->
@@ -379,42 +391,42 @@ body{
   <h2>Dove si trova il tuo immobile?</h2>
   <p class="sub">Ogni zona di Piacenza ha dinamiche di mercato diverse. Questo mi permette di arrivare alla nostra conversazione già preparato sui tuoi dati reali.</p>
   <div class="options-grid">
-    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Centro storico')">
-      <span class="option-icon">🏛</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Piacenza — Centro storico')">
+      <span class="option-icon" aria-hidden="true">🏛</span>
       <div><span class="option-label">Piacenza — Centro storico</span><span class="option-hint">Entro le mura, capoluogo</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Piacenza — Quartieri residenziali')">
-      <span class="option-icon">🏙</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Piacenza — Quartieri residenziali')">
+      <span class="option-icon" aria-hidden="true">🏙</span>
       <div><span class="option-label">Piacenza — Quartieri</span><span class="option-hint">Farnesiana, Roma, Pittoni…</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Gossolengo')">
-      <span class="option-icon">🌳</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Gossolengo')">
+      <span class="option-icon" aria-hidden="true">🌳</span>
       <div><span class="option-label">Gossolengo</span><span class="option-hint">Hinterland, 8 km dal centro</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Rivergaro — Valle Trebbia')">
-      <span class="option-icon">🏔</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Rivergaro — Valle Trebbia')">
+      <span class="option-icon" aria-hidden="true">🏔</span>
       <div><span class="option-label">Rivergaro</span><span class="option-hint">Valle Trebbia, 12 km</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Vigolzone')">
-      <span class="option-icon">🌾</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Vigolzone')">
+      <span class="option-icon" aria-hidden="true">🌾</span>
       <div><span class="option-label">Vigolzone</span><span class="option-hint">Campagna, 15 km</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Podenzano')">
-      <span class="option-icon">🏡</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Podenzano')">
+      <span class="option-icon" aria-hidden="true">🏡</span>
       <div><span class="option-label">Podenzano</span><span class="option-hint">Pianura, 10 km</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Ponte dell\'Olio — Valle Nure')">
-      <span class="option-icon">🍃</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Ponte dell\'Olio — Valle Nure')">
+      <span class="option-icon" aria-hidden="true">🍃</span>
       <div><span class="option-label">Ponte dell'Olio</span><span class="option-hint">Valle Nure, 18 km</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'zona','Altra zona')">
-      <span class="option-icon">📍</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'zona','Altra zona')">
+      <span class="option-icon" aria-hidden="true">📍</span>
       <div><span class="option-label">Altra zona</span><span class="option-hint">Lo specifico nella nota finale</span></div>
     </button>
   </div>
   <div class="btn-row">
-    <button class="btn-prev" onclick="go(1)">← Indietro</button>
-    <button class="btn-next" id="n2" disabled onclick="go(3)">Avanti →</button>
+    <button type="button" class="btn-prev" onclick="go(1)">← Indietro</button>
+    <button type="button" class="btn-next" id="n2" disabled onclick="go(3)">Avanti →</button>
   </div>
 </div>
 
@@ -426,57 +438,57 @@ body{
 
   <span class="field-label">Perché stai pensando di vendere?</span>
   <div class="options-grid" style="margin-bottom:22px;">
-    <button class="option-btn" onclick="sel(this,'motivo','Voglio comprare una casa più adatta')">
-      <span class="option-icon">🔄</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Voglio comprare una casa più adatta')">
+      <span class="option-icon" aria-hidden="true">🔄</span>
       <div><span class="option-label">Cambio casa</span><span class="option-hint">Più grande, più piccola, zona diversa</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'motivo','Eredità o successione')">
-      <span class="option-icon">📜</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Eredità o successione')">
+      <span class="option-icon" aria-hidden="true">📜</span>
       <div><span class="option-label">Eredità o successione</span><span class="option-hint">Immobile ricevuto, da gestire</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'motivo','Separazione o divorzio')">
-      <span class="option-icon">⚖️</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Separazione o divorzio')">
+      <span class="option-icon" aria-hidden="true">⚖️</span>
       <div><span class="option-label">Separazione o divorzio</span><span class="option-hint">Casa comune da liquidare</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'motivo','Trasferimento per lavoro o famiglia')">
-      <span class="option-icon">✈️</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Trasferimento per lavoro o famiglia')">
+      <span class="option-icon" aria-hidden="true">✈️</span>
       <div><span class="option-label">Trasferimento</span><span class="option-hint">Cambio città, nuova fase di vita</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'motivo','Necessità economica')">
-      <span class="option-icon">💶</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Necessità economica')">
+      <span class="option-icon" aria-hidden="true">💶</span>
       <div><span class="option-label">Necessità economica</span><span class="option-hint">Ho bisogno di liquidità</span></div>
     </button>
-    <button class="option-btn" onclick="sel(this,'motivo','Sto ancora valutando')">
-      <span class="option-icon">🤔</span>
+    <button type="button" class="option-btn" aria-pressed="false" onclick="sel(this,'motivo','Sto ancora valutando')">
+      <span class="option-icon" aria-hidden="true">🤔</span>
       <div><span class="option-label">Sto ancora valutando</span><span class="option-hint">Voglio capire prima le possibilità</span></div>
     </button>
   </div>
 
   <span class="field-label">Il tuo immobile è attualmente…</span>
   <div class="options-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:22px;">
-    <button class="option-btn col3" onclick="sel(this,'stato_uso','Abitato da me')"><span class="option-label">Abitato da me</span></button>
-    <button class="option-btn col3" onclick="sel(this,'stato_uso','In affitto')"><span class="option-label">In affitto</span></button>
-    <button class="option-btn col3" onclick="sel(this,'stato_uso','Vuoto / inutilizzato')"><span class="option-label">Vuoto</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'stato_uso','Abitato da me')"><span class="option-label">Abitato da me</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'stato_uso','In affitto')"><span class="option-label">In affitto</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'stato_uso','Vuoto / inutilizzato')"><span class="option-label">Vuoto</span></button>
   </div>
 
   <span class="field-label">Hai già parlato con altri agenti?</span>
   <div class="options-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:22px;">
-    <button class="option-btn col3" onclick="sel(this,'agenti','No, sei il primo')"><span class="option-label">No, sei il primo</span></button>
-    <button class="option-btn col3" onclick="sel(this,'agenti','Sì, ho già valutazioni')"><span class="option-label">Ho già valutazioni</span></button>
-    <button class="option-btn col3" onclick="sel(this,'agenti','Sono già in agenzia')"><span class="option-label">Sono già in agenzia</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'agenti','No, sei il primo')"><span class="option-label">No, sei il primo</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'agenti','Sì, ho già valutazioni')"><span class="option-label">Ho già valutazioni</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'agenti','Sono già in agenzia')"><span class="option-label">Sono già in agenzia</span></button>
   </div>
 
   <span class="field-label">In quanto tempo vorresti vendere?</span>
   <div class="options-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:4px;">
-    <button class="option-btn col3" onclick="sel(this,'tempi','Entro 3 mesi')"><span class="option-label">Entro 3 mesi</span></button>
-    <button class="option-btn col3" onclick="sel(this,'tempi','Entro 6 mesi')"><span class="option-label">Entro 6 mesi</span></button>
-    <button class="option-btn col3" onclick="sel(this,'tempi','Entro 1 anno')"><span class="option-label">Entro 1 anno</span></button>
-    <button class="option-btn col3" onclick="sel(this,'tempi','Non ho fretta')"><span class="option-label">Non ho fretta</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'tempi','Entro 3 mesi')"><span class="option-label">Entro 3 mesi</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'tempi','Entro 6 mesi')"><span class="option-label">Entro 6 mesi</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'tempi','Entro 1 anno')"><span class="option-label">Entro 1 anno</span></button>
+    <button type="button" class="option-btn col3" aria-pressed="false" onclick="sel(this,'tempi','Non ho fretta')"><span class="option-label">Non ho fretta</span></button>
   </div>
 
   <div class="btn-row" style="margin-top:24px;">
-    <button class="btn-prev" onclick="go(2)">← Indietro</button>
-    <button class="btn-next" id="n3" disabled onclick="go(4)">Avanti →</button>
+    <button type="button" class="btn-prev" onclick="go(2)">← Indietro</button>
+    <button type="button" class="btn-next" id="n3" disabled onclick="go(4)">Avanti →</button>
   </div>
 </div>
 
@@ -491,8 +503,8 @@ body{
     <span class="field-label">L'immobile</span>
     <div class="form-row">
       <div class="form-group">
-        <label>Tipologia *</label>
-        <select id="ftipologia">
+        <label for="ftipologia">Tipologia *</label>
+        <select id="ftipologia" name="tipologia">
           <option value="">Seleziona...</option>
           <option>Appartamento</option>
           <option>Villa / Casa indipendente</option>
@@ -501,53 +513,53 @@ body{
         </select>
       </div>
       <div class="form-group">
-        <label>Via e numero civico</label>
-        <input type="text" id="fvia" placeholder="Es. Via Roma 12, Piacenza">
+        <label for="fvia">Via e numero civico</label>
+        <input type="text" id="fvia" name="via" autocomplete="street-address" placeholder="Es. Via Roma 12, Piacenza">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Zona / quartiere</label>
-        <input type="text" id="fquartiere" placeholder="Es. Farnesiana, centro storico…">
+        <label for="fquartiere">Zona / quartiere</label>
+        <input type="text" id="fquartiere" name="quartiere" placeholder="Es. Farnesiana, centro storico…">
       </div>
       <div class="form-group">
-        <label>Superficie (mq)</label>
-        <input type="text" id="fmq" placeholder="Es. 95">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label>Piano</label>
-        <input type="text" id="fpiano" placeholder="Es. 2° con ascensore">
-      </div>
-      <div class="form-group">
-        <label>Locali / vani</label>
-        <input type="text" id="fvani" placeholder="Es. 3 locali, 2 bagni">
+        <label for="fmq">Superficie (mq)</label>
+        <input type="text" id="fmq" name="superficie_mq" placeholder="Es. 95">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Stato conservativo</label>
-        <input type="text" id="fstato" placeholder="Es. abitabile, da ristrutturare…">
+        <label for="fpiano">Piano</label>
+        <input type="text" id="fpiano" name="piano" placeholder="Es. 2° con ascensore">
       </div>
       <div class="form-group">
-        <label>Classe energetica</label>
-        <input type="text" id="fclasse" placeholder="Es. C, G, non so…">
+        <label for="fvani">Locali / vani</label>
+        <input type="text" id="fvani" name="locali" placeholder="Es. 3 locali, 2 bagni">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Box / garage</label>
-        <input type="text" id="fbox" placeholder="Es. sì, box singolo">
+        <label for="fstato">Stato conservativo</label>
+        <input type="text" id="fstato" name="stato_conservativo" placeholder="Es. abitabile, da ristrutturare…">
       </div>
       <div class="form-group">
-        <label>Giardino / terrazzo</label>
-        <input type="text" id="fgiardino" placeholder="Es. terrazzo 20 mq">
+        <label for="fclasse">Classe energetica</label>
+        <input type="text" id="fclasse" name="classe_energetica" placeholder="Es. C, G, non so…">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fbox">Box / garage</label>
+        <input type="text" id="fbox" name="box_garage" placeholder="Es. sì, box singolo">
+      </div>
+      <div class="form-group">
+        <label for="fgiardino">Giardino / terrazzo</label>
+        <input type="text" id="fgiardino" name="giardino_terrazzo" placeholder="Es. terrazzo 20 mq">
       </div>
     </div>
     <div class="form-group">
-      <label>Altre caratteristiche</label>
-      <input type="text" id="faltro" placeholder="Es. cantina, soffitta, riscaldamento autonomo…">
+      <label for="faltro">Altre caratteristiche</label>
+      <input type="text" id="faltro" name="altre_caratteristiche" placeholder="Es. cantina, soffitta, riscaldamento autonomo…">
     </div>
   </div>
 
@@ -556,17 +568,17 @@ body{
     <span class="field-label">Situazione attuale</span>
     <div class="form-row">
       <div class="form-group">
-        <label>È già in vendita?</label>
-        <input type="text" id="finvendita" placeholder="Sì / No / Da quanto tempo">
+        <label for="finvendita">È già in vendita?</label>
+        <input type="text" id="finvendita" name="gia_in_vendita" placeholder="Sì / No / Da quanto tempo">
       </div>
       <div class="form-group">
-        <label>Prezzo richiesto o in mente</label>
-        <input type="text" id="fprezzo" placeholder="Es. 180.000 €">
+        <label for="fprezzo">Prezzo richiesto o in mente</label>
+        <input type="text" id="fprezzo" name="prezzo" placeholder="Es. 180.000 €">
       </div>
     </div>
     <div class="form-group">
-      <label>Hai già ricevuto visite o offerte?</label>
-      <input type="text" id="fofferte" placeholder="Es. molte visite ma nessuna offerta…">
+      <label for="fofferte">Hai già ricevuto visite o offerte?</label>
+      <input type="text" id="fofferte" name="visite_offerte" placeholder="Es. molte visite ma nessuna offerta…">
     </div>
   </div>
 
@@ -574,17 +586,17 @@ body{
   <div class="form-block">
     <span class="field-label">I tuoi contatti</span>
     <div class="form-row">
-      <div class="form-group"><label>Nome *</label><input type="text" id="fn" placeholder="Il tuo nome" oninput="chk()"></div>
-      <div class="form-group"><label>Cognome</label><input type="text" id="fl" placeholder="Il tuo cognome"></div>
+      <div class="form-group"><label for="fn">Nome *</label><input type="text" id="fn" name="nome" autocomplete="given-name" required placeholder="Il tuo nome" oninput="chk()"></div>
+      <div class="form-group"><label for="fl">Cognome</label><input type="text" id="fl" name="cognome" autocomplete="family-name" placeholder="Il tuo cognome"></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Telefono *</label><input type="tel" id="fp" placeholder="+39 …" oninput="chk()"></div>
-      <div class="form-group"><label>Email (opzionale)</label><input type="email" id="fe" placeholder="la@tua.email"></div>
+      <div class="form-group"><label for="fp">Telefono *</label><input type="tel" id="fp" name="telefono" autocomplete="tel" required placeholder="+39 …" oninput="chk()"></div>
+      <div class="form-group"><label for="fe">Email (opzionale)</label><input type="email" id="fe" name="email" autocomplete="email" placeholder="la@tua.email"></div>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label>Quando ti chiamo?</label>
-        <select id="fo">
+        <label for="fo">Quando ti chiamo?</label>
+        <select id="fo" name="fascia_oraria">
           <option value="">Seleziona…</option>
           <option>Mattina (9:00 – 12:00)</option>
           <option>Primo pomeriggio (13:00 – 16:00)</option>
@@ -593,8 +605,8 @@ body{
         </select>
       </div>
       <div class="form-group">
-        <label>Come preferisci essere contattato?</label>
-        <select id="fcontatto">
+        <label for="fcontatto">Come preferisci essere contattato?</label>
+        <select id="fcontatto" name="canale_contatto">
           <option value="">Seleziona…</option>
           <option>Telefonata</option>
           <option>WhatsApp</option>
@@ -603,21 +615,22 @@ body{
       </div>
     </div>
     <div class="form-group">
-      <label>Qualcosa che vuoi dirmi subito (opzionale)</label>
-      <textarea id="fnote" rows="2" placeholder="Es. è un'eredità, è in affitto, ho già un'offerta, voglio capire il valore reale…" style="resize:none;"></textarea>
+      <label for="fnote">Qualcosa che vuoi dirmi subito (opzionale)</label>
+      <textarea id="fnote" name="note" rows="2" placeholder="Es. è un'eredità, è in affitto, ho già un'offerta, voglio capire il valore reale…" style="resize:none;"></textarea>
     </div>
   </div>
 
-  <p class="privacy">🔒 I tuoi dati non vengono ceduti a terzi e sono trattati nel rispetto del GDPR. Ti contatto solo io, Davide Scaglia — nessun call center.</p>
+  <p class="privacy"><span aria-hidden="true">🔒 </span>I tuoi dati non vengono ceduti a terzi e sono trattati nel rispetto del GDPR. Ti contatto solo io, Davide Scaglia — nessun call center.</p>
   <div class="btn-row" style="margin-top:18px;">
-    <button class="btn-prev" onclick="go(3)">← Indietro</button>
-    <button class="btn-next" id="n4" disabled onclick="showConferma()">Parliamone →</button>
+    <button type="button" class="btn-prev" onclick="go(3)">← Indietro</button>
+    <button type="button" class="btn-next" id="n4" disabled onclick="showConferma()">Parliamone →</button>
   </div>
   <p class="submit-note">Nessun impegno. Solo chiarezza.</p>
 </div>
 
 </div><!-- /wizard-card -->
 </div><!-- /wizard-main -->
+</main>
 
 <script>
 var d={tipo:'',zona:'',motivo:'',stato_uso:'',agenti:'',tempi:''};
@@ -634,8 +647,9 @@ function go(n){
 }
 function sel(btn,field,val){
   var grid=btn.closest('.options-grid');
-  if(grid) grid.querySelectorAll('.option-btn').forEach(function(b){b.classList.remove('selected');});
+  if(grid) grid.querySelectorAll('.option-btn').forEach(function(b){b.classList.remove('selected');b.setAttribute('aria-pressed','false');});
   btn.classList.add('selected');
+  btn.setAttribute('aria-pressed','true');
   d[field]=val;
   var stepId=btn.closest('.step').id.replace('step','');
   if(stepId==='3'){
