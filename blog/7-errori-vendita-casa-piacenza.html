@@ -110,15 +110,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
 <style>
 :root {
   --nero: #1c1a17;
   --bianco: #fdfcf9;
   --oro: #B8860B;
+  --oro-chiaro: #d4a520;
   --oro-scuro: #8B6508;
-  --grigio: #7a7570;
+  --oro-testo: #7A5505;
+  --grigio: #5f5a55;
   --crema: #faf6ee;
   --radius: 6px;
   --radius-lg: 16px;
@@ -126,6 +130,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bianco); color: var(--nero); -webkit-font-smoothing: antialiased; }
+.skip-link {
+  position: fixed; top: -100px; left: 16px; z-index: 2000;
+  background: var(--oro-chiaro); color: var(--nero);
+  padding: 12px 20px; border-radius: var(--radius);
+  font-weight: 700; font-size: 14px; text-decoration: none; transition: top .2s;
+}
+.skip-link:focus { top: 12px; outline: 2px solid #fff; }
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(10,10,10,0.96);
@@ -138,16 +149,16 @@ nav {
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .nav-logo-mark {
   width: 38px; height: 38px;
-  background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
+  background: linear-gradient(135deg, var(--oro-chiaro), var(--oro));
   border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Playfair Display', serif;
-  color: white; font-weight: 900; font-size: 18px;
+  color: var(--nero); font-weight: 900; font-size: 18px;
 }
 .nav-logo-text .brand { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: white; display: block; }
-.nav-logo-text .sub { font-size: 10px; color: var(--oro); letter-spacing: 2px; text-transform: uppercase; }
-.nav-back { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; font-weight: 500; }
-.nav-back:hover { color: var(--oro); }
+.nav-logo-text .sub { font-size: 10px; color: var(--oro-chiaro); letter-spacing: 2px; text-transform: uppercase; }
+.nav-back { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 13px; font-weight: 500; padding: 8px 12px; }
+.nav-back:hover { color: var(--oro-chiaro); }
 .hero {
   min-height: 60vh;
   background: var(--nero);
@@ -162,19 +173,19 @@ nav {
   padding: 6px 16px; border-radius: 100px;
   margin-bottom: 28px;
 }
-.hero-eyebrow span { font-size: 12px; color: var(--oro); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
-.hero-eyebrow-dot { width: 6px; height: 6px; background: var(--oro); border-radius: 50%; }
-.hero-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--oro); margin-bottom: 16px; display: block; }
+.hero-eyebrow span { font-size: 12px; color: var(--oro-chiaro); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+.hero-eyebrow-dot { width: 6px; height: 6px; background: var(--oro-chiaro); border-radius: 50%; }
+.hero-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--oro-chiaro); margin-bottom: 16px; display: block; }
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(28px, 4.5vw, 58px);
   line-height: 1.15; color: white;
   margin-bottom: 20px; font-weight: 900;
 }
-.hero h1 em { font-style: italic; color: var(--oro); }
-.hero-sub { font-size: clamp(16px, 2vw, 19px); line-height: 1.75; color: rgba(255,255,255,0.7); margin-bottom: 16px; max-width: 720px; }
-.hero-author { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 0; }
-.hero-author strong { color: rgba(255,255,255,0.75); }
+.hero h1 em { font-style: italic; color: var(--oro-chiaro); }
+.hero-sub { font-size: clamp(16px, 2vw, 19px); line-height: 1.75; color: rgba(255,255,255,0.78); margin-bottom: 16px; max-width: 720px; }
+.hero-author { font-size: 14px; color: rgba(255,255,255,0.72); margin-bottom: 0; }
+.hero-author strong { color: rgba(255,255,255,0.92); }
 .article-body { max-width: 780px; margin: 0 auto; padding: 80px 5%; }
 .article-body p { font-size: 18px; line-height: 1.85; color: #2a2825; margin-bottom: 28px; }
 .article-body p strong { color: var(--nero); }
@@ -197,21 +208,21 @@ nav {
 }
 .author-monogram {
   width: 64px; height: 64px; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--oro), var(--oro-scuro));
+  background: linear-gradient(135deg, var(--oro-chiaro), var(--oro));
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-family: 'Playfair Display', serif;
-  color: white; font-weight: 900; font-size: 24px;
+  color: var(--nero); font-weight: 900; font-size: 24px;
 }
 .author-info .name { font-family: 'Playfair Display', serif; font-size: 20px; color: white; font-weight: 700; margin-bottom: 4px; }
-.author-info .role { font-size: 13px; color: var(--oro); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; }
-.author-info .bio { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 16px; }
+.author-info .role { font-size: 13px; color: var(--oro-chiaro); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; }
+.author-info .bio { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.78); margin-bottom: 16px; }
 .author-contacts { display: flex; flex-wrap: wrap; gap: 16px; }
-.author-contacts a { color: var(--oro); text-decoration: none; font-size: 14px; font-weight: 600; }
+.author-contacts a { color: var(--oro-chiaro); text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; padding: 6px 4px; min-height: 32px; }
 .author-contacts a:hover { text-decoration: underline; }
-footer { background: #111; color: rgba(255,255,255,0.4); padding: 32px 5%; text-align: center; font-size: 13px; }
-footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-footer a:hover { color: var(--oro); }
+footer { background: #111; color: rgba(255,255,255,0.70); padding: 32px 5%; text-align: center; font-size: 13px; line-height: 1.7; }
+footer a { color: rgba(255,255,255,0.82); text-decoration: none; display: inline-block; padding: 6px 4px; min-height: 28px; }
+footer a:hover { color: var(--oro-chiaro); }
 @media (max-width: 768px) {
   .author-box { flex-direction: column; padding: 28px 24px; }
   .article-body { padding: 48px 5%; }
@@ -219,10 +230,11 @@ footer a:hover { color: var(--oro); }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-<nav>
+<nav aria-label="Navigazione principale">
   <a href="https://venderecasapiacenza.it" class="nav-logo">
-    <div class="nav-logo-mark">S</div>
+    <div class="nav-logo-mark" aria-hidden="true">S</div>
     <div class="nav-logo-text">
       <span class="brand">Immobiliare Scaglia</span>
       <span class="sub">Dal 2007 · Piacenza</span>
@@ -231,10 +243,11 @@ footer a:hover { color: var(--oro); }
   <a href="https://venderecasapiacenza.it/blog" class="nav-back">← Magazine</a>
 </nav>
 
+<main id="main-content">
 <section class="hero">
   <div class="hero-content">
     <div class="hero-eyebrow">
-      <div class="hero-eyebrow-dot"></div>
+      <div class="hero-eyebrow-dot" aria-hidden="true"></div>
       <span>Piacenza · 2026</span>
     </div>
     <span class="hero-label">Errori da evitare</span>
@@ -265,20 +278,21 @@ footer a:hover { color: var(--oro); }
   </div>
 
   <div class="author-box">
-    <div class="author-monogram">DS</div>
+    <div class="author-monogram" aria-hidden="true">DS</div>
     <div class="author-info">
       <div class="name">Davide Scaglia</div>
       <div class="role">Agente di Affari in Mediazione · REA PC-168637</div>
       <div class="bio">Agente immobiliare a Piacenza dal 2007, fondatore di Immobiliare Scaglia nel 2012. Questo articolo è basato su 18 anni di esperienza diretta nel mercato immobiliare di Piacenza.</div>
       <div class="author-contacts">
-        <a href="tel:+393286930033">📞 +39 328 693 0033</a>
-        <a href="mailto:info@venderecasapiacenza.it">✉️ info@venderecasapiacenza.it</a>
-        <a href="https://venderecasapiacenza.it">🌐 venderecasapiacenza.it</a>
+        <a href="tel:+393286930033"><span aria-hidden="true">📞</span> +39 328 693 0033</a>
+        <a href="mailto:info@venderecasapiacenza.it"><span aria-hidden="true">✉️</span> info@venderecasapiacenza.it</a>
+        <a href="https://venderecasapiacenza.it"><span aria-hidden="true">🌐</span> venderecasapiacenza.it</a>
       </div>
     </div>
   </div>
 
 </article>
+</main>
 
 <footer>
   <p style="margin-bottom:8px;"><strong>Immobiliare Scaglia di Scaglia Davide</strong><br>

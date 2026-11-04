@@ -52,16 +52,19 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --nero:#1c1a17;
   --oro:#B8860B;
   --oro-chiaro:#d4a520;
   --oro-scuro:#8B6508;
+  --oro-testo:#7A5505;
   --bianco:#fdfcf9;
   --crema:#faf6ee;
-  --grigio:#7a7570;
+  --grigio:#5f5a55;
   --grigio-chiaro:#f2ede3;
   --card:#fff;
   --radius:8px;
@@ -78,6 +81,13 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:2000;
+  background:var(--oro-chiaro);color:var(--nero);
+  padding:12px 20px;border-radius:var(--radius);
+  font-weight:700;font-size:14px;text-decoration:none;transition:top .2s;
+}
+.skip-link:focus{top:12px;outline:2px solid #fff;}
 
 /* ===== NAV ===== */
 nav{
@@ -104,14 +114,14 @@ nav{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .logo-text .brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;letter-spacing:2px;color:#fff;display:block;}
-.logo-text .sub{font-size:9px;color:var(--oro);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-top:3px;display:block;}
+.logo-text .sub{font-size:9px;color:var(--oro-chiaro);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-top:3px;display:block;}
 .nav-back{
-  color:rgba(255,255,255,0.5);font-size:13px;text-decoration:none;
-  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.78);font-size:13px;text-decoration:none;
+  border:1px solid rgba(255,255,255,0.2);
   padding:8px 16px;border-radius:100px;
   transition:all .2s;display:flex;align-items:center;gap:6px;
 }
-.nav-back:hover{color:var(--oro);border-color:rgba(184,134,11,0.4);}
+.nav-back:hover{color:var(--oro-chiaro);border-color:rgba(184,134,11,0.4);}
 
 /* ===== HERO MAGAZINE ===== */
 .mag-hero{
@@ -132,7 +142,7 @@ nav{
 .mag-hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;}
 .mag-eyebrow{
   font-size:10px;font-weight:700;letter-spacing:4px;
-  text-transform:uppercase;color:var(--oro);
+  text-transform:uppercase;color:var(--oro-chiaro);
   margin-bottom:24px;display:block;
 }
 .mag-hero h1{
@@ -142,20 +152,19 @@ nav{
   font-weight:900;line-height:1.1;
   margin-bottom:16px;
 }
-.mag-hero h1 em{font-style:italic;color:var(--oro);}
+.mag-hero h1 em{font-style:italic;color:var(--oro-chiaro);}
 .mag-tagline{
   font-family:'Playfair Display',serif;
   font-size:clamp(15px,1.8vw,20px);
   font-style:italic;
-  color:rgba(255,255,255,0.6);
+  color:rgba(255,255,255,0.78);
   margin-bottom:10px;
   letter-spacing:0.01em;
 }
 .mag-tagline-bold{
   font-size:clamp(13px,1.4vw,16px);
   font-weight:600;
-  letter-spacing:0.5px;
-  color:rgba(255,255,255,0.38);
+  color:rgba(255,255,255,0.68);
   text-transform:uppercase;
   letter-spacing:2px;
   margin-bottom:36px;
@@ -170,13 +179,13 @@ nav{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .mag-intro{
-  color:rgba(255,255,255,0.68);
+  color:rgba(255,255,255,0.78);
   font-size:clamp(14px,1.6vw,17px);
   line-height:1.8;max-width:660px;margin:0 auto 40px;
 }
 .mag-cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px;}
 .btn-wa{
-  background:#25d366;color:#fff;
+  background:#25d366;color:var(--nero);
   padding:14px 26px;border-radius:var(--radius);
   font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;
   text-decoration:none;display:inline-flex;align-items:center;gap:9px;
@@ -209,9 +218,9 @@ nav{
 .mag-stat .num{
   font-family:'Playfair Display',serif;
   font-size:28px;font-weight:900;
-  color:var(--oro);line-height:1;margin-bottom:6px;
+  color:var(--oro-chiaro);line-height:1;margin-bottom:6px;
 }
-.mag-stat .lbl{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;}
+.mag-stat .lbl{font-size:11px;color:rgba(255,255,255,0.68);letter-spacing:1px;text-transform:uppercase;}
 
 /* ===== SEZIONE ARTICOLI ===== */
 .articles-section{
@@ -225,7 +234,7 @@ nav{
 }
 .section-label{
   font-size:10px;font-weight:700;letter-spacing:3.5px;
-  text-transform:uppercase;color:var(--oro);
+  text-transform:uppercase;color:var(--oro-testo);
   margin-bottom:10px;display:block;
 }
 .section-header h2{
@@ -233,11 +242,11 @@ nav{
   font-size:clamp(26px,3.5vw,40px);
   font-weight:900;color:var(--nero);line-height:1.1;
 }
-.section-header h2 em{font-style:italic;color:var(--oro);}
+.section-header h2 em{font-style:italic;color:var(--oro-testo);}
 .coming-badge{
   background:rgba(184,134,11,0.1);
   border:1px solid rgba(184,134,11,0.25);
-  color:var(--oro-scuro);
+  color:var(--oro-testo);
   font-size:11px;font-weight:700;
   padding:8px 18px;border-radius:100px;
   letter-spacing:1px;white-space:nowrap;
@@ -321,7 +330,7 @@ nav{
   flex-wrap:wrap;
 }
 .upcoming-badge{
-  background:var(--nero);color:var(--oro);
+  background:var(--nero);color:var(--oro-chiaro);
   font-size:10px;font-weight:700;letter-spacing:2.5px;
   text-transform:uppercase;padding:7px 16px;border-radius:100px;
   flex-shrink:0;
@@ -346,9 +355,9 @@ nav{
 .upcoming-item:hover{box-shadow:var(--shadow);}
 .upcoming-num{
   font-size:10px;font-weight:700;letter-spacing:2px;
-  text-transform:uppercase;color:var(--oro);margin-bottom:10px;
+  text-transform:uppercase;color:var(--oro-testo);margin-bottom:10px;
 }
-.upcoming-item h4{
+.upcoming-item h3, .upcoming-item h4{
   font-family:'Playfair Display',serif;
   font-size:16px;font-weight:700;
   color:var(--nero);margin-bottom:8px;line-height:1.3;
@@ -374,17 +383,17 @@ nav{
   pointer-events:none;
 }
 .domande-inner{position:relative;z-index:1;}
-.domande-section .section-label{color:var(--oro);}
+.domande-section .section-label{color:var(--oro-chiaro);}
 .domande-section h2{
   font-family:'Playfair Display',serif;
   font-size:clamp(24px,3vw,36px);
   font-weight:900;color:#fff;
   line-height:1.2;margin-bottom:12px;
 }
-.domande-section h2 em{font-style:italic;color:var(--oro);}
+.domande-section h2 em{font-style:italic;color:var(--oro-chiaro);}
 .domande-section > .domande-inner > p{
   font-size:clamp(14px,1.6vw,17px);
-  color:rgba(255,255,255,0.62);
+  color:rgba(255,255,255,0.75);
   line-height:1.75;max-width:660px;margin-bottom:44px;
 }
 .domande-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:44px;}
@@ -401,7 +410,7 @@ nav{
   color:#fff;margin-bottom:12px;line-height:1.35;
   font-style:italic;
 }
-.domanda-a{font-size:13px;color:rgba(255,255,255,0.58);line-height:1.68;}
+.domanda-a{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.68;}
 
 /* contatti box */
 .contatti-box{
@@ -416,14 +425,15 @@ nav{
   font-family:'Playfair Display',serif;
   color:#fff;font-size:20px;margin-bottom:6px;
 }
-.contatti-box p{color:rgba(255,255,255,0.55);font-size:14px;}
+.contatti-box p{color:rgba(255,255,255,0.75);font-size:14px;}
 .contatti-links{display:flex;gap:12px;flex-wrap:wrap;}
 .c-link{
-  color:rgba(255,255,255,0.75);font-size:14px;
+  color:rgba(255,255,255,0.85);font-size:14px;
   text-decoration:none;display:flex;align-items:center;gap:7px;
+  padding:6px 8px;min-height:32px;
   transition:color .2s;
 }
-.c-link:hover{color:var(--oro);}
+.c-link:hover{color:var(--oro-chiaro);}
 
 /* ===== FOOTER ===== */
 .mag-footer{
@@ -436,13 +446,14 @@ nav{
   display:flex;justify-content:space-between;
   align-items:center;flex-wrap:wrap;gap:16px;
 }
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;}
 .footer-links a{
-  font-size:12px;color:rgba(255,255,255,0.3);
+  font-size:12px;color:rgba(255,255,255,0.72);
   text-decoration:none;transition:color .2s;
+  display:inline-block;padding:6px 4px;min-height:28px;
 }
-.footer-links a:hover{color:var(--oro);}
-.footer-copy{font-size:11px;color:rgba(255,255,255,0.16);line-height:1.7;}
+.footer-links a:hover{color:var(--oro-chiaro);}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.62);line-height:1.7;}
 
 /* WA float */
 .wa-float{
@@ -522,10 +533,11 @@ nav{
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-<nav>
+<nav aria-label="Navigazione principale">
   <a href="https://venderecasapiacenza.it" class="nav-logo">
-    <div class="logo-mark"><span>DS</span></div>
+    <div class="logo-mark" aria-hidden="true"><span>DS</span></div>
     <div class="logo-text">
       <span class="brand">DAVIDE SCAGLIA</span>
       <span class="sub">Vendere Casa a Piacenza</span>
@@ -534,6 +546,7 @@ nav{
   <a href="https://venderecasapiacenza.it" class="nav-back">← Torna al sito</a>
 </nav>
 
+<main id="main-content">
 <!-- HERO -->
 <div class="mag-hero">
   <div class="hero-grid"></div>
@@ -542,10 +555,10 @@ nav{
     <h1>Vendere Casa a Piacenza<br><em>Magazine</em></h1>
     <p class="mag-tagline">"Le case si scelgono con emozioni. Si vivono con il cuore. Si vendono con strategia e metodo."</p>
     <span class="mag-tagline-bold">Vendere bene non è un caso.</span>
-    <p class="mag-intro">Strategie reali, dati di mercato locali e guide concrete per chi vuole vendere casa a Piacenza senza perdere tempo. Di <strong style="color:rgba(255,255,255,0.9)">Davide Scaglia</strong> — agente immobiliare a Piacenza dal 2007. Niente teoria: solo quello che funziona davvero.</p>
+    <p class="mag-intro">Strategie reali, dati di mercato locali e guide concrete per chi vuole vendere casa a Piacenza senza perdere tempo. Di <strong style="color:rgba(255,255,255,0.92)">Davide Scaglia</strong> — agente immobiliare a Piacenza dal 2007. Niente teoria: solo quello che funziona davvero.</p>
     <div class="mag-cta-row">
-      <a href="https://wa.me/393286930033" class="btn-wa" target="_blank">💬 Scrivimi su WhatsApp</a>
-      <a href="tel:+393286930033" class="btn-tel">📞 328 693 0033</a>
+      <a href="https://wa.me/393286930033" class="btn-wa" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> Scrivimi su WhatsApp</a>
+      <a href="tel:+393286930033" class="btn-tel"><span aria-hidden="true">📞</span> 328 693 0033</a>
     </div>
     <div class="mag-stats">
       <div class="mag-stat">
@@ -557,7 +570,7 @@ nav{
         <div class="lbl">Inizio attività</div>
       </div>
       <div class="mag-stat">
-        <div class="num">5 ⭐</div>
+        <div class="num">5 <span aria-hidden="true">⭐</span></div>
         <div class="lbl">Video testimonianze</div>
       </div>
       <div class="mag-stat">
@@ -576,7 +589,7 @@ nav{
       <span class="section-label">Gli articoli del Magazine</span>
       <h2>Guide e strategie<br>per <em>vendere meglio</em></h2>
     </div>
-    <span class="coming-badge">📅 Nuovi articoli in arrivo</span>
+    <span class="coming-badge"><span aria-hidden="true">📅 </span>Nuovi articoli in arrivo</span>
   </div>
 
   <div class="articles-grid">
@@ -584,9 +597,9 @@ nav{
     <!-- FEATURED -->
     <div class="article-card featured">
       <div class="card-img featured-img" style="background:linear-gradient(135deg,#0a0a0a,#1a1a2e);">
-        <div class="card-img-bg">📱</div>
+        <div class="card-img-bg" aria-hidden="true">📱</div>
         <div class="card-img-overlay"></div>
-        <span class="card-cat">💡 Strategia</span>
+        <span class="card-cat"><span aria-hidden="true">💡 </span>Strategia</span>
       </div>
       <div class="card-body">
         <div class="card-meta">
@@ -605,9 +618,9 @@ nav{
 
     <div class="article-card">
       <div class="card-img" style="background:linear-gradient(135deg,#1a1a2e,#2d1b69);">
-        <div class="card-img-bg">📈</div>
+        <div class="card-img-bg" aria-hidden="true">📈</div>
         <div class="card-img-overlay"></div>
-        <span class="card-cat">💡 Strategia</span>
+        <span class="card-cat"><span aria-hidden="true">💡 </span>Strategia</span>
       </div>
       <div class="card-body">
         <div class="card-meta">
@@ -625,9 +638,9 @@ nav{
 
     <div class="article-card">
       <div class="card-img" style="background:linear-gradient(135deg,#0d2137,#1a3a5c);">
-        <div class="card-img-bg">📋</div>
+        <div class="card-img-bg" aria-hidden="true">📋</div>
         <div class="card-img-overlay"></div>
-        <span class="card-cat">📋 Guida</span>
+        <span class="card-cat"><span aria-hidden="true">📋 </span>Guida</span>
       </div>
       <div class="card-body">
         <div class="card-meta">
@@ -648,7 +661,7 @@ nav{
   <!-- PROSSIMAMENTE -->
   <div class="upcoming-section">
     <div class="upcoming-header">
-      <span class="upcoming-badge">📅 Prossimamente</span>
+      <span class="upcoming-badge"><span aria-hidden="true">📅 </span>Prossimamente</span>
       <div>
         <h2>I prossimi 6 articoli</h2>
         <p>In preparazione — in uscita nelle prossime settimane sul Magazine</p>
@@ -656,39 +669,39 @@ nav{
     </div>
     <div class="upcoming-grid">
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 04</div>
-        <h4>Come preparare casa per la vendita senza spendere soldi</h4>
+        <h3>Come preparare casa per la vendita senza spendere soldi</h3>
         <p>Home staging low cost, foto che vendono, la prima impressione online che convince o respinge.</p>
       </div>
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 05</div>
-        <h4>Vendere casa durante una separazione: cosa sapere</h4>
+        <h3>Vendere casa durante una separazione: cosa sapere</h3>
         <p>Valutazione condivisa, accordi tra le parti, come gestire l'immobile comune senza conflitti.</p>
       </div>
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 06</div>
-        <h4>Eredità e immobili: come vendere una casa ricevuta in successione</h4>
+        <h3>Eredità e immobili: come vendere una casa ricevuta in successione</h3>
         <p>Più eredi, un solo immobile. Come trovare un accordo e vendere al valore reale di mercato.</p>
       </div>
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 07</div>
-        <h4>Quanto vale la mia casa a Piacenza nel 2026?</h4>
+        <h3>Quanto vale la mia casa a Piacenza nel 2026?</h3>
         <p>Zone, fattori che influenzano il prezzo, la differenza tra valore catastale e valore di mercato reale.</p>
       </div>
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 08</div>
-        <h4>Perché la mia casa non si vende? Le 7 cause più comuni</h4>
+        <h3>Perché la mia casa non si vende? Le 7 cause più comuni</h3>
         <p>Prezzo fuori mercato, foto sbagliate, descrizione inefficace: le vere ragioni per cui un immobile resta fermo.</p>
       </div>
       <div class="upcoming-item">
-        <div class="upcoming-dot"></div>
+        <div class="upcoming-dot" aria-hidden="true"></div>
         <div class="upcoming-num">Articolo 09</div>
-        <h4>Agente immobiliare o fai da te? La scelta giusta per vendere a Piacenza</h4>
+        <h3>Agente immobiliare o fai da te? La scelta giusta per vendere a Piacenza</h3>
         <p>I rischi della vendita privata, quanto costa davvero sbagliare e quando un professionista fa la differenza.</p>
       </div>
     </div>
@@ -724,20 +737,21 @@ nav{
           <p>Consulenza gratuita — rispondo io, Davide Scaglia, entro 24 ore.</p>
         </div>
         <div class="contatti-links">
-          <a href="https://wa.me/393286930033" class="c-link" target="_blank">💬 WhatsApp</a>
-          <a href="tel:+393286930033" class="c-link">📞 328 693 0033</a>
-          <a href="mailto:info@venderecasapiacenza.it" class="c-link">✉️ Email</a>
+          <a href="https://wa.me/393286930033" class="c-link" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> WhatsApp</a>
+          <a href="tel:+393286930033" class="c-link"><span aria-hidden="true">📞</span> 328 693 0033</a>
+          <a href="mailto:info@venderecasapiacenza.it" class="c-link"><span aria-hidden="true">✉️</span> Email</a>
         </div>
       </div>
     </div>
   </div>
 
 </div><!-- /articles-section -->
+</main>
 
 <footer class="mag-footer">
   <div class="mag-footer-inner">
     <div class="footer-copy">
-      <strong style="color:rgba(255,255,255,0.4);">Immobiliare Scaglia di Scaglia Davide</strong><br>
+      <strong style="color:rgba(255,255,255,0.82);">Immobiliare Scaglia di Scaglia Davide</strong><br>
       Agente di Affari in Mediazione — REA PC-168637 · P.IVA: 01493570335 · PEC: immobiliarescaglia@pec.it<br>
       © 2026 — Tutti i diritti riservati
     </div>
@@ -752,9 +766,11 @@ nav{
   </div>
 </footer>
 
-<a href="https://wa.me/393286930033" class="wa-float" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<aside aria-label="Contatto rapido WhatsApp">
+<a href="https://wa.me/393286930033" class="wa-float" target="_blank" rel="noopener" aria-label="Scrivimi su WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
+</aside>
 
 </body>
 </html>
