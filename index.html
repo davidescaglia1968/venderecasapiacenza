@@ -1073,7 +1073,7 @@
 
   /* ========== FAQ ========== */
   #faq { background: var(--grigio-chiaro); }
-  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 48px; align-items: start; }
   .faq-item {
     background: white; border-radius: var(--radius-lg);
     border: 1px solid rgba(0,0,0,0.06);
@@ -1081,17 +1081,17 @@
   }
   .faq-q {
     width: 100%; background: none; border: none; text-align: left;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', 'DM Sans Fallback', sans-serif;
     padding: 22px 24px;
     display: flex; justify-content: space-between; align-items: center;
     cursor: pointer; gap: 16px;
   }
-  .faq-q span { font-size: 15px; font-weight: 600; color: var(--nero); flex: 1; }
+  .faq-q span:not(.faq-toggle) { font-size: 15px; font-weight: 600; color: var(--nero); flex: 1; }
   .faq-toggle {
-    width: 28px; height: 28px; flex-shrink: 0;
+    width: 28px; height: 28px; flex: 0 0 28px;
     background: var(--grigio-chiaro); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; color: var(--oro-testo); font-weight: 600;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px; line-height: 1; color: var(--oro-testo); font-weight: 600;
     transition: transform 0.3s;
   }
   .faq-item.open .faq-toggle { transform: rotate(45deg); }
@@ -1101,7 +1101,7 @@
     font-size: 14px; color: var(--grigio); line-height: 1.7;
     padding: 0 24px;
   }
-  .faq-item.open .faq-a { max-height: 260px; padding: 0 24px 20px; }
+  .faq-item.open .faq-a { max-height: 400px; padding: 0 24px 20px; }
 
   /* ========== CONTATTI ========== */
   #contatti { background: var(--crema, #faf6ee); }
